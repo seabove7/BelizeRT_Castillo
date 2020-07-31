@@ -141,7 +141,7 @@ RT.calc <- read.csv("/Users/colleen/BelizeRT_CalcSurvData/RT_output/RT_calc_boot
 RT.calc$trans <- factor(RT.calc$trans, levels = c("NS", "BR", "FR")) # relevel transplant factors
 RT.calc$source <- factor(RT.calc$source, levels = c("NS", "BR", "FR")) # relevel source factors
 
-RT.calc$Treatment <- paste(RT.calc$source, RT.calc$trans, sep = "_to_") # make a 'treatment' column
+RT.calc$Treatment <- paste(RT.calc$source, RT.calc$trans, sep = " to ") # make a 'treatment' column
 
 # condensed dataframe of modelled mean and 95% CI per treatment
 RT.calc.tab <- RT.calc %>% 
@@ -176,6 +176,26 @@ calc.avg.plot
 ```
 
 **Figure 2A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+
+
+```{r supplemental calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
+
+calc.avg2.plot <- ggplot(data = RT.calc) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = trans, y = rate, colour = source), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
+  geom_linerange(aes(x = trans, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
+  scale_color_manual(" Source
+Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Transplant Location") +
+  ggtitle("") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+calc.avg2.plot
+
+```
+
+**Supplemental Figure 1A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
 ### Calcification by Time Point
@@ -250,7 +270,7 @@ RT.calc.tp$source <- factor(RT.calc.tp$source, levels = c("NS", "BR", "FR")) # r
 RT.calc.tp$TP <- factor(RT.calc.tp$TP) # make time point a factor
 RT.calc.tp$TP <- revalue(RT.calc.tp$TP, c("y23" = "2013", "y34" = "2014", "y45" = "2015")) # redefine time point factors to reflect year measured
 
-RT.calc.tp$Treatment <- paste(RT.calc.tp$source, RT.calc.tp$trans, sep = "_to_") # make a 'treatment' column
+RT.calc.tp$Treatment <- paste(RT.calc.tp$source, RT.calc.tp$trans, sep = " to ") # make a 'treatment' column
 RT.calc.tp$Treatment <- paste(RT.calc.tp$Treatment, RT.calc.tp$TP, sep = " in ") # make a 'treatment' column
 
 # condensed dataframe of modelled mean and 95% CI per treatment
@@ -276,7 +296,7 @@ calc.tp.plot <- ggplot(data = RT.calc.tp) +
   theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
   geom_point(aes(x = TP, y = rate, colour = trans), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
   geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = trans), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
-  facet_wrap(~ source, labeller = labeller(source = c("NS" = "Nearshore", "BR" = "Backreef", "FR" ="Forereef"))) +
+  facet_wrap(~ source) +
   scale_color_manual("Transplant Location", values=c("#D55E00", "#009E73", "#0072B2")) +
   xlab("Time (years)") +
   ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
@@ -288,6 +308,24 @@ calc.tp.plot
 **Figure 2B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
+```{r supplementalTP calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+
+calc.tp2.plot <- ggplot(data = RT.calc.tp) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = TP, y = rate, colour = source), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
+  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
+  facet_wrap(~ trans) +
+  scale_color_manual("Source Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Time (years)") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+calc.tp2.plot
+
+```
+
+**Supplemental 1B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+
 <br/>
 
 ### Figure 2
@@ -295,10 +333,25 @@ calc.tp.plot
 ```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
 
 plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
-  ggsave("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/Figure2_Calcification_modified.pdf", height = 3.3, width = 12)
+  draw_label("Source Location", size = 11, x = 0.695, y = 0.96) +
+  ggsave("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/Figure2_Calcification_modified.pdf", height = 3.3, width = 12, useDingbats = FALSE)
 
 ```
 **Figure 2.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by source location (A) and at yearly intervals (B). Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+
+<br/>
+
+### Supplemental Figure 1
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
+
+plot_grid(calc.avg2.plot, calc.tp2.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
+  draw_label("Transplant Location", size = 11, x = 0.695, y = 0.96) +
+  ggsave("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/FigureS1_Calcification_modified.pdf", height = 3.3, width = 12, useDingbats = FALSE)
+  
+
+```
+**Supplemental Figure 1.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location (A) and at yearly intervals (B). Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
 ###############################
@@ -313,7 +366,7 @@ plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", 
 sur <- read.csv("/Users/colleen/BelizeRT_CalcSurvData/RT_data/RT_survival.csv") # Read in survival data (0 = living, 1 = mortality event under 'Status')
 sur$Colony <- as.factor(sur$Colony) # make colony ID a factor
 
-sur.r <- Surv(sur$Day,sur$Status) # Creates your survival dataframe
+sur.r <- Surv(sur$Day, sur$Status) # Creates your survival dataframe
 
 # This produces the event data for each grouping (this case transplant) (% surviving at each Day and the CI with it)
 sur.all <- survfit(sur.r ~ Tranplant + Source, data = sur) 
@@ -339,18 +392,19 @@ kable(surv.tab, digits = 3) %>%
 
 ```
 
+
 #### <span style="color: navy;">**Data Visualization**</span>
 
 ```{r survival figure, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width= 5.5, fig.height=6}
 
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Days since transplant", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445)) # Creates the axis label for x axis
+plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
+axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) # Creates the axis label for x axis
 legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
 legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n") # create line legends 
 
 pdf("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/Figure3_Survival_modification.pdf", width = 5.5, height = 5.7) # writes figure as a PDF to file
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Days since transplant", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445))
+plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
+axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
 legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
 legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
 dev.off() 
