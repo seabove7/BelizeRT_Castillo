@@ -1,7 +1,7 @@
 ---
 title: "Calcification and Survival Data Analyses and Visualization *(Castillo et al In Prep)*"
 author: "Colleen B Bove"
-date: "*Last update: 3/20/2020*"
+date: "*Last run on `r format(Sys.time(), '%d %B %Y')`*"
 output:
   html_document: 
     toc: true
@@ -28,6 +28,11 @@ library(coxme)
 library(survival)
 library(survminer)
 library(finalfit)
+library(performance)
+
+
+## Knit standards
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, options(knitr.kable.NA = ''))
 
 ```
 
@@ -49,16 +54,113 @@ seed = 14 # seed to make results replicatable (our seed was 14)
 
 ---
 
+
+## Colony survival {.tabset}
+
+### Figure 2
+
+```{r survival dataframe setup, message=FALSE, warning=FALSE}
+
+sur <- read.csv("RT_data/RT_survival.csv") # Read in survival data (0 = living, 1 = mortality event under 'Status')
+sur$Colony <- as.factor(sur$Colony) # make colony ID a factor
+
+sur.r <- Surv(sur$Day, sur$Status) # Creates your survival dataframe
+
+# This produces the event data for each grouping (this case transplant) (% surviving at each Day and the CI with it)
+sur.all <- survfit(sur.r ~ Tranplant + Source, data = sur) # Computes an estimate of a survival curve based on transplantation using Kaplan-Meier; this will also be used for plotting
+#sur.all # view output to see mortality event and sample size summary stats
+  
+```
+
+<br/>
+
+#### <span style="color: navy;">**Cox Proportional Hazard Model**</span>
+
+```{r survival model, echo=TRUE, message=FALSE, warning=FALSE}
+
+surv.mod <- coxph(sur.r ~ Source + Tranplant, data = sur)
+
+```
+
+
+#### <span style="color: navy;">**Data Visualization**</span>
+
+```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width= 5.5, fig.height=6}
+
+plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
+axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) # Creates the axis label for x axis
+legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
+legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n") # create line legends 
+
+## save as PDF
+pdf("RT_figures/Figure2_Survival.pdf", width = 5.5, height = 5.7) # writes figure as a PDF to file
+plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
+axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
+legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
+legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
+dev.off() 
+
+## save as PNG
+png("RT_figures/Figure2_Survival.png", width = 5.5, height = 5.7, units = "in", res = 1200)
+plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
+axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
+legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
+legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
+dev.off() 
+
+```
+
+**Figure 2.** Fraction surviving of *Siderastrea siderea* colonies across time (2011-2015) with respect to source location and transplanted location. Source location is represented by line type (FR = dashed; BR = solid; NS = dotted) and transplant location is denoted by colour (<span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>). 
+
+<br/>
+
+
+### Supplemental Table 1
+
+**Table S1.** Cox proportional hazard model output, with exp(coef) representing the hazard ratio, se(coef) is the standard error, z is the z score, and Pr(>|z|) is the propability that the estimated could be 0.
+
+```{r survival model table, message=FALSE, warning=FALSE}
+
+surv_mod_df <- data.frame(summary(surv.mod)$coefficients)
+colnames(surv_mod_df) <- c("coefficient", "exp(coef)" , "se(coef)", "z", "Pr(>|z|)")
+
+kable(surv_mod_df, digits = 3) %>% 
+  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
+  column_spec(1, bold = TRUE)
+
+```
+
+<br/>
+
+
+### Supplemental Table 2
+
+**Table S2.** ANOVA output of the survival model.
+
+```{r}
+
+surv_aov <- anova(surv.mod,  test = 'Chisq')
+
+kable(surv_aov, digits = 3) %>% 
+  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
+  column_spec(1, bold = TRUE)
+
+```
+
+
+###############################
+
+
 ## Calcification rate {.tabset}
 
 <br/>
 
 ### Overall Calcification
 
-```{r calc df setup, echo=FALSE, message=FALSE, warning=FALSE}
+```{r calc df setup, message=FALSE, warning=FALSE}
 
 # read in dataframe
-RT.calc <- read.csv('/Users/colleen/BelizeRT_CalcSurvData/RT_data/RT_calcification.csv') # read in data
+RT.calc <- read.csv('RT_data/RT_calcification.csv') # read in data
 
 # convert dataframe from wide to long
 RT.calc <- gather(RT.calc, TP, rate, y23:avg2)
@@ -68,6 +170,7 @@ RT.calc <- completeFun(RT.calc, "rate")
 
 # subset for the average rate of corals that made it to the end 
 RT.calc.fin <- subset(RT.calc, TP == "avg")
+RT.calc.fin$rate <- as.numeric(RT.calc.fin$rate)
 
 # subset for timepoint calcification rates (this dataframe is for the 'timepoint calcification' analysis)
 RT.calc.tp <- subset(RT.calc, TP != "avg2")
@@ -81,13 +184,18 @@ RT.calc.tp$TP <- factor(RT.calc.tp$TP)
 
 #### <span style="color: navy;">**Model selection**</span>
 
-**Table 1 | Overall calcification Akaike information criterion (AIC) model selection**
+**Table S3 | Overall calcification Akaike information criterion (AIC) model selection**
 
 Model selection for assessment of source and transplant location impacts on overall (2012 - 2015) coral calcification rates was performed using AIC. The model with the lowest AIC (in bold) best fit the data and was used for analyses.
-```{r calcification AIC model selection, echo=FALSE, message=FALSE, warning=FALSE}
+```{r calcification AIC model selection, message=FALSE, warning=FALSE}
 
 ## AIC model selection
 full.int <- lm(rate ~ source * trans, data = RT.calc.fin) # interaction of source with transplant location
+
+# data look normal so I am okay with proceeding with a linear model here
+#check_normality(full.int)
+#check_model(full.int)
+
 full.add <- lm(rate ~ source + trans, data = RT.calc.fin) # additive model of source with transplant location
 tran.only <- lm(rate ~ trans, data = RT.calc.fin) # transplant location only
 sourc.only <- lm(rate ~ source, data = RT.calc.fin) # source location only
@@ -100,7 +208,6 @@ calc.AIC$AIC <- round(calc.AIC$AIC, 2) # round the AIC values to 2 decimal place
 
 kable(calc.AIC) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  row_spec(0, background = "lightgrey") %>% 
   row_spec(1, bold = TRUE) 
 
 ```
@@ -110,7 +217,7 @@ kable(calc.AIC) %>%
 #### <span style="color: navy;">**Modelling Parametric Bootstrap 95% Confidence Intervals**</span>
 
 Model:
-```{r calcification model, message=FALSE, warning=FALSE}
+```{r calcification model, echo = TRUE}
 
 calc.model <- lm(rate ~ source * trans, data = RT.calc.fin) # selected model
 
@@ -124,20 +231,20 @@ out <- simulate(calc.model, nsim = bootnum, seed = seed, re.form=NULL)
 boots <- apply(out,2,function(x) predict(lm(x ~ source * trans, data = RT.calc.fin), reform = NA))
 boots <- cbind(predict(calc.model, re.form=NA), boots)
 RT.calc.fin2 <- (cbind(RT.calc.fin, as.data.frame(t(apply(boots, 1, function(x) c(mean(x), quantile(x, c(0.025, 0.975))))))))
-colnames(RT.calc.fin2)[6:8] <- c("mean", "lowerci", "upperci")
+colnames(RT.calc.fin2)[6:8] <- c("estimate", "lowerci", "upperci")
 
-write.csv(RT.calc.fin2, "/Users/colleen/BelizeRT_CalcSurvData/RT_output/RT_calc_boot.csv")
+write.csv(RT.calc.fin2, "RT_output/RT_calc_boot.csv")
 
 ```
 
 <br/>
 
-**Table 2 | Modelled Mean Calcification Rate and 95% Confidence Interval**
+**Table S4 | Modelled Mean Calcification Rate and 95% Confidence Interval**
 
 Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
-```{r CI table, echo=FALSE, message=FALSE, warning=FALSE}
+```{r CI table, message=FALSE, warning=FALSE}
 
-RT.calc <- read.csv("/Users/colleen/BelizeRT_CalcSurvData/RT_output/RT_calc_boot.csv", header = TRUE) # new dataframe with modelled 95% CI and mean calcification rates
+RT.calc <- read.csv("RT_output/RT_calc_boot.csv", header = TRUE) # new dataframe with modelled 95% CI and mean calcification rates
 RT.calc$trans <- factor(RT.calc$trans, levels = c("NS", "BR", "FR")) # relevel transplant factors
 RT.calc$source <- factor(RT.calc$source, levels = c("NS", "BR", "FR")) # relevel source factors
 
@@ -146,11 +253,12 @@ RT.calc$Treatment <- paste(RT.calc$source, RT.calc$trans, sep = " to ") # make a
 # condensed dataframe of modelled mean and 95% CI per treatment
 RT.calc.tab <- RT.calc %>% 
   group_by(Treatment) %>% 
-  summarize(`Modelled Mean` = mean(mean, na.rm=TRUE), `Lower 95% CI` = mean(lowerci, na.rm=TRUE), `Upper 95% CI` = mean(upperci, na.rm=TRUE))
+  summarize(`Modelled Mean` = mean(estimate, na.rm=TRUE),
+            `Lower 95% CI` = mean(lowerci, na.rm=TRUE),
+            `Upper 95% CI` = mean(upperci, na.rm=TRUE))
 
 kable(RT.calc.tab, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  row_spec(0, background = "lightgrey") %>% 
   column_spec(1, bold = TRUE)
 
 ```
@@ -158,15 +266,14 @@ kable(RT.calc.tab, digits = 2) %>%
 
 #### <span style="color: navy;">**Data Visualization**</span>
 
-```{r calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
+```{r calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
 
 calc.avg.plot <- ggplot(data = RT.calc) +
   theme_bw() +
   theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
   geom_point(aes(x = source, y = rate, colour = trans), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
   geom_linerange(aes(x = source, ymin = lowerci, ymax = upperci, colour = trans), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
-  scale_color_manual("Transplant
-  Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  scale_color_manual("Transplant \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
   xlab("Source Location") +
   ggtitle("") +
   ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
@@ -175,18 +282,17 @@ calc.avg.plot
 
 ```
 
-**Figure 2A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+**Figure 3A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
-```{r supplemental calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
+```{r supplemental calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
 
 calc.avg2.plot <- ggplot(data = RT.calc) +
   theme_bw() +
   theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
   geom_point(aes(x = trans, y = rate, colour = source), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
   geom_linerange(aes(x = trans, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
-  scale_color_manual(" Source
-Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  scale_color_manual("Source \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
   xlab("Transplant Location") +
   ggtitle("") +
   ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
@@ -203,13 +309,19 @@ calc.avg2.plot
 
 #### <span style="color: navy;">**Model selection**</span>
 
-**Table 3 | Time point calcification Akaike information criterion (AIC) model selection**
+**Table S5 | Time point calcification Akaike information criterion (AIC) model selection**
   
 Model selection for assessment of source and transplant location impacts on time point coral calcification rates was performed using AIC. The model in bold appropriately fit the data and was used for analyses.
-```{r TP calcification AIC model selection, echo=FALSE, message=FALSE, warning=FALSE}
+```{r TP calcification AIC model selection, message=FALSE, warning=FALSE}
 
 ## AIC model selection
 full.int <- lm(rate ~ source * trans * TP, data = RT.calc.tp) # fully interactive model
+
+# data look normal so I am okay with proceeding with a linear model here
+#check_normality(full.int)
+#check_model(full.int)
+
+
 full.add <- lm(rate ~ source + trans + TP, data = RT.calc.tp) # fully additive model
 add.tp <- lm(rate ~ source * trans + TP, data = RT.calc.tp) # interaction of source with transplant location, add time point
 add.trans <- lm(rate ~ source * TP + trans, data = RT.calc.tp) # interaction of source location with time point, add transplant location
@@ -226,7 +338,6 @@ calc.tp.AIC$AIC <- round(calc.tp.AIC$AIC, 2) # round the AIC values to 2 decimal
 
 kable(calc.tp.AIC) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  row_spec(0, background = "lightgrey") %>% 
   row_spec(1, bold = TRUE) 
 
 ```
@@ -236,7 +347,7 @@ kable(calc.tp.AIC) %>%
 #### <span style="color: navy;">**Modelling Parametric Bootstrap 95% Confidence Intervals**</span>
   
 Model:
-```{r TP calcification model, message=FALSE, warning=FALSE}
+```{r TP calcification model, echo = TRUE}
 
 tp.model <- lm(rate ~ source * trans * TP, data = RT.calc.tp) # selected model
 
@@ -250,21 +361,21 @@ out <- simulate(tp.model, nsim = bootnum, seed = seed, re.form=NULL)
 boots <- apply(out,2,function(x) predict(lm(x ~ source * trans * TP, data = RT.calc.tp), reform = NA))
 boots <- cbind(predict(tp.model, re.form=NA), boots)
 RT.calc.tp2 <- (cbind(RT.calc.tp, as.data.frame(t(apply(boots, 1, function(x) c(mean(x), quantile(x, c(0.025, 0.975))))))))
-colnames(RT.calc.tp2)[6:8] <- c("mean", "lowerci", "upperci")
+colnames(RT.calc.tp2)[6:8] <- c("estimate", "lowerci", "upperci")
 
-write.csv(RT.calc.tp2, "/Users/colleen/BelizeRT_CalcSurvData/RT_output/RT_TP_calc_boot.csv")
+write.csv(RT.calc.tp2, "RT_output/RT_TP_calc_boot.csv")
 
 ```
 
 <br/>
 
   
-**Table 4 | Modelled Mean Calcification Rate and 95% Confidence Interval by Time Point**
+**Table S6 | Modelled Mean Calcification Rate and 95% Confidence Interval by Time Point**
   
 Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
-```{r TP CI table, echo=FALSE, message=FALSE, warning=FALSE}
+```{r TP CI table, message=FALSE, warning=FALSE}
 
-RT.calc.tp <- read.csv("/Users/colleen/BelizeRT_CalcSurvData/RT_output/RT_TP_calc_boot.csv", header = TRUE) # new dataframe with modelled 95% CI and mean calcification rates
+RT.calc.tp <- read.csv("RT_output/RT_TP_calc_boot.csv", header = TRUE) # new dataframe with modelled 95% CI and mean calcification rates
 RT.calc.tp$trans <- factor(RT.calc.tp$trans, levels = c("NS", "BR", "FR")) # relevel transplant location factors
 RT.calc.tp$source <- factor(RT.calc.tp$source, levels = c("NS", "BR", "FR")) # relevel source location factors
 RT.calc.tp$TP <- factor(RT.calc.tp$TP) # make time point a factor
@@ -276,11 +387,12 @@ RT.calc.tp$Treatment <- paste(RT.calc.tp$Treatment, RT.calc.tp$TP, sep = " in ")
 # condensed dataframe of modelled mean and 95% CI per treatment
 RT.calc.TP.tab <- RT.calc.tp %>% 
   group_by(Treatment) %>% 
-  summarize(`Modelled Mean` = mean(mean, na.rm=TRUE), `Lower 95% CI` = mean(lowerci, na.rm=TRUE), `Upper 95% CI` = mean(upperci, na.rm=TRUE))
+  summarize(`Modelled Mean` = mean(estimate, na.rm=TRUE),
+            `Lower 95% CI` = mean(lowerci, na.rm=TRUE),
+            `Upper 95% CI` = mean(upperci, na.rm=TRUE))
 
 kable(RT.calc.TP.tab, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  row_spec(0, background = "lightgrey") %>% 
   column_spec(1, bold = TRUE)
 
 ```
@@ -289,7 +401,7 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 
 #### <span style="color: navy;">**Data Visualization**</span>
 
-```{r TP calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+```{r TP calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
 
 calc.tp.plot <- ggplot(data = RT.calc.tp) +
   theme_bw() +
@@ -305,10 +417,10 @@ calc.tp.plot
 
 ```
 
-**Figure 2B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+**Figure 3B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
-```{r supplementalTP calcification plot, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+```{r supplementalTP calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
 
 calc.tp2.plot <- ggplot(data = RT.calc.tp) +
   theme_bw() +
@@ -328,13 +440,14 @@ calc.tp2.plot
 
 <br/>
 
-### Figure 2
+### Figure 3
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
+```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
 
 plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
-  draw_label("Source Location", size = 11, x = 0.695, y = 0.96) +
-  ggsave("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/Figure2_Calcification_modified.pdf", height = 3.3, width = 12, useDingbats = FALSE)
+  draw_label("Source Location", size = 11, x = 0.695, y = 0.96)
+  ggsave("RT_figures/Figure3_Calcification.pdf", height = 3.3, width = 12, useDingbats = FALSE)
+  ggsave("RT_figures/Figure3_Calcification.png", height = 3.3, width = 12)
 
 ```
 **Figure 2.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by source location (A) and at yearly intervals (B). Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
@@ -343,81 +456,24 @@ plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", 
 
 ### Supplemental Figure 1
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
+```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
 
 plot_grid(calc.avg2.plot, calc.tp2.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
-  draw_label("Transplant Location", size = 11, x = 0.695, y = 0.96) +
-  ggsave("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/FigureS1_Calcification_modified.pdf", height = 3.3, width = 12, useDingbats = FALSE)
+  draw_label("Transplant Location", size = 11, x = 0.695, y = 0.96)
+  ggsave("RT_figures/FigureS1_Calcification.pdf", height = 3.3, width = 12, useDingbats = FALSE)
+  ggsave("RT_figures/FigureS1_Calcification.png", height = 3.3, width = 12)
   
 
 ```
 **Supplemental Figure 1.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location (A) and at yearly intervals (B). Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modelled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 
-###############################
-
-
-
-## Colony survival
-
-
-```{r survival dataframe setup, echo=FALSE, message=FALSE, warning=FALSE}
-
-sur <- read.csv("/Users/colleen/BelizeRT_CalcSurvData/RT_data/RT_survival.csv") # Read in survival data (0 = living, 1 = mortality event under 'Status')
-sur$Colony <- as.factor(sur$Colony) # make colony ID a factor
-
-sur.r <- Surv(sur$Day, sur$Status) # Creates your survival dataframe
-
-# This produces the event data for each grouping (this case transplant) (% surviving at each Day and the CI with it)
-sur.all <- survfit(sur.r ~ Tranplant + Source, data = sur) 
-
-```
-
-<br/>
-
-#### <span style="color: navy;">**Cox Proportional Hazard Model**</span>
-
-```{r survival model, echo=TRUE, message=FALSE, warning=FALSE}
-
-surv.mod <- coxph(sur.r ~ Source + Tranplant, data = sur)
-
-```
-
-```{r survival model table, echo=FALSE, message=FALSE, warning=FALSE}
-surv.tab <- anova(surv.mod)  
-
-kable(surv.tab, digits = 3) %>% 
-  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  row_spec(0, background = "lightgrey")
-
-```
-
-
-#### <span style="color: navy;">**Data Visualization**</span>
-
-```{r survival figure, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width= 5.5, fig.height=6}
-
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) # Creates the axis label for x axis
-legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
-legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n") # create line legends 
-
-pdf("/Users/colleen/BelizeRT_CalcSurvData/RT_figures/Figure3_Survival_modification.pdf", width = 5.5, height = 5.7) # writes figure as a PDF to file
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
-legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
-legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
-dev.off() 
-
-```
-
-**Figure 3.** Fraction surviving of *Siderastrea siderea* colonies across time (2011-2015) with respect to source location and transplanted location. Source location is represented by line type (FR = dashed; BF = solid; NS = dotted) and transplant location is denoted by colour (<span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>). 
-
 ---
 
 <br/>
 
-<span style="color: navy;">*Session Information:*</span>
+## <span style="color: navy;">*Session Information:*</span>
+*Last run on `r format(Sys.time(), '%d %B %Y')`*
 ```{r echo=FALSE}
 
 sessionInfo()
