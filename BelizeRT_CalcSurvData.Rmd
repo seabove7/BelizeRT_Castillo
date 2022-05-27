@@ -107,16 +107,16 @@ dev.off()
 <br/>
 
 
-### Supplementary Table 3
+### Supplementary Table 4
 
-**Table S3.** Number or corals surviving per year in each transplant location (BR = backreef, FR = forereef, NS = Nearshore).
+**Table S4.** Number or corals surviving per year in each transplant location (BR = backreef, FR = forereef, NS = Nearshore).
 
 ```{r}
 
-tableS3 <- read.csv("RT_data/RT_survival_table.csv")[1:7] # Read in num corals surviving at each timepoint
-names(tableS3) <- gsub(x = names(tableS3), pattern = "X", replacement = "") # remove 'X' from in front of years of columns
+tableS4 <- read.csv("RT_data/RT_survival_table.csv")[1:7] # Read in num corals surviving at each timepoint
+names(tableS4) <- gsub(x = names(tableS4), pattern = "X", replacement = "") # remove 'X' from in front of years of columns
 
-kable(tableS3) %>% 
+kable(tableS4) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
   row_spec(0, bold = TRUE) %>% 
   kable_classic(full_width = FALSE, html_font = "Times")
@@ -484,7 +484,7 @@ plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", 
 
 #### Supplemental Table 1
 
-**Table S1 | Akaike information criterion (AIC) model selection for calcification linear models.** Model selection for assessment of source and transplant location impacts on overall (2012 - 2015) and annual coral calcification rates performed using AIC. The model with the lowest AIC (in bold) best fit the data and was used for analyses.
+**Table S1.** Akaike information criterion (AIC) model selection for calcification linear models. Model selection for assessment of source and transplant location impacts on overall (2012 - 2015) and annual coral calcification rates performed using AIC. The model with the lowest AIC (in bold) best fit the data and was used for analyses.
 
 ```{r}
 
@@ -504,17 +504,17 @@ kable(AIC_full) %>%
 <br/>
 
 
-#### Supplemental Table 4
+#### Supplemental Table 5
 
-**Table S4** Linear model output assessing overall calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
+**Table S5** Linear model output assessing overall calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
 
 ```{r}
 
-tableS4 <- summary(calc.model)$coefficients
+tableS5 <- summary(calc.model)$coefficients
 
-row.names(tableS4) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)")
+row.names(tableS5) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)")
 
-kable(tableS4, digits = 2) %>% 
+kable(tableS5, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
   row_spec(0, bold = TRUE) %>% 
   kable_classic(full_width = FALSE, html_font = "Times")
@@ -524,9 +524,9 @@ kable(tableS4, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 5
+#### Supplemental Table 6
 
-**Table S5.** Modeled mean calcification rate and 95% confidence interval. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
+**Table S6.** Modeled mean calcification rate and 95% confidence interval. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
 
 ```{r}
 
@@ -540,18 +540,18 @@ kable(RT.calc.tab, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 6
+#### Supplemental Table 7
 
 **Table S6** Linear model output assessing annual calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef from 2013.
 
 ```{r}
 
-tableS6 <- summary(tp.model)$coefficients
+tableS7 <- summary(tp.model)$coefficients
 
-row.names(tableS6) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "Year (2014)", "Year (2015)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)", "source (FR):Year (2014)", "source (NS):Year (2014)", "source (FR):Year (2015)", "source (NS):Year (2015)", "transplant (FR):Year (2014)", "transplant (NS):Year (2014)", "transplant (FR):Year (2015)", "transplant (NS):Year (2015)", "source (FR):transplant (FR):Year (2014)", "source (NS):transplant (FR):Year (2014)", "source (FR):transplant (NS):Year (2014)", "source (NS):transplant (NS):Year (2014)", "source (FR):transplant (FR):Year (2015)", "source (NS):transplant (FR):Year (2015)", "source (FR):transplant (NS):Year (2015)", "source (NS):transplant (NS):Year (2015)")
+row.names(tableS7) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "Year (2014)", "Year (2015)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)", "source (FR):Year (2014)", "source (NS):Year (2014)", "source (FR):Year (2015)", "source (NS):Year (2015)", "transplant (FR):Year (2014)", "transplant (NS):Year (2014)", "transplant (FR):Year (2015)", "transplant (NS):Year (2015)", "source (FR):transplant (FR):Year (2014)", "source (NS):transplant (FR):Year (2014)", "source (FR):transplant (NS):Year (2014)", "source (NS):transplant (NS):Year (2014)", "source (FR):transplant (FR):Year (2015)", "source (NS):transplant (FR):Year (2015)", "source (FR):transplant (NS):Year (2015)", "source (NS):transplant (NS):Year (2015)")
 
 
-kable(tableS6, digits = 2) %>% 
+kable(tableS7, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
   row_spec(0, bold = TRUE) %>% 
   kable_classic(full_width = FALSE, html_font = "Times")
@@ -561,9 +561,9 @@ kable(tableS6, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 7
+#### Supplemental Table 8
 
-**Table S7.** Modeled mean calcification rate and 95% confidence interval by year. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
+**Table S8.** Modeled mean calcification rate and 95% confidence interval by year. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
 
 ```{r}
 
@@ -593,40 +593,72 @@ plot_grid(calc.avg2.plot, calc.tp2.plot, rel_widths = c(0.7,1.3), labels = c("A"
 <br/>
 
 
-## GE Plasticity Tables
+## GE Plasticity Tables {.tabset}
 
-### Supplemental Table XX
+### Supplemental Table S3
 
-```{r}
+*(These model outputs are taken from the plasticity analysis and just constructed into tables here)*
 
-```
+**Table S3.** Akaike information criterion (AIC) model selection for coral host and algal symbiont gene expression plasticity. Model selection for assessment of source and transplant location impacts on gene expression plasticity performed using AIC.
 
-<br/>
+| Host Model          |     AIC |     BIC | Nagelkerke's R2 |
+| :-------------------|--------:|--------:|----------------:|
+| Source * Transplant |  46.845 |  64.687 |           0.833 |
+| Source + Transplant | 102.088 | 112.794 |           0.146 |
+| Transplant          |  99.632 | 106.769 |           0.108 |
+| Source              | 102.398 | 109.535 |           0.034 |
 
-
-### Supplemental Table XX
-
-```{r}
-
-```
-
-<br/>
-
-
-### Supplemental Table XX
-
-```{r}
-
-```
+| Symbiont Model      | AIC    | BIC     | Nagelkerke's R2 |
+| :-------------------|-------:|--------:|----------------:|
+| Source * Transplant | 31.742 | 46.714  |           0.863 |
+| Source + Transplant | 94.949 | 104.930 |           0.038 |
+| Transplant          | 91.827 | 98.481  |           0.011 |
+| Source              | 91.317 | 97.971  |           0.027 |
 
 <br/>
 
 
 ### Supplemental Table XX
 
-```{r}
+*(These model outputs are taken from the plasticity analysis and just constructed into tables here)*
 
-```
+**Table SXX.** Linear model output assessing coral host gene expression plasticity. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
+
+|                             | Estimate | Std. Error | t value |     Pr(>t) |
+| :---------------------------|---------:|-----------:|--------:|:-------------|
+| *(Intercept) *              |  -0.6692 |     0.1731 |  -3.866 | 0.000460 *** |
+| Source (FR)                 |   1.1464 |     0.2448 |   4.683 | 4.17e-05 *** |
+| Source (NS)                 |   0.6369 |     0.2568 |   2.481 | 0.018072 *   |
+| Transplant (FR)             |   1.1503 |     0.2448 |   4.699 | 3.97e-05 *** |
+| Transplant (NS)             |   0.0778 |     0.2998 |   0.259 | 0.796787     |
+| Source (FR):Transplant (FR) |  -3.0430 |     0.3462 |  -8.789 | 2.22e-10 *** |
+| Source (NS):Transplant (FR) |  -0.2569 |     0.3548 |  -0.724 | 0.473857     |
+| Source (FR):Transplant (NS) |   0.1188 |     0.4580 |   0.259 | 0.796844     |
+| Source (NS):Transplant (NS) |  -1.5480 |     0.4133 |  -3.746 | 0.000647 *** |
+
+<br/>
+
+
+### Supplemental Table XX
+
+*(These model outputs are taken from the plasticity analysis and just constructed into tables here)*
+
+**Table SXX.** Linear model output assessing algal symbiont gene expression plasticity. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
+
+|                             | Estimate | Std. Error | t value |     Pr(>t) |
+| :---------------------------|---------:|-----------:|--------:|:-------------|
+| *(Intercept) *              |  -1.2588 |     0.1355 |  -9.290 | 1.80e-10 *** |
+| Source (FR)                 |   1.7762 |     0.1916 |   9.270 | 1.90e-10 *** |
+| Source (NS)                 |   1.5797 |     0.2142 |   7.374 | 2.66e-08 *** |
+| Transplant (FR)             |   1.5676 |     0.1916 |   8.181 | 3.06e-09 *** |
+| Transplant (NS)             |   2.0990 |     0.2347 |   8.944 | 4.29e-10 *** |
+| Source (FR):Transplant (FR) |  -2.9321 |     0.2710 | -10.820 | 4.72e-12 *** |
+| Source (NS):Transplant (FR) |  -1.0877 |     0.3030 |  -3.590 |  0.00112 **  |
+| Source (FR):Transplant (NS) |     *NA* |       *NA* |    *NA* |       *NA*   |
+| Source (NS):Transplant (NS) |  -3.0780 |     0.3319 |  -9.274 | 1.88e-10 *** |
+
+
+
 
 <br/>
 
