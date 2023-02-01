@@ -57,7 +57,7 @@ seed = 14 # seed to make results replicatable (our seed was 14)
 
 ## Colony survival {.tabset}
 
-### Figure 2
+### Figure 2A
 
 ```{r survival dataframe setup, message=FALSE, warning=FALSE}
 
@@ -77,32 +77,29 @@ sur.all <- survfit(sur.r ~ Transplant + Source, data = sur) # Computes an estima
 
 #### <span style="color: navy;">**Data Visualization**</span>
 
-```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width= 5.5, fig.height=6}
+```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width = 5.7, fig.height = 5.5}
 
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) # Creates the axis label for x axis
-legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
-legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n") # create line legends 
+surv_plot <- ggsurvplot(sur.all, data = sur,
+           palette = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"),
+           linetype = c(1, 2, 3, 1, 2, 3, 1, 2, 3),
+           censor = FALSE,
+           legend = c(0.35, 0.13),
+           legend.title = "",
+           legend.labs = c("BR to BR", "FR to BR", "NS to BR", "BR to FR", "FR to FR", "NS to FR", "BR to NS", "FR to NS", "NS to NS")) 
+surv_plot$plot <-  surv_plot$plot + scale_x_continuous(breaks = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) +
+  guides(col = guide_legend(ncol = 3)) +
+  labs(x = "Time (years)", y = "Fraction surviving") +
+  theme(plot.margin = margin(0.1, 0.7, 0.1, 0.1, "cm"))
 
-## save as PDF
-pdf("RT_figures/Figure2_Survival.pdf", width = 5.5, height = 5.7) # writes figure as a PDF to file
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
-legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
-legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
-dev.off() 
+surv_plot$plot
 
-## save as PNG
-png("RT_figures/Figure2_Survival.png", width = 5.5, height = 5.7, units = "in", res = 1200)
-plot(sur.all, col = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"), lwd = c(5, 5, 5, 4, 4, 4, 3, 3, 3), lty = c(1, 2, 3, 1, 2, 3, 1, 2, 3), xaxt = "n", xlab = "Time (Year)", ylab = "Fraction surviving")
-axis(side = 1, at = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015"))
-legend("bottomleft", col = c("#0072B2", "#009E73","#D55E00"), legend = c("FR","BR","NS"), title = "Transplant", lwd = 3, bty = "n")
-legend("bottomright", lty = c(2, 1, 3), legend = c("FR", "BR", "NS"), lwd = 3, title = "Source", bty = "n")
-dev.off() 
+## Save survival plots
+# ggsave("RT_figures/Figure2A_Survival.pdf", width = 5.7, height = 5.5, useDingbats = FALSE) # save as PDF
+# ggsave("RT_figures/Figure2A_Survival.png", width = 5.7, height = 5.5) # save as PNG
 
 ```
 
-**Figure 2.** Fraction surviving of *Siderastrea siderea* colonies across time (2011-2015) with respect to source location and transplanted location. Source location is represented by line type (FR = dashed; BR = solid; NS = dotted) and transplant location is denoted by colour (<span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>). 
+**Figure 2A.** Fraction of surviving *Siderastrea siderea* colonies through time (2011-2015) after reciprocal transplantation with respect to source location and transplanted location. Source location is represented by line type (FR = dashed; BR = solid; NS = dotted) and transplant location is denoted by color (<span style="color: #D55E00;">orange = NS [nearshore]</span>, <span style="color: #009E73;">green = BR [backreef]</span>, and <span style="color: #0072B2;">blue = FR [forereef]</span>). 
 
 <br/>
 
@@ -178,7 +175,8 @@ kable(surv_aov, digits = 3) %>%
 
 <br/>
 
-### Overall Calcification
+
+### Overall Calcification Statistics
 
 ```{r calc df setup, message=FALSE, warning=FALSE}
 
@@ -286,8 +284,7 @@ kable(RT.calc.tab, digits = 2) %>%
 
 ```
 
-
-#### <span style="color: navy;">**Data Visualization**</span>
+### Figure 2B
 
 ```{r calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
 
@@ -305,30 +302,12 @@ calc.avg.plot
 
 ```
 
-**Figure 3A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+**Figure 2B.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">orange = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
-
-```{r supplemental calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
-
-calc.avg2.plot <- ggplot(data = RT.calc) +
-  theme_bw() +
-  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  geom_point(aes(x = trans, y = rate, colour = source), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
-  geom_linerange(aes(x = trans, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
-  scale_color_manual("Source \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
-  xlab("Transplant Location") +
-  ggtitle("") +
-  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
-
-calc.avg2.plot
-
-```
-
-**Supplemental Figure 1A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+<br/>
 
 
 ### Calcification by Year
-
 
 #### <span style="color: navy;">**Model selection**</span>
 
@@ -444,39 +423,6 @@ calc.tp.plot
 
 **Figure 3B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
-
-```{r supplementalTP calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
-
-calc.tp2.plot <- ggplot(data = RT.calc.tp) +
-  theme_bw() +
-  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  geom_point(aes(x = TP, y = rate, colour = source), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
-  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
-  facet_wrap(~ trans) +
-  scale_color_manual("Source Location", values=c("#D55E00", "#009E73", "#0072B2")) +
-  xlab("Time (years)") +
-  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
-
-calc.tp2.plot
-
-```
-
-**Supplemental 1B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
-
-<br/>
-
-### Figure 3
-
-```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
-
-plot_grid(calc.avg.plot, calc.tp.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
-  draw_label("Source Location", size = 11, x = 0.695, y = 0.96)
-  ggsave("RT_figures/Figure3_Calcification.pdf", height = 3.3, width = 12, useDingbats = FALSE)
-  ggsave("RT_figures/Figure3_Calcification.png", height = 3.3, width = 12)
-
-```
-**Figure 2.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by source location (A) and at yearly intervals (B). Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
-
 <br/>
 
 
@@ -577,7 +523,48 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 <br/>
 
 
-### Supplemental Figure 1
+### Supplemental Figures
+
+#### First ()
+
+```{r supplemental calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
+
+calc.avg2.plot <- ggplot(data = RT.calc) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = trans, y = rate, colour = source), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
+  geom_linerange(aes(x = trans, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
+  scale_color_manual("Source \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Transplant Location") +
+  ggtitle("") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+calc.avg2.plot
+
+```
+
+**Supplemental Figure 1A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+
+
+### Second ()
+
+```{r supplementalTP calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+
+calc.tp2.plot <- ggplot(data = RT.calc.tp) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = TP, y = rate, colour = source), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
+  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
+  facet_wrap(~ trans) +
+  scale_color_manual("Source Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Time (years)") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+calc.tp2.plot
+
+```
+
+**Supplemental 1B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
 
 ```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
 
@@ -662,6 +649,20 @@ plot_grid(calc.avg2.plot, calc.tp2.plot, rel_widths = c(0.7,1.3), labels = c("A"
 
 <br/>
 
+
+## Final figures {.tabset}
+
+### Figure 2
+
+```{r}
+
+surv_plot$plot
+
+## Save survival plots
+# ggsave("RT_figures/Figure2A_Survival.pdf", width = 5.7, height = 5.5, useDingbats = FALSE) # save as PDF
+# ggsave("RT_figures/Figure2A_Survival.png", width = 5.7, height = 5.5) # save as PNG
+
+```
 
 
 ## <span style="color: navy;">*Session Information:*</span>
