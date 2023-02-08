@@ -16,10 +16,7 @@ This file contains all data manipulations, analyses, and visualizations used to 
 
 ```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
 
-library(ggplot2)
 library(lme4)
-library(tidyr)
-library(plyr)
 library(cowplot)
 library(kableExtra)
 library(tidyverse)
@@ -29,6 +26,9 @@ library(survival)
 library(survminer)
 library(finalfit)
 library(performance)
+library(gghalves)
+library(xts)
+library(FSA)
 
 
 ## Knit standards
@@ -53,6 +53,439 @@ seed = 14 # seed to make results replicatable (our seed was 14)
 
 
 ---
+
+
+
+## *In situ* temperature {.tabset}
+
+### Figure 1B
+
+```{r temp dataframe setup, message=FALSE, warning=FALSE}
+
+temp_long <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
+  mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
+  select(-Date.Time) %>% 
+  pivot_longer(Forereef:Nearshore, names_to = "reef", values_to = "temp") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+temp_wide <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
+  mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
+  select(-Date.Time) %>% 
+  drop_na()
+
+```
+
+Overall temperature observations from Nov 2014 - Oct 2015
+```{r}
+
+ggplot(data = temp_long, aes(x = date_time, y = temp, colour = reef, group = reef)) +
+  geom_line() +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = c(0.8, 0.2)) +
+  ylab("Temperature (°C)")
+
+```
+
+### Overall temperatures
+
+Mean +/- SE and distribution across reefs
+```{r overall temp plot}
+
+temp_plot <- ggplot(data = temp_long, aes(x = reef, y = temp, fill = reef, colour = reef, group = reef)) +
+  geom_half_violin(side = "r") +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1), geom = "errorbar", width = 0, size = 1, colour = "gray15") +
+  stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+```
+
+```{r overall temp stat}
+
+### Checking the linear model for overall temps:
+temp_lm <- lm((temp) ~ reef, data = temp_long)
+#check_model(temp_lm)
+check_heteroscedasticity(temp_lm) # no good
+check_normality(temp_lm) # no good
+## transforming the data (log, sqrt, etc., does not improve the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+temp_kw <- kruskal.test(temp ~ reef, data = temp_long)
+temp_pval <- substitute(italic(P[reef])==p, list(p = format(temp_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+temp_dt <- dunnTest(temp ~ reef, data = temp_long, method = "bonferroni")
+temp_FN_pval <- substitute(italic(P[FR-NS])==p, list(p = format(temp_dt[["res"]][["P.adj"]][3], digits = 2))) # save the p-value for plotting
+temp_NB_pval <- substitute(italic(P[NS-BR])==p, list(p = format(temp_dt[["res"]][["P.adj"]][2], digits = 2))) # save the p-value for plotting
+temp_FB_pval <- substitute(italic(P[FR-BR])==p, list(p = format(temp_dt[["res"]][["P.adj"]][1], digits = 2))) # save the p-value for plotting
+
+```
+
+
+```{r overall temp plot with stats, fig.height=4, fig.width=4}
+
+temp_plot +
+  annotate("text", x = 1, y = 24.8, label = deparse(temp_pval), parse = TRUE, size = 3) +
+  annotate("text", x = 3.0, y = 33.0, label = deparse(temp_FN_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.02, y = 32.6, label = deparse(temp_FB_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.0, y = 32.2, label = deparse(temp_NB_pval), parse = TRUE, size = 2.5)
+
+
+ggsave("RT_figures/Overall_temp.pdf", height = 4, width = 4, useDingbats = FALSE) # save plot
+
+```
+
+<br/>
+
+### Mean temperatures
+
+```{r temp df to xts}
+
+## convert the temp data to xts for manipulation with apply.xxx
+temp_xts <- xts(temp_wide[,-4], order.by = temp_wide[,4])
+
+```
+
+Means (monthly, weekly, daily)
+```{r temp mean plots}
+
+## Monthly Mean
+monthly_mean <- data.frame(apply.monthly(temp_xts, colMeans, na.rm = TRUE)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "mean_temp") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+month_mean_plot <- ggplot(data = monthly_mean, aes(x = reef, y = mean_temp, fill = reef, colour = reef)) +
+  labs(title = "Monthly Mean: Nov 2014 - Oct 2015",
+              subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.7) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+
+
+## Weekly Mean
+weekly_mean <- data.frame(apply.weekly(temp_xts, colMeans, na.rm = TRUE)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "mean_temp") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+week_mean_plot <- ggplot(data = weekly_mean, aes(x = reef, y = mean_temp, fill = reef, colour = reef)) +
+  labs(title = "Weekly Mean: Nov 2014 - Oct 2015",
+              subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.7) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+
+
+## Daily Mean
+daily_mean <- data.frame(apply.daily(temp_xts, colMeans, na.rm = TRUE)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "mean_temp") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+day_mean_plot <- ggplot(data = daily_mean, aes(x = reef, y = mean_temp, fill = reef, colour = reef)) +
+  labs(title = "Daily Mean: Nov 2014 - Oct 2015",
+              subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.3) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+```
+
+
+```{r stats of daily mean temps}
+
+### Checking the linear model for daily mean temps:
+day_mean_lm <- lm((mean_temp) ~ reef, data = daily_mean)
+#check_model(day_mean_lm)
+check_heteroscedasticity(day_mean_lm) # no good
+check_normality(day_mean_lm) # no good
+## transforming the data (log, sqrt, etc., improves the heteroscedasticity but not the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+day_mean_kw <- kruskal.test((mean_temp) ~ reef, data = daily_mean)
+day_mean_pval <- substitute(italic(P[reef])==p, list(p = format(day_mean_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+day_mean_dt <- dunnTest(mean_temp ~ reef, data = daily_mean, method = "bonferroni")
+day_mean_FN_pval <- substitute(italic(P[FR-NS])==p, list(p = format(day_mean_dt[["res"]][["P.adj"]][3], digits = 2))) # save the p-value for plotting
+day_mean_NB_pval <- substitute(italic(P[NS-BR])==p, list(p = format(day_mean_dt[["res"]][["P.adj"]][2], digits = 2))) # save the p-value for plotting
+day_mean_FB_pval <- substitute(italic(P[FR-BR])==p, list(p = format(day_mean_dt[["res"]][["P.adj"]][1], digits = 2))) # save the p-value for plotting
+
+
+```
+
+```{r stats of weekly mean temps}
+
+### Checking the linear model for weekly mean temps:
+week_mean_lm <- lm((mean_temp) ~ reef, data = weekly_mean)
+#check_model(week_mean_lm)
+check_heteroscedasticity(week_mean_lm) # okay!
+check_normality(week_mean_lm) # no good
+## transforming the data (log, sqrt, etc., does not improve the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+week_mean_kw <- kruskal.test(mean_temp ~ reef, data = weekly_mean)
+week_mean_pval <- substitute(italic(P[reef])==p, list(p = format(week_mean_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+week_mean_dt <- dunnTest(mean_temp ~ reef, data = weekly_mean, method = "bonferroni")
+
+```
+
+```{r stats of monthly mean temps}
+
+### Checking the linear model for monthly mean temps:
+month_mean_lm <- lm((mean_temp) ~ reef, data = monthly_mean)
+#check_model(month_mean_lm)
+check_heteroscedasticity(month_mean_lm) # okay!
+check_normality(month_mean_lm) # no good
+## transforming the data (log, sqrt, etc., does not improve the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+month_mean_kw <- kruskal.test(mean_temp ~ reef, data = monthly_mean)
+month_mean_pval <- substitute(italic(P[reef])==p, list(p = format(month_mean_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+month_mean_dt <- dunnTest(mean_temp ~ reef, data = monthly_mean, method = "bonferroni")
+
+```
+
+
+```{r full mean plots, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
+
+## Add the stats:
+month_mean_stat_plot <- month_mean_plot +
+  annotate("text", x = 1, y = 26, label = deparse(month_mean_pval), parse = TRUE, size = 3)
+
+week_mean_stat_plot <- week_mean_plot +
+  annotate("text", x = 1, y = 26, label = deparse(week_mean_pval), parse = TRUE, size = 3)
+
+day_mean_stat_plot <- day_mean_plot +
+  annotate("text", x = 1, y = 25.5, label = deparse(day_mean_pval), parse = TRUE, size = 3) +
+  annotate("text", x = 3.75, y = 32, label = deparse(day_mean_FN_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.83, y = 31.7, label = deparse(day_mean_FB_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.77, y = 31.4, label = deparse(day_mean_NB_pval), parse = TRUE, size = 2.5) +
+  coord_cartesian(x = c(1, 3.7))
+
+
+## Combine all mean plots together for visual comparison
+ggarrange(month_mean_stat_plot, week_mean_stat_plot, day_mean_stat_plot, ncol = 3)
+ggsave("RT_figures/Mean_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
+
+```
+
+<br/>
+
+### Temperature ranges
+
+Ranges (monthly, weekly, daily)
+```{r temp range plots}
+
+## a column range function to apply across time ranges below
+colRange <- function(x) sapply(x, FUN = function(x) (max(x, na.rm = TRUE) - min(x, na.rm = TRUE)))
+
+
+## Monthly Range
+monthly_range <- data.frame(apply.monthly(temp_xts, colRange)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "temp_range") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+month_range_plot <- ggplot(data = monthly_range, aes(x = reef, y = temp_range, fill = reef, colour = reef)) +
+  labs(title = "Monthly Range: Nov 2014 - Oct 2015",
+       subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.7) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+
+
+## Weekly Range
+weekly_range <- data.frame(apply.weekly(temp_xts, colRange)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "temp_range") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+week_range_plot <- ggplot(data = weekly_range, aes(x = reef, y = temp_range, fill = reef, colour = reef)) +
+  labs(title = "Weekly Range: Nov 2014 - Oct 2015",
+       subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.7, binwidth = 1/5) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+
+
+## Daily Range
+daily_range <- data.frame(apply.daily(temp_xts, colRange)) %>% # monthly mean SST 
+  rownames_to_column(var = "date") %>% 
+  pivot_longer(-date, names_to = "reef", values_to = "temp_range") %>% 
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+
+day_range_plot <- ggplot(data = daily_range, aes(x = reef, y = temp_range, fill = reef, colour = reef)) +
+  labs(title = "Daily Range: Nov 2014 - Oct 2015",
+       subtitle = "Temp collected every 30 min") +
+  geom_half_violin(side = "r", alpha = 0.3, colour = NA) +
+  geom_half_dotplot(side = "r", dotsize = 0.3, binwidth = 1/10) +
+  #stat_summary(fun = "mean", size = 0.5, colour = "gray15") +
+  scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  scale_fill_manual(values = c("#D55E00","#009E73","#0072B2")) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = "none") +
+  guides(fill = guide_legend(override.aes = list(fill = NA)),
+         color = guide_legend(override.aes = list(linetype = 0, colour = c("#D55E00","#009E73","#0072B2")))) +
+  ylab("Temperature (°C)")
+
+```
+
+
+```{r stats of daily range temps}
+
+### Checking the linear model for daily range temps:
+day_range_lm <- lm((temp_range) ~ reef, data = daily_range)
+#check_model(day_range_lm)
+check_heteroscedasticity(day_range_lm) # no good
+check_normality(day_range_lm) # no good
+## transforming the data (log, sqrt, etc., improves the heteroscedasticity but not the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+day_range_kw <- kruskal.test(temp_range ~ reef, data = daily_range)
+day_range_pval <- substitute(italic(P[reef])==p, list(p = format(day_range_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+day_range_dt <- dunnTest(temp_range ~ reef, data = daily_range, method = "bonferroni")
+day_range_FN_pval <- substitute(italic(P[FR-NS])==p, list(p = format(day_range_dt[["res"]][["P.adj"]][3], digits = 2))) # save the p-value for plotting
+day_range_NB_pval <- substitute(italic(P[NS-BR])==p, list(p = format(day_range_dt[["res"]][["P.adj"]][2], digits = 2))) # save the p-value for plotting
+day_range_FB_pval <- substitute(italic(P[FR-BR])==p, list(p = format(day_range_dt[["res"]][["P.adj"]][1], digits = 2))) # save the p-value for plotting
+
+```
+
+```{r stats of weekly range temps}
+
+### Checking the linear model for weekly range temps:
+week_range_lm <- lm((temp_range) ~ reef, data = weekly_range)
+#check_model(week_range_lm)
+check_heteroscedasticity(week_range_lm) # okay!
+check_normality(week_range_lm) # no good
+## transforming the data (log, sqrt, etc., does not improve the distribution of the residuals)
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+week_range_kw <- kruskal.test(temp_range ~ reef, data = weekly_range)
+week_range_pval <- substitute(italic(P[reef])==p, list(p = format(week_range_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+week_range_dt <- dunnTest(temp_range ~ reef, data = weekly_range, method = "bonferroni")
+week_range_FN_pval <- substitute(italic(P[FR-NS])==p, list(p = format(week_range_dt[["res"]][["P.adj"]][3], digits = 2))) # save the p-value for plotting
+week_range_NB_pval <- substitute(italic(P[NS-BR])==p, list(p = format(week_range_dt[["res"]][["P.adj"]][2], digits = 2))) # save the p-value for plotting
+week_range_FB_pval <- substitute(italic(P[FR-BR])==p, list(p = format(week_range_dt[["res"]][["P.adj"]][1], digits = 2))) # save the p-value for plotting
+
+```
+
+```{r stats of monthly range temps}
+
+### Checking the linear model for monthly range temps:
+month_range_lm <- lm((temp_range) ~ reef, data = monthly_range)
+#check_model(month_range_lm)
+check_heteroscedasticity(month_range_lm) # okay!
+check_normality(month_range_lm) # okay!
+## data are good! But to keep consistent, I am moving forward with the same stat tests as other metrics
+
+
+## Moving forward with Kruskal-Wallis test: non-parametric testing of distributions of samples
+month_range_kw <- kruskal.test(temp_range ~ reef, data = monthly_range)
+month_range_pval <- substitute(italic(P[reef])==p, list(p = format(month_range_kw[["p.value"]], digits = 2))) # save the p-value for plotting
+
+### Pairwise comparisons of the reef environments using Dunn's Test for Multiple Comparisons with bonferroni p adjustment
+month_range_dt <- dunnTest(temp_range ~ reef, data = monthly_range, method = "bonferroni")
+month_range_FN_pval <- substitute(italic(P[FR-NS])==p, list(p = format(month_range_dt[["res"]][["P.adj"]][3], digits = 2))) # save the p-value for plotting
+month_range_NB_pval <- substitute(italic(P[NS-BR])==p, list(p = format(month_range_dt[["res"]][["P.adj"]][2], digits = 2))) # save the p-value for plotting
+month_range_FB_pval <- substitute(italic(P[FR-BR])==p, list(p = format(month_range_dt[["res"]][["P.adj"]][1], digits = 2))) # save the p-value for plotting
+
+```
+
+
+```{r full range plots, fig.height=4, fig.width=12, message=FALSE, warning=FALSE}
+
+## Add the stats:
+month_range_stat_plot <- month_range_plot +
+  annotate("text", x = 0.95, y = 1.8, label = deparse(month_range_pval), parse = TRUE, size = 3) +
+  annotate("text", x = 3.22, y = 5.2, label = deparse(month_range_FN_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.28, y = 5.6, label = deparse(month_range_NB_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.26, y = 5.4, label = deparse(month_range_FB_pval), parse = TRUE, size = 2.5)
+
+week_range_stat_plot <- week_range_plot +
+  annotate("text", x = 0.95, y = 0.1, label = deparse(week_range_pval), parse = TRUE, size = 3) +
+  annotate("text", x = 3.62, y = 5.4, label = deparse(week_range_FN_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.66, y = 6, label = deparse(week_range_NB_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.62, y = 5.7, label = deparse(week_range_FB_pval), parse = TRUE, size = 2.5) +
+  coord_cartesian(x = c(1, 3.6))
+
+day_range_stat_plot <- day_range_plot +
+  annotate("text", x = 0.95, y = 0.1, label = deparse(day_range_pval), parse = TRUE, size = 3) +
+  annotate("text", x = 3.9, y = 3.2, label = deparse(day_range_FN_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.97, y = 3.5, label = deparse(day_range_NB_pval), parse = TRUE, size = 2.5) +
+  annotate("text", x = 3.93, y = 3.35, label = deparse(day_range_FB_pval), parse = TRUE, size = 2.5) +
+  coord_cartesian(x = c(1, 4))
+
+
+## Combine all range plots together for visual comparison
+ggarrange(month_range_stat_plot, week_range_stat_plot, day_range_stat_plot, ncol = 3)
+ggsave("RT_figures/Range_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
+
+```
+
+
+<br/>
+<br/>
 
 
 ## Colony survival {.tabset}
@@ -382,8 +815,7 @@ RT.calc.tp <- read.csv("RT_output/RT_TP_calc_boot.csv", header = TRUE) # new dat
 RT.calc.tp$trans <- factor(RT.calc.tp$trans, levels = c("NS", "BR", "FR")) # relevel transplant location factors
 RT.calc.tp$source <- factor(RT.calc.tp$source, levels = c("NS", "BR", "FR")) # relevel source location factors
 RT.calc.tp$TP <- factor(RT.calc.tp$TP) # make Year a factor
-RT.calc.tp$TP <- revalue(RT.calc.tp$TP, c("y23" = "2013", "y34" = "2014", "y45" = "2015")) # redefine Year factors to reflect year measured
-
+levels(RT.calc.tp$TP) <- list("2013" = "y23", "2014" = "y34", "2015" = "y45")
 RT.calc.tp$Treatment <- paste(RT.calc.tp$source, RT.calc.tp$trans, sep = " to ") # make a 'treatment' column
 RT.calc.tp$Treatment <- paste(RT.calc.tp$Treatment, RT.calc.tp$TP, sep = " in ") # make a 'treatment' column
 
