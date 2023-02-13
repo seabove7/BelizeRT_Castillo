@@ -66,7 +66,7 @@ temp_long <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>%
   mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
   select(-Date.Time) %>% 
   pivot_longer(Forereef:Nearshore, names_to = "reef", values_to = "temp") %>% 
-  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef")))
+  mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef"))) 
 
 temp_wide <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
   mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
@@ -524,13 +524,17 @@ ggsave("RT_figures/Range_temp.pdf", height = 4, width = 12, useDingbats = FALSE)
 
 ```{r survival dataframe setup, message=FALSE, warning=FALSE}
 
-sur <- read.csv("RT_data/RT_survival.csv") # Read in survival data (0 = living, 1 = mortality event under 'Status')
+sur <- read.csv("RT_data/RT_survival.csv") %>% # Read in survival data (0 = living, 1 = mortality event under 'Status')
+  mutate(Source = fct_relevel(Source, levels = c("NS", "BR", "FR")), # relevel source to be by distance from land
+         Transplant = fct_relevel(Transplant, levels = c("NS", "BR", "FR"))) # relevel transplant to be by distance from land
+
+
 sur$Colony <- as.factor(sur$Colony) # make colony ID a factor
 
 sur.r <- Surv(sur$Days, sur$Status) # Creates your survival dataframe
 
 # This produces the event data for each grouping (this case transplant) (% surviving at each Day and the CI with it)
-sur.all <- survfit(sur.r ~ Transplant + Source, data = sur) # Computes an estimate of a survival curve based on transplantation using Kaplan-Meier; this will also be used for plotting
+sur.all <- survfit(sur.r ~ Source + Transplant, data = sur) # Computes an estimate of a survival curve based on transplantation using Kaplan-Meier; this will also be used for plotting
 #sur.all # view output to see mortality event and sample size summary stats
 #summary(sur.all)
   
@@ -543,11 +547,11 @@ sur.all <- survfit(sur.r ~ Transplant + Source, data = sur) # Computes an estima
 ```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width = 5.7, fig.height = 5.5}
 
 surv_plot <- ggsurvplot(sur.all, data = sur,
-           palette = c("#0072B2", "#0072B2","#0072B2","#009E73","#009E73","#009E73","#D55E00","#D55E00","#D55E00"),
-           linetype = c(1, 2, 3, 1, 2, 3, 1, 2, 3),
+           palette = c("#D55E00", "#0072B2", "#009E73", "#D55E00", "#0072B2", "#009E73", "#D55E00", "#0072B2", "#009E73"),
+           linetype = c(1, 1, 1, 2, 2, 2, 3, 3, 3),
            censor = FALSE,
            legend.title = "",
-           legend.labs = c("BR to BR", "FR to BR", "NS to BR", "BR to FR", "FR to FR", "NS to FR", "BR to NS", "FR to NS", "NS to NS")) 
+           legend.labs = c("NS to NS", "NS to BR", "NS to FR", "BR to NS", "BR to BR", "BR to FR", "FR to NS", "FR to BR", "FR to FR")) 
 surv_plot$plot <-  surv_plot$plot + scale_x_continuous(breaks = c(0, 365, 711, 1088, 1445), labels = c("2011", "2012", "2013", "2014", "2015")) +
   guides(col = guide_legend(ncol = 3)) +
   labs(x = "Time (years)", y = "Fraction surviving") +
