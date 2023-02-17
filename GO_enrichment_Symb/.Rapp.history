@@ -1,0 +1,593 @@
+setwd("/Users/daviessw/Dropbox/UNC/RT_Paper/2020_Final_RT/Sym_GE/Sym_GO")
+input="trans_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,
+level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="trans_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="trans_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="BP" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+# Edit these to match your data file names: #
+input="source_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="BP" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+# Plotting results#
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,
+perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already
+largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes
+smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)#
+# do
+# Edit these to match your data file names: #
+input="source_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")#
+# Calculating stats. It takes ~3 min for MF and BP. Do not rerun it if you just want to replot the data with different cutoffs, go straight to gomwuPlot. If you change any of the numeric values below, delete the files that were generated in previos runs first.#
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+# Plotting results#
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="BP" # either MF, or BP, or CC#
+source("gomwu.functions.R")#
+# Calculating stats. It takes ~3 min for MF and BP. Do not rerun it if you just want to replot the data with different cutoffs, go straight to gomwuPlot. If you change any of the numeric values below, delete the files that were generated in previos runs first.#
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)#
+# do not continue if the printout shows that no GO terms pass 10% FDR.
+goDivision="MF" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+input="trans_sym_BRvsFR_GO_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")#
+# Calculating stats. It takes ~3 min for MF and BP. Do not rerun it if you just want to replot the data with different cutoffs, go straight to gomwuPlot. If you change any of the numeric values below, delete the files that were generated in previos runs first.#
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+input="trans_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")#
+# Calculating stats. It takes ~3 min for MF and BP. Do not rerun it if you just want to replot the data with different cutoffs, go straight to gomwuPlot. If you change any of the numeric values below, delete the files that were generated in previos runs first.#
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+input="trans_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+input="trans_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")#
+# Calculating stats. It takes ~3 min for MF and BP. Do not rerun it if you just want to replot the data with different cutoffs, go straight to gomwuPlot. If you change any of the numeric values below, delete the files that were generated in previos runs first.#
+gomwuStats(input, goDatabase, goAnnotations, goDivision,#
+	perlPath="/usr/bin/perl", # replace with full path to perl executable if it is not in your system's PATH already#
+	largest=0.1,  # a GO category will not be considered if it contains more than this fraction of the total number of genes#
+	smallest=5,   # a GO category should contain at least this many genes to be considered#
+	clusterCutHeight=0.25 # threshold for merging similar (gene-sharing) terms. #
+)
+getwd()
+setwd("/Users/daviessw/Dropbox/UNC/RT_Paper/2022_Final_RT/GE/Sym_GO")
+setwd("/Users/daviessw/Dropbox/UNC/RT_Paper/2022_Final_RT/GE/Sym_GO")#
+#
+# Edit these to match your data file names: #
+input="trans_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="trans_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="BP" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="trans_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_BRvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="MF" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+head(input)
+head(goAnnotations)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_NSvsBR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="BP" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="CC" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+input="source_sym_NSvsFR_GO.csv" # two columns of comma-separated values: gene id, continuous measure of significance. To perform standard GO enrichment analysis based on Fisher's exact test, use binary measure (0 or 1, i.e., either sgnificant or not).#
+goAnnotations="sym_feb_iso2go.tab" # two-column, tab-delimited, one line per gene, multiple GO terms separated by semicolon. If you have multiple lines per gene, use nrify_GOtable.pl prior to running this script.#
+goDatabase="go.obo" # download from http://www.geneontology.org/GO.downloads.ontology.shtml#
+goDivision="CC" # either MF, or BP, or CC#
+source("gomwu.functions.R")
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="BP" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)
+goDivision="MF" # either MF, or BP, or CC
+gomwuPlot(input,goAnnotations,goDivision,absValue=0.5,#
+	# absValue=-log(0.5,10),  # genes with the measure value exceeding this will be counted as "good genes". Specify absValue=0.5 if you are doing Fisher's exact test for standard GO enrichment.#
+	level1=0.1, # FDR threshold for plotting. Specify level1=1 to plot all GO categories containing genes exceeding the absValue.#
+	level2=0.05, # FDR cutoff to print in regular (not italic) font.#
+	level3=0.01, # FDR cutoff to print in large bold font.#
+	txtsize=1,    # decrease to fit more on one page, or increase (after rescaling the plot so the tree fits the text) for better "word cloud" effect#
+	treeHeight=0.5 # height of the hierarchical clustering tree#
+)

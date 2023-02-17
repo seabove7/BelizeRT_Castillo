@@ -131,7 +131,7 @@ pca_s$source=conditions$source
 head(pca_s)
 
 cbPalette <- c("#009E73", "#0072B2", "#D55E00")
-pdf("PCA_Host_allgenes_rlog.pdf",height=5,width=6)
+#pdf("PCA_Host_allgenes_rlog.pdf",height=5,width=6)
 ggplot(pca_s, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   geom_point(size=3) +
   #  geom_text_repel(aes(label=Samples)) +
@@ -142,7 +142,7 @@ ggplot(pca_s, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   # geom_polygon(alpha=.2)+
   xlab(paste0("PC1: ",pc1v,"% variance")) +
   ylab(paste0("PC2: ",pc2v,"% variance")) 
-dev.off()
+#dev.off()
 
 adonis(pca_s[,1:2] ~ trans+source, data = pca_s, method='eu', na.rm = TRUE)
 #Permutation: free
@@ -157,7 +157,7 @@ adonis(pca_s[,1:2] ~ trans+source, data = pca_s, method='eu', na.rm = TRUE)
 #Also try the imbedded plotPCA method within DESeq2
 pcaData <- DESeq2::plotPCA(rlog, intgroup = c("source", "trans"), returnData = TRUE) # this one will only pull PC 1&2
 cbPalette <- c("#009E73", "#0072B2", "#D55E00")
-pdf("PCA_Host_allgenes_rlog_plotPCA.pdf",height=5,width=6)
+#pdf("PCA_Host_allgenes_rlog_plotPCA.pdf",height=5,width=6)
 ggplot(pcaData, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   geom_point(size=3) +
   #  geom_text_repel(aes(label=Samples)) +
@@ -168,7 +168,7 @@ ggplot(pcaData, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   # geom_polygon(alpha=.2)+
   #xlab(paste0("PC1: ",pc1v,"% variance")) +
   #ylab(paste0("PC2: ",pc2v,"% variance")) 
-dev.off()
+#dev.off()
 
 ##try vst normalization
 vst_norm=vst(dds, blind=TRUE) 
@@ -190,7 +190,7 @@ pca_s$source=conditions$source
 head(pca_s)
 
 cbPalette <- c("#009E73", "#0072B2", "#D55E00")
-pdf("PCA_Host_allgenes_vst.pdf",height=5,width=6)
+#pdf("PCA_Host_allgenes_vst.pdf",height=5,width=6)
 ggplot(pca_s, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   geom_point(size=3) +
   #  geom_text_repel(aes(label=Samples)) +
@@ -201,11 +201,11 @@ ggplot(pca_s, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   # geom_polygon(alpha=.2)+
   xlab(paste0("PC1: ",pc1v,"% variance")) +
   ylab(paste0("PC2: ",pc2v,"% variance")) 
-dev.off()
+#dev.off()
 
 pcaData <- DESeq2::plotPCA(vst_norm, intgroup = c("source", "trans"), returnData = TRUE) # this one will only pull PC 1&2
 cbPalette <- c("#009E73", "#0072B2", "#D55E00")
-pdf("PCA_Host_allgenes_vst_plotPCA.pdf",height=5,width=6)
+#pdf("PCA_Host_allgenes_vst_plotPCA.pdf",height=5,width=6)
 ggplot(pcaData, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
   geom_point(size=3) +
   #  geom_text_repel(aes(label=Samples)) +
@@ -216,7 +216,7 @@ ggplot(pcaData, aes(PC1, PC2, color = trans, pch=source, group=trans)) +
 # geom_polygon(alpha=.2)+
 #xlab(paste0("PC1: ",pc1v,"% variance")) +
 #ylab(paste0("PC2: ",pc2v,"% variance")) 
-dev.off()
+#dev.off()
 
 ##looks the same as rlog- stick with rlog
 
@@ -590,13 +590,14 @@ my_colour = list(
   Transplant = c(NS = "#D55E00", BR = "#009E73", FR = "#0072B2"))
 
 # big heat map of all annotated genes
-pdf("NS_BR_DEGS_annotated.pdf",height=8,width=10, onefile = F)
+pdf("Figures/Supplemental_Figures/For_edits/FigS4a_NS_BR_DEGS_annotated.pdf",height=8,width=10, onefile = F)
 pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA")
 dev.off()
+
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_NSBR_trans.pdf",height=6,width=4, onefile=F)
+#pdf("Figures/Supplemental_Figures/For_edits/heatmap_NSBR_trans.pdf",height=6,width=4, onefile=F)
 pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
-dev.off()
+#dev.off()
 ####################################################################################################
 #####trans NS versus FR
 head(rldpvals)
@@ -636,13 +637,13 @@ my_sample_col <- data.frame(Source = c("FR", "NS", "NS","BR", "FR","NS", "BR", "
 row.names(my_sample_col)= colnames(anno)
 
 # big heat map of all annotated genes
-pdf("NS_FR_DEGS_annotated.pdf",height=8,width=10, onefile=F)
+pdf("Figures/Supplemental_Figures/For_edits/FigS4b_NS_FR_DEGS_annotated.pdf",height=8,width=10, onefile=F)
 pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA")
 dev.off()
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_NSFR_trans.pdf",height=6,width=4, onefile=F)
+#pdf("heatmap_NSFR_trans.pdf",height=6,width=4, onefile=F)
 pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
-dev.off()
+#dev.off()
 
 ####################################################################################################
 #####trans BR versus FR
@@ -684,13 +685,13 @@ my_sample_col <- data.frame(Source = c("FR","NS","FR","NS","BR","FR","NS","FR","
 row.names(my_sample_col)= colnames(anno)
 
 # big heat map of all annotated genes
-pdf("BR_FR_DEGS_annotated.pdf",height=20,width=10, onefile=F)
+pdf("Figures/Supplemental_Figures/For_edits/FigS4c_BR_FR_DEGS_annotated.pdf",height=20,width=10, onefile=F)
 pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA")
 dev.off()
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_BRFR_trans.pdf",height=6,width=4, onefile=F)
+#pdf("heatmap_BRFR_trans.pdf",height=6,width=4, onefile=F)
 pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
-dev.off()
+#dev.off()
 ################################################################################################################
 #####look at the DEG for source NS versus FR
 head(rldpvals)
@@ -797,25 +798,25 @@ length(pdegs1)
 
 ###do UP, DOWN, ALL
 candidates=list("NSvsFRdown"=pSource1down, "NSvsBRdown"=pSource2down, "BRvsFRdown"=pSource3down)
-quartz()
-prettyvenn=venn.diagram(
-  x = candidates,
-  filename=NULL,
-  col = "transparent",
-  fill = c("coral2", "forestgreen", "royalblue1"),
-  alpha = 0.5,
-  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
-  cex = 2.5,
-  fontfamily = "sans",
-  fontface = "bold",
-  cat.default.pos = "text",
-  cat.col = c("darkred", "darkgreen", "blue4"),
-  cat.cex = 2.5,
-  cat.fontfamily = "sans",
-  cat.dist = c(0.08, 0.08, 0.03),
-  cat.pos = 1
-);
-grid.draw(prettyvenn)
+#quartz()
+#prettyvenn=venn.diagram(
+#  x = candidates,
+#  filename=NULL,
+#  col = "transparent",
+#  fill = c("coral2", "forestgreen", "royalblue1"),
+#  alpha = 0.5,
+#  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
+#  cex = 2.5,
+#  fontfamily = "sans",
+#  fontface = "bold",
+#  cat.default.pos = "text",
+#  cat.col = c("darkred", "darkgreen", "blue4"),
+#  cat.cex = 2.5,
+#  cat.fontfamily = "sans",
+#  cat.dist = c(0.08, 0.08, 0.03),
+#  cat.pos = 1
+#);
+#grid.draw(prettyvenn)
 
 # VENN Diagram to include both up and down regulated genes in common for transplant
 head(resTrans1)
@@ -859,25 +860,25 @@ length(pdegs1)
 
 ###do UP, DOWN, ALL
 candidates=list("NSvsFRup"=pTrans1up, "NSvsBRup"=pTrans2up, "BRvsFRup"=pTrans3up)
-quartz()
-prettyvenn=venn.diagram(
-  x = candidates,
-  filename=NULL,
-  col = "transparent",
-  fill = c("coral2", "forestgreen", "royalblue1"),
-  alpha = 0.5,
-  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
-  cex = 2.5,
-  fontfamily = "sans",
-  fontface = "bold",
-  cat.default.pos = "text",
-  cat.col = c("darkred", "darkgreen", "blue4"),
-  cat.cex = 2.5,
-  cat.fontfamily = "sans",
-  cat.dist = c(0.08, 0.08, 0.03),
-  cat.pos = 1
-);
-grid.draw(prettyvenn)
+#quartz()
+#prettyvenn=venn.diagram(
+#  x = candidates,
+#  filename=NULL,
+#  col = "transparent",
+#  fill = c("coral2", "forestgreen", "royalblue1"),
+#  alpha = 0.5,
+#  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
+#  cex = 2.5,
+#  fontfamily = "sans",
+#  fontface = "bold",
+#  cat.default.pos = "text",
+#  cat.col = c("darkred", "darkgreen", "blue4"),
+#  cat.cex = 2.5,
+#  cat.fontfamily = "sans",
+#  cat.dist = c(0.08, 0.08, 0.03),
+#  cat.pos = 1
+#);
+#grid.draw(prettyvenn)
 
 
 # CANONICAL CORRESPONDENCE ANALYSIS OF GENE EXPRESSION based on raw counts
@@ -992,7 +993,7 @@ shape_source <- ifelse(conditions$source == 'FR', 15,
 shape_trans <- ifelse(conditions$trans == 'FR', 15,
                        ifelse(conditions$trans == 'NS', 16, 17))
 
-pdf("CCA_Host_trans_final.pdf",height=5,width=5, useDingbats=FALSE)
+pdf("Figures/Supplemental_Figures/For_edits/Fig3b_CCA_Host_trans_final.pdf",height=5,width=5, useDingbats=FALSE)
 plot(ccaa,choices=c(1,2),display="sites", type="n", ylab="CCA2 (25.9%)", xlab="CCA1 (29.1%)", xlim=range(-2.5,3), ylim=range(-2.5,2.1))
 points(ccaa,choices=c(1,2),col=pt_colors, pch=shape_trans)
 ordispider(ccaa,groups=conditions$trans,col="grey50")
@@ -1007,7 +1008,7 @@ legend("bottomleft", legend = c("NS", "BR", "FR"), col = c("grey","grey","grey")
        inset = c(0.13, 0.005), title="Transplant")
 dev.off()
 
-pdf("CCA_host_source_final.pdf",height=5,width=5, useDingbats=FALSE)
+pdf("Figures/Supplemental_Figures/For_edits/Fig3a_CCA_host_source_final.pdf",height=5,width=5, useDingbats=FALSE)
 plot(ccaa,choices=c(1,2),display="sites",type="n",  ylab="CCA2 (25.9%)", xlab="CCA1 (29.1%)", xlim=range(-2.5,3), ylim=range(-2.5,2.1))
 points(ccaa,choices=c(1,2),col=pt_colors,pch=shape_trans)
 ordispider(ccaa,groups=conditions$source,col="grey50")
@@ -1041,8 +1042,8 @@ anova(ccaa,by = "term")
 ## -------------------------------------------------------- Colleen's additions below for plasticity:
 set.seed(16)
 #### I decided it will be cleaner if you source these functions from another script so you will need to do that now! Just save it to your working directory or add the path to it in the source function:
-source("CCAplast_function.R")
-quartz()
+source("Code/CCAplast_function.R")
+#quartz()
 screeplot(ccaa)
 ## create dataframe of CCAs with experimental conditions
 ccaa_full <- data.frame(conditions,
@@ -1172,7 +1173,7 @@ plast_boot$source <- relevel(plast_boot$source, ref = "NS")
 plast_boot$trans <- relevel(plast_boot$trans, ref = "NS")
 
 # plot of plasticity (host)
-pdf("CCA_host_plasticity_CI.pdf",height=3,width=3, useDingbats=FALSE)
+
 ggplot(data = plast_boot, aes(x = trans, colour = source)) +
   theme_bw() +
   theme(panel.grid = element_blank(), legend.position = "top") +
@@ -1182,7 +1183,7 @@ ggplot(data = plast_boot, aes(x = trans, colour = source)) +
   geom_point(aes(y = estimate), position = position_dodge(width = 0.3), size = 2) +
   scale_color_manual("Source", values = c("#D55E00", "#009E73", "#0072B2")) +
   labs(x = "Transplant Location", y = "Plasticity")
-dev.off()
+ggsave("Figures/Supplemental_Figures/For_edits/Fig3c_CCA_host_plasticity_CI.pdf", height = 3, width = 3, useDingbats = FALSE)
 
 ccaa_plast_sum <- ccaa_plast %>%
   group_by(trans, source) %>%
@@ -1192,7 +1193,6 @@ ccaa_plast_sum <- ccaa_plast %>%
 ccaa_plast$source <- relevel(ccaa_plast$source, ref = "NS")
 ccaa_plast$trans <- relevel(ccaa_plast$trans, ref = "NS")
 # plot of plasticity
-pdf("CCA_host_plasticity_SD.pdf",height=3,width=3, useDingbats=FALSE)
 ggplot(data = ccaa_plast, aes(x = trans, colour = source)) +
   theme_bw() +
   theme(panel.grid = element_blank(), legend.position = "top") +
@@ -1202,13 +1202,21 @@ ggplot(data = ccaa_plast, aes(x = trans, colour = source)) +
   geom_point(data = ccaa_plast_sum, aes(y = mean), position = position_dodge(width = 0.2), size = 2) +
   scale_color_manual("Source", values = c("#D55E00", "#009E73", "#0072B2")) +
   labs(x = "Transplant Location", y = "Plasticity")
-dev.off()
+#ggsave("Figures/Supplemental_Figures/For_edits/Fig3c_CCA_host_plasticity_SD.pdf", height = 3, width = 3, useDingbats = FALSE)
+
 
 ###Data were then put into GO_MWU for GO enrichment analysis to associate function
 
-#####Ssid reciprocal transplant RNAseq analysis
-###algal symbiont data - all assumed to be Cladocopium reads
-setwd("~/Dropbox/UNC/RT_Paper/2022_Final_RT/GE")
+
+
+
+
+
+
+
+##### Ssid reciprocal transplant RNAseq analysis
+### algal symbiont data - all assumed to be Cladocopium reads
+#setwd("~/Dropbox/UNC/RT_Paper/2022_Final_RT/GE")
 library("DESeq2")
 library("ggplot2")
 library("dplyr")
@@ -1276,6 +1284,7 @@ nrow(conditions)
 names(conditions)=c("source", "trans")
 
 dds<-DESeqDataSetFromMatrix(countData=countData, colData=conditions, design=~ source+trans) #can only test for the main effects source location and transplant location
+dds_symb <- DESeqDataSetFromMatrix(countData=countData, colData=conditions, design=~ source+trans) 
 
 #one step DESeq
 dds<-DESeq(dds)
@@ -1308,7 +1317,7 @@ pca_s$source=conditions$source
 head(pca_s)
 
 cbPalette <- c("#009E73", "#0072B2", "#D55E00")
-pdf("PCA_Sym_allgenes_source.pdf",height=5,width=6)
+#pdf("PCA_Sym_allgenes_source.pdf",height=5,width=6)
 ggplot(pca_s, aes(PC1, PC2, color = source, pch = trans, group=source)) +
   geom_point(size=3) +
   #  geom_text_repel(aes(label=Samples)) +
@@ -1319,7 +1328,7 @@ ggplot(pca_s, aes(PC1, PC2, color = source, pch = trans, group=source)) +
   # geom_polygon(alpha=.2)+
   xlab(paste0("PC1: ",pc1v,"% variance")) +
   ylab(paste0("PC2: ",pc2v,"% variance")) 
-dev.off()
+#dev.off()
 
 adonis(pca_s[,1:2] ~ trans+source, data = pca_s, method='eu', na.rm = TRUE)
 #Permutation: free
@@ -1714,13 +1723,13 @@ my_colour = list(
   Transplant = c(NS = "#D55E00", BR = "#009E73", FR = "#0072B2"))
 
 # big heat map of all annotated genes
-pdf("source_sym_NS_BR_DEGS_annotated.pdf",height=3,width=10, onefile=F)
-pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames =F, border_color = "NA" )
+pdf("Figures/Supplemental_Figures/For_edits/FigS6a_source_sym_NS_BR_DEGS_annotated.pdf",height=3,width=10, onefile=F)
+pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames =F, border_color = "NA")
 dev.off()
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_NSBR_source_sym.pdf",height=4,width=4, onefile=F)
-pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA" )
-dev.off()
+#pdf("heatmap_NSBR_source_sym.pdf",height=4,width=4, onefile=F)
+pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
+#dev.off()
 ####################################################################################################
 #####trans NS versus FR
 head(rldpvals)
@@ -1767,13 +1776,13 @@ my_sample_col <- data.frame(Source = c("FR", "FR","NS", "FR","FR", "NS", "FR", "
 row.names(my_sample_col)= colnames(anno)
 
 # big heat map of all annotated genes
-pdf("source_sym_NS_FR_DEGS_annotated.pdf",height=6,width=10, onefile=F)
-pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA" )
+pdf("Figures/Supplemental_Figures/For_edits/FigS6b_source_sym_NS_FR_DEGS_annotated.pdf",height=6,width=10, onefile=F)
+pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA")
 dev.off()
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_NSFR_source_sym.pdf",height=4,width=4, onefile=F)
-pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA" )
-dev.off()
+#pdf("heatmap_NSFR_source_sym.pdf",height=4,width=4, onefile=F)
+pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
+#dev.off()
 
 ####################################################################################################
 #####trans BR versus FR
@@ -1812,9 +1821,9 @@ df_unanno <- df_all_iso %>%
   filter(is.na(V2))
 #no genes were annotated
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_NSFR_source_sym.pdf",height=4,width=4, onefile=F)
-pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA" )
-dev.off()
+#pdf("heatmap_NSFR_source_sym.pdf",height=4,width=4, onefile=F)
+pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
+#dev.off()
 
 #source BR vs FR
 head(rldpvals)
@@ -1856,13 +1865,13 @@ my_sample_col <- data.frame(Source = c("FR","FR", "BR", "FR","FR", "FR", "BR","B
 row.names(my_sample_col)= colnames(anno)
 
 # big heat map of all annotated genes
-pdf("source_BR_FR_DEGS_annotated_sym.pdf",height=8,width=10, onefile=F)
-pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA" )
+pdf("Figures/Supplemental_Figures/For_edits/FigS6c_source_BR_FR_DEGS_annotated_sym.pdf",height=8,width=10, onefile=F)
+pheatmap(anno,cluster_cols=T,scale="row", color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = T, show_colnames = F, border_color = "NA")
 dev.off()
 # big heat map of all DEGs, no annotation too
-pdf("heatmap_BRFR_source_sym.pdf",height=5,width=4, onefile=F)
-pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA" )
-dev.off()
+#pdf("heatmap_BRFR_source_sym.pdf",height=5,width=4, onefile=F)
+pheatmap(unanno,cluster_cols=T,scale="row",color=col0, annotation_col= my_sample_col, annotation_colors =my_colour, show_rownames = F,show_colnames = F, border_color = "NA")
+#dev.off()
 
 ###########################################################################################
 # VENN Diagram to include both up and down regulated genes in common for source
@@ -1909,25 +1918,25 @@ length(pdegs1)
 
 ###do UP, DOWN, ALL
 candidates=list("NSvsFRup"=pSource1up, "NSvsBRup"=pSource2up, "BRvsFRup"=pSource3up)
-quartz()
-prettyvenn=venn.diagram(
-  x = candidates,
-  filename=NULL,
-  col = "transparent",
-  fill = c("coral2", "forestgreen", "royalblue1"),
-  alpha = 0.5,
-  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
-  cex = 2.5,
-  fontfamily = "sans",
-  fontface = "bold",
-  cat.default.pos = "text",
-  cat.col = c("darkred", "darkgreen", "blue4"),
-  cat.cex = 2.5,
-  cat.fontfamily = "sans",
-  cat.dist = c(0.08, 0.08, 0.03),
-  cat.pos = 1
-)
-grid.draw(prettyvenn)
+#quartz()
+#prettyvenn=venn.diagram(
+#  x = candidates,
+#  filename=NULL,
+#  col = "transparent",
+#  fill = c("coral2", "forestgreen", "royalblue1"),
+#  alpha = 0.5,
+#  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
+#  cex = 2.5,
+#  fontfamily = "sans",
+#  fontface = "bold",
+#  cat.default.pos = "text",
+#  cat.col = c("darkred", "darkgreen", "blue4"),
+#  cat.cex = 2.5,
+#  cat.fontfamily = "sans",
+#  cat.dist = c(0.08, 0.08, 0.03),
+#  cat.pos = 1
+#)
+#grid.draw(prettyvenn)
 
 # VENN Diagram to include both up and down regulated genes in common for transplant
 head(resTrans1)
@@ -1971,25 +1980,25 @@ length(pdegs1)
 
 ###do UP, DOWN, ALL
 candidates=list("NSvsFRup"=pTrans1up, "NSvsBRup"=pTrans2up, "BRvsFRup"=pTrans3up)
-prettyvenn=venn.diagram(
-  x = candidates,
-  filename=NULL,
-  col = "transparent",
-  fill = c("coral2", "forestgreen", "royalblue1"),
-  alpha = 0.5,
-  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
-  cex = 2.5,
-  fontfamily = "sans",
-  fontface = "bold",
-  cat.default.pos = "text",
-  cat.col = c("darkred", "darkgreen", "blue4"),
-  cat.cex = 2.5,
-  cat.fontfamily = "sans",
-  cat.dist = c(0.08, 0.08, 0.03),
-  cat.pos = 1
-);
-quartz()
-grid.draw(prettyvenn)
+#prettyvenn=venn.diagram(
+#  x = candidates,
+#  filename=NULL,
+#  col = "transparent",
+#  fill = c("coral2", "forestgreen", "royalblue1"),
+#  alpha = 0.5,
+#  label.col = c("darkred", "white", "darkgreen", "white", "white", "white", "blue4"),
+#  cex = 2.5,
+#  fontfamily = "sans",
+#  fontface = "bold",
+#  cat.default.pos = "text",
+#  cat.col = c("darkred", "darkgreen", "blue4"),
+#  cat.cex = 2.5,
+#  cat.fontfamily = "sans",
+#  cat.dist = c(0.08, 0.08, 0.03),
+#  cat.pos = 1
+#);
+#quartz()
+#grid.draw(prettyvenn)
 
 # CANONICAL CORRESPONDENCE ANALYSIS OF GENE EXPRESSION based on raw counts
 ##packages used in plasticity analysis. need to restart R to avoid DLL issue
@@ -2055,7 +2064,7 @@ shape_source <- ifelse(conditions$source == 'FR', 15,
 shape_trans <- ifelse(conditions$trans == 'FR', 15,
                       ifelse(conditions$trans == 'NS', 16, 17))
 
-pdf("CCA_sym_trans_final.pdf",height=5,width=5, useDingbats=FALSE)
+pdf("Figures/Supplemental_Figures/For_edits/Fig3b_CCA_sym_trans_final.pdf",height=5,width=5, useDingbats=FALSE)
 plot(ccaa,choices=c(1,2),display="sites", type="n", ylab="CCA2 (26.4%)", xlab="CCA1 (30.9%)", xlim=range(-2.3,3), ylim=range(-2.0,2.7))
 points(ccaa,choices=c(1,2),col=pt_colors, pch=shape_trans)
 ordispider(ccaa,groups=conditions$trans,col="grey50")
@@ -2070,7 +2079,7 @@ legend("bottomleft", legend = c("NS", "BR", "FR"), col = c("grey","grey","grey")
        inset = c(0.13, 0.005), title="Transplant")
 dev.off()
 
-pdf("CCA_sym_source_final.pdf",height=5,width=5, useDingbats=FALSE)
+pdf("Figures/Supplemental_Figures/For_edits/Fig3a_CCA_sym_source_final.pdf",height=5,width=5, useDingbats=FALSE)
 plot(ccaa,choices=c(1,2),display="sites",type="n",  ylab="CCA2 (26.4%)", xlab="CCA1 (30.9%)", xlim=range(-2.3,3), ylim=range(-2.0,2.7))
 points(ccaa,choices=c(1,2),col=pt_colors,pch=shape_trans)
 ordispider(ccaa,groups=conditions$source,col="grey50")
@@ -2104,8 +2113,8 @@ anova(ccaa,by = "term")
 ## -------------------------------------------------------- Colleen's additions below for plasticity:
 set.seed(16)
 #### I decided it will be cleaner if you source these functions from another script so you will need to do that now! Just save it to your working directory or add the path to it in the source function:
-source("CCAplast_function.R")
-quartz()
+source("Code/CCAplast_function.R")
+
 screeplot(ccaa)
 ## create dataframe of CCAs with experimental conditions
 ccaa_full <- data.frame(conditions,
@@ -2242,7 +2251,6 @@ plast_symb_boot$trans <- relevel(plast_symb_boot$trans, ref = "NS")
 plast_symb_boot$trt <- paste(plast_symb_boot$source, plast_symb_boot$trans, sep = "_")
 plast_symb_boot <- subset(plast_symb_boot, trt != "FR_NS") %>%  droplevels() # dropping the FR to NS level since it only has a single frag
 
-pdf("CCA_sym_plasticity_CI.pdf",height=3,width=3, useDingbats=FALSE)
 ggplot(data = plast_symb_boot, aes(x = trans, colour = source)) +
   theme_bw() +
   theme(panel.grid = element_blank(), legend.position = "top") +
@@ -2252,7 +2260,7 @@ ggplot(data = plast_symb_boot, aes(x = trans, colour = source)) +
   geom_point(aes(y = estimate), position = position_dodge(width = 0.3), size = 2) +
   scale_color_manual("Source", values = c("#D55E00", "#009E73", "#0072B2")) +
   labs(x = "Transplant Location", y = "Plasticity")
-dev.off()
+ggsave("Figures/Supplemental_Figures/For_edits/Fig3c_CCA_sym_plasticity_CI.pdf", height = 3, width = 3, useDingbats = FALSE)
 
 ccaa_symb_plast_sum <- ccaa_symb_plast %>%
   group_by(trans, source) %>%
@@ -2265,7 +2273,7 @@ ccaa_symb_plast_sum$source <- relevel(ccaa_symb_plast_sum$source, ref = "NS")
 ccaa_symb_plast_sum$trans <- relevel(ccaa_symb_plast_sum$trans, ref = "NS")
 
 # plot of plasticity
-pdf("CCA_sym_plasticity_SD.pdf",height=3,width=3, useDingbats=FALSE)
+#pdf("CCA_sym_plasticity_SD.pdf",height=3,width=3, useDingbats=FALSE)
 ggplot(data = ccaa_symb_plast, aes(x = trans, colour = source)) +
   theme_bw() +
   theme(panel.grid = element_blank(), legend.position = "top") +
@@ -2275,4 +2283,137 @@ ggplot(data = ccaa_symb_plast, aes(x = trans, colour = source)) +
   geom_point(data = ccaa_symb_plast_sum, aes(y = mean), position = position_dodge(width = 0.2), size = 2) +
   scale_color_manual("Source", values = c("#D55E00", "#009E73", "#0072B2")) +
   labs(x = "Transplant Location", y = "Plasticity")
+#dev.off()
+
+
+
+####-------------------------------------------------------------------------------------------####
+#### Colleen is adding in a heatmap of interesting symbiont genes from GO categories
+# This is following what we did the in the ACER microplastics x OAW project: https://github.com/seabove7/Acer_OAW-Microplastics
+
+##--------------get pvals 
+# Source 1 = contrast=c("source","NS","FR")
+valSource1 <- cbind(resSource1$pvalue, resSource1$padj)
+head(valSource1)
+colnames(valSource1) <- c("pval.Source1", "padj.Source1")
+length(valSource1[,1])
+table(complete.cases(valSource1))
+
+# Source 2 = contrast=c("source","NS","BR")
+valSource2 <- cbind(resSource2$pvalue, resSource2$padj)
+head(valSource2)
+colnames(valSource2) <- c("pval.Source2", "padj.Source2")
+length(valSource2[,1])
+table(complete.cases(valSource2))
+
+# Source 3 = contrast=c("source","BR","FR")
+valSource3 <- cbind(resSource3$pvalue, resSource3$padj)
+head(valSource3)
+colnames(valSource3) <- c("pval.Source3", "padj.Source3")
+length(valSource3[,1])
+table(complete.cases(valSource3))
+
+
+######-------------make rlogdata and pvals table
+rlog_symb <- rlogTransformation(dds_symb, blind = TRUE) 
+rld_symb <- assay(rlog_symb)
+head(rld_symb)
+colnames(rld_symb) <- paste(conditions$source, conditions$trans, sep = "_")
+head(rld_symb)
+length(rld_symb[,1])
+
+rldpvals <- cbind(rld_symb, valSource1, valSource2, valSource3)
+head(rldpvals)
+dim(rldpvals)
+# 4750   46
+table(complete.cases(rldpvals))
+# FALSE  TRUE 
+# 3315  1435 
+
+write.csv(rldpvals, "Data/GeneExpression_data/Belize_RT_RLDandPVALS.csv", quote=F)
+
+
+
+
+library(dplyr)
+library(stringr)
+iso2go <- read.table("GO_enrichment_Symb/sym_feb_iso2go.tab", fill = TRUE) %>%
+  dplyr::rename("GO_ID" = "V2") 
+  
+head(iso2go)
+
+sym_source_BR_FR_res <- read.table("Data/GeneExpression_data/sym_RTsource_BRvsFR.txt")
+head(sym_source_BR_FR_res)
+
+
+rldpval <- readr::read_csv("Data/GeneExpression_data/Belize_RT_RLDandPVALS.csv") %>%
+  select(gene = 1, everything())
+head(rldpval)
+
+col0 <- colorRampPalette(rev(c("chocolate1","#FEE090","grey10", "cyan3","cyan")))(100)
+
+##pulling all of the immunity terms and making a data frame
+symb_source <- iso2go %>%
+  mutate(gene = iso2go$V1) %>%
+  left_join(rldpval)
+head(symb_source)
+
+#immuno=symb_source[,c(2,3,6,8,11,12,13,15,17,19,20,26,27)]
+#head(immuno)
+row.names(symb_source) <- symb_source$gene
+symb_source <- symb_source[,-1]
+head(symb_source)
+
+##gene table
+gg <- read.table("GO_enrichment_Symb/sym_feb_iso2gene.tab",sep="\t")
+head(gg)
+
+p.val <- 0.10 # raw pvalue for GO enriched
+conds <- symb_source[symb_source$pval.Source1<=p.val & !is.na(symb_source$pval.Source1),]
+length(conds[,1])
+#387
+head(conds)
+
+############## COLLEEN STOPPED HERE ##############
+
+
+exp <- conds[,1:10]
+head(exp)
+means <- apply(exp,1,mean) # means of rows
+explc <- exp - means # subtracting them
+head(explc)
+head(gg)
+
+library(tidyverse)
+
+df_all_iso <- explc %>%
+  rownames_to_column("V1") %>%
+  left_join(gg) %>%
+  mutate(V2 = gsub(" OS=.*", "", V2))
+head(df_all_iso)
+unanno=df_all_iso[,2:11]
+
+df_only_anno <- df_all_iso %>%
+  filter(!is.na(V2))
+rownames(df_only_anno) <- make.unique(df_only_anno$V2)
+head(df_only_anno)
+anno=df_only_anno[,2:11]
+head(anno)
+
+#dataframe of the samples
+colnames(anno)
+
+##write out and edit manually a few gene names that have weird descriptions
+write.csv(anno, "immunity_info_raw.csv", quote=TRUE)
+anno2 <- read.csv("immunity_info_EDIT.csv", row.names=1) # Sarah performed some modifications to the excel file before uploading it here
+
+#cbPalette2 <- c("darkorange","firebrick2", "firebrick4")
+my_sample_col <- data.frame(treatment = c("OAW+MP","AMB","AMB","OAW+MP","AMB","OAW+MP","OAW+MP", "OAW+MP","AMB","AMB"))
+row.names(my_sample_col)= colnames(anno2)
+my_colour = list(treatment = c(`OAW+MP` = cbPalette[4], AMB = cbPalette[1]))
+
+# big heat map of all annotated genes
+library(pheatmap)
+pdf("Figures/Figure4_OAW_AMB_immunity.pdf", height = 8.2, width = 9, onefile = F)
+pheatmap(anno2, cluster_cols = TRUE, scale = "row", color = col0, annotation_col = my_sample_col, annotation_colors = my_colour, show_rownames = TRUE, show_colnames = FALSE, border_color = "NA")
 dev.off()

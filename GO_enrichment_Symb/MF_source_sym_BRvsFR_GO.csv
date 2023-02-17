@@ -1,0 +1,1999 @@
+name	term	lev	seq	value
+"peptide binding"	GO:0042277	3	isogroup263900	-6.89543194896359
+"peptide binding"	GO:0042277	3	isogroup50944	-0.452120476968793
+"peptide binding"	GO:0042277	3	isogroup246490	2.46790365822465
+"peptide binding"	GO:0042277	3	isogroup50112	-0.842289833048711
+"peptide binding"	GO:0042277	3	isogroup116093	-1.87752235784301
+"peptide binding"	GO:0042277	3	isogroup260780	-0.827015744005025
+"peptide binding"	GO:0042277	3	isogroup264714	-1.29036619299871
+"peptide binding"	GO:0042277	3	isogroup194767	3.95178655918563
+"peptide binding"	GO:0042277	3	isogroup163733	-0.831575256264217
+"peptide binding"	GO:0042277	3	isogroup264634	-0.940191692461576
+"channel regulator activity"	GO:0016247	1	isogroup117436	-1.24093120218776
+"channel regulator activity"	GO:0016247	1	isogroup53418	-0.395590802545467
+"channel regulator activity"	GO:0016247	1	isogroup241267	-13.1421676724191
+"channel regulator activity"	GO:0016247	1	isogroup52154	0.71064945370878
+"channel regulator activity"	GO:0016247	1	isogroup210221	1.02724869574503
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup195137	-0.362451521756176
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup265649	-0.802800507489861
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup188418	-0.384391606024445
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup232794	-1.69155911159519
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup243270	-0.333565482844295
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup187784	0.132342159712466
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup224528	-0.550217885749362
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup210769	-0.978153944532131
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup214314	-1.2955920382194
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup41458	-3.90079667074766
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup192368	-0.556154899259573
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup208445	5.06368958537907
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup228387	7.52822845007224
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup208792	-0.422350996180044
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup265646	1.92995882665936
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup163634	0.717471175123772
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup199794	0.743267759872947
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup235410	1.11628952202927
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup214922	-0.156737238835952
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup114544	0.450724026340128
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup194625	-1.08217157489784
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup230959	-0.988254640395765
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup257902	-2.01592114893442
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup173815	-1.03077318655966
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup265278	-11.3595169117479
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup265403	0.00859068445572751
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup117055	-2.31468058330561
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup114082	-8.15865881960723
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup43874	-1.85336561648035
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup238965	-0.968989318537911
+"cation transmembrane transporter activity"	GO:0008324	2	isogroup264769	1.87547563443008
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup266576	-0.696121108351108
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup244486	-0.472162579493179
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup208416	-0.412344218974579
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup264829	1.56873079326063
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup194676	0.726637229540485
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup230146	2.83955722496844
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup114026	0.551458749068214
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup194260	-0.377423543610615
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup176518	-2.60671571137303
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup81504	-0.334405451655311
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup53550	0.777048216431555
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup265981	-2.27680810039608
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup265405	-1.02780427931103
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup266943	-2.70095249603077
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup219046	0.710138253688587
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup264946	0.184127650876119
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup163788	2.12449605211891
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup161672	-0.748336648027912
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup264415	1.10408724369399
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup188192	-0.178578871454347
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup115690	-3.69204283815707
+"phosphoric ester hydrolase activity"	GO:0016791;GO:0042578	3	isogroup117094	1.00135444698817
+"oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"	GO:0016653	4	isogroup267285	0.253698813320254
+"oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"	GO:0016653	4	isogroup39143	-0.838401160197565
+"oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"	GO:0016653	4	isogroup161819	0.493458105197581
+"oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"	GO:0016653	4	isogroup252814	-1.27410469242362
+"oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"	GO:0016653	4	isogroup230382	-0.389624058400039
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup246490	2.46790365822465
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup114450	0.00233492347780401
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup53603	-1.74721500430929
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup254731	1.17696939498713
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup115927	-0.558449522344441
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup259912	-2.4580900596681
+"receptor activity"	GO:0038023;GO:0004872	2	isogroup254412	1.61674442629754
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup117511	0.393688710772673
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup162379	-0.126281453050277
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup117234	-1.03814500786399
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup250231	-0.393442235292833
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup264126	1.99078518435185
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"	GO:0016709	4	isogroup263939	-4.7085140063302
+"heme binding"	GO:0020037	2	isogroup179736	-2.31560364276933
+"heme binding"	GO:0020037	2	isogroup241228	-0.880353678887332
+"heme binding"	GO:0020037	2	isogroup113729	0.870754066597086
+"heme binding"	GO:0020037	2	isogroup246633	-0.646693719435962
+"heme binding"	GO:0020037	2	isogroup116252	-8.94569602299899
+"heme binding"	GO:0020037	2	isogroup256863	-0.874073223315928
+"heme binding"	GO:0020037	2	isogroup217742	-0.708056240564163
+"heme binding"	GO:0020037	2	isogroup241732	-0.28494722819866
+"heme binding"	GO:0020037	2	isogroup232755	2.15517652222242
+"heme binding"	GO:0020037	2	isogroup188434	-0.96223208992706
+"heme binding"	GO:0020037	2	isogroup117234	-1.03814500786399
+"heme binding"	GO:0020037	2	isogroup236251	0.0263034088924226
+"heme binding"	GO:0020037	2	isogroup230714	-0.0256278290949613
+"heme binding"	GO:0020037	2	isogroup161819	0.493458105197581
+"heme binding"	GO:0020037	2	isogroup177597	-7.88492223611469
+"heme binding"	GO:0020037	2	isogroup173220	-0.155694787697472
+"heme binding"	GO:0020037	2	isogroup156434	-0.719614197805696
+"heme binding"	GO:0020037	2	isogroup235373	3.06947027077435
+"heme binding"	GO:0020037	2	isogroup252814	-1.27410469242362
+"heme binding"	GO:0020037	2	isogroup203655	0.267848035946753
+"heme binding"	GO:0020037	2	isogroup237709	-0.38557063315909
+"heme binding"	GO:0020037	2	isogroup172177	-3.34951082769757
+"heme binding"	GO:0020037	2	isogroup117507	-1.5288429126694
+"heme binding"	GO:0020037	2	isogroup263939	-4.7085140063302
+"heme binding"	GO:0020037	2	isogroup230382	-0.389624058400039
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup178239	0.252029135876186
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup53474	0.569297692747828
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup257490	0.392072028950917
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup194397	-1.56271612764203
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup115651	-1.00486407461412
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup116583	0.538452992039466
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup216058	0.426353301417291
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup232654	1.16743202031289
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup190410	-0.0636018614436792
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup229955	-0.0146906478408484
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup265852	-2.64258405227004
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup116935	-0.369374225896359
+"carboxylic acid binding"	GO:0031177;GO:0019842;GO:0072341;GO:0016597;GO:0031406;GO:0043177	5	isogroup42241	-2.74259055690582
+"exopeptidase activity"	GO:0008238	5	isogroup259723	0.433703192153331
+"exopeptidase activity"	GO:0008238	5	isogroup39794	-0.531241026162258
+"exopeptidase activity"	GO:0008238	5	isogroup203143	0.156777215128243
+"exopeptidase activity"	GO:0008238	5	isogroup115617	0.121192062618341
+"exopeptidase activity"	GO:0008238	5	isogroup210225	0.749684013674479
+"exopeptidase activity"	GO:0008238	5	isogroup261607	1.79062411290061
+"core promoter binding"	GO:0001047	4	isogroup180671	1.17122171442871
+"core promoter binding"	GO:0001047	4	isogroup116271	-0.379156819262953
+"core promoter binding"	GO:0001047	4	isogroup172880	1.16629789502637
+"core promoter binding"	GO:0001047	4	isogroup224738	1.75656470320444
+"core promoter binding"	GO:0001047	4	isogroup165688	-0.0454837578617013
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup195137	-0.362451521756176
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup267144	-2.21947266281766
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup192368	-0.556154899259573
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup188905	-0.79448172104311
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup163634	0.717471175123772
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup264318	1.1361243181796
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup235410	1.11628952202927
+"inorganic anion transmembrane transporter activity"	GO:0015103	6	isogroup257902	-2.01592114893442
+"DNA binding"	GO:0003677	3	isogroup253470	-1.72529313310454
+"DNA binding"	GO:0003677	3	isogroup268794	-1.25102450408707
+"DNA binding"	GO:0003677	3	isogroup152369	3.4211528418183
+"DNA binding"	GO:0003677	3	isogroup257219	2.47619875662673
+"DNA binding"	GO:0003677	3	isogroup205016	-0.474524536534264
+"DNA binding"	GO:0003677	3	isogroup41616	1.2206790493051
+"DNA binding"	GO:0003677	3	isogroup174036	-3.1029724116392
+"DNA binding"	GO:0003677	3	isogroup180671	1.17122171442871
+"DNA binding"	GO:0003677	3	isogroup266883	0.227170853898709
+"DNA binding"	GO:0003677	3	isogroup44332	-0.902177586822006
+"DNA binding"	GO:0003677	3	isogroup232577	3.42991596427806
+"DNA binding"	GO:0003677	3	isogroup116271	-0.379156819262953
+"DNA binding"	GO:0003677	3	isogroup174571	-1.10072141829887
+"DNA binding"	GO:0003677	3	isogroup236585	-0.761579550199589
+"DNA binding"	GO:0003677	3	isogroup172880	1.16629789502637
+"DNA binding"	GO:0003677	3	isogroup153176	-0.0992502216622544
+"DNA binding"	GO:0003677	3	isogroup195443	-0.291368027828079
+"DNA binding"	GO:0003677	3	isogroup242095	-0.183127608508883
+"DNA binding"	GO:0003677	3	isogroup115886	0.614913016795339
+"DNA binding"	GO:0003677	3	isogroup197090	-1.42971235058843
+"DNA binding"	GO:0003677	3	isogroup224738	1.75656470320444
+"DNA binding"	GO:0003677	3	isogroup55436	-1.68664727442102
+"DNA binding"	GO:0003677	3	isogroup220783	0.102500290262214
+"DNA binding"	GO:0003677	3	isogroup161711	-0.375336341152744
+"DNA binding"	GO:0003677	3	isogroup117295	-0.624305407720256
+"DNA binding"	GO:0003677	3	isogroup116107	-3.10750750912014
+"DNA binding"	GO:0003677	3	isogroup178777	1.97313961761712
+"DNA binding"	GO:0003677	3	isogroup165688	-0.0454837578617013
+"DNA binding"	GO:0003677	3	isogroup40847	1.26736135450385
+"DNA binding"	GO:0003677	3	isogroup259391	5.43705797893191
+"DNA binding"	GO:0003677	3	isogroup216458	-1.16218849171441
+"DNA binding"	GO:0003677	3	isogroup264860	1.99197953327242
+"DNA binding"	GO:0003677	3	isogroup54944	-0.0530079913043656
+"DNA binding"	GO:0003677	3	isogroup215501	-0.437959901540452
+"DNA binding"	GO:0003677	3	isogroup264005	-0.316114214913647
+"DNA binding"	GO:0003677	3	isogroup244498	-2.29003563702299
+"DNA binding"	GO:0003677	3	isogroup39035	-1.22318821249102
+"DNA binding"	GO:0003677	3	isogroup43046	-0.506333417316883
+"DNA binding"	GO:0003677	3	isogroup251592	3.72945979702603
+"2 iron, 2 sulfur cluster binding"	GO:0051537	2	isogroup241228	-0.880353678887332
+"2 iron, 2 sulfur cluster binding"	GO:0051537	2	isogroup208792	-0.422350996180044
+"2 iron, 2 sulfur cluster binding"	GO:0051537	2	isogroup189462	-0.433855408323868
+"2 iron, 2 sulfur cluster binding"	GO:0051537	2	isogroup265278	-11.3595169117479
+"2 iron, 2 sulfur cluster binding"	GO:0051537	2	isogroup238965	-0.968989318537911
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup177742	-1.93073849111877
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup267743	-1.20312713164605
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup41337	-3.23184766610775
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup237348	1.02587562031146
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup264058	0.0743637683215615
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup39108	0.909660889543393
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup264226	0.232526956057732
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup116592	0.00958459116110334
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup219461	-0.215383209796909
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup260441	-0.048283249659858
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup116037	0.511941822921552
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup250584	1.18427403002606
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup203655	0.267848035946753
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup226004	1.14261715932798
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup115908	-0.980900121407105
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup265081	2.5305527395902
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup264397	-6.95382961178861
+"ligase activity, forming carbon-nitrogen bonds"	GO:0016879	3	isogroup116329	-0.337450792143685
+"electron carrier activity"	GO:0009055	1	isogroup193417	-3.96789330905458
+"electron carrier activity"	GO:0009055	1	isogroup179736	-2.31560364276933
+"electron carrier activity"	GO:0009055	1	isogroup113729	0.870754066597086
+"electron carrier activity"	GO:0009055	1	isogroup256863	-0.874073223315928
+"electron carrier activity"	GO:0009055	1	isogroup268729	0.374994780152381
+"electron carrier activity"	GO:0009055	1	isogroup241732	-0.28494722819866
+"electron carrier activity"	GO:0009055	1	isogroup254254	-3.34311159814038
+"electron carrier activity"	GO:0009055	1	isogroup204282	2.39780468358072
+"electron carrier activity"	GO:0009055	1	isogroup236251	0.0263034088924226
+"electron carrier activity"	GO:0009055	1	isogroup230714	-0.0256278290949613
+"electron carrier activity"	GO:0009055	1	isogroup173220	-0.155694787697472
+"electron carrier activity"	GO:0009055	1	isogroup156434	-0.719614197805696
+"electron carrier activity"	GO:0009055	1	isogroup189462	-0.433855408323868
+"electron carrier activity"	GO:0009055	1	isogroup265278	-11.3595169117479
+"electron carrier activity"	GO:0009055	1	isogroup220555	1.61233662121085
+"electron carrier activity"	GO:0009055	1	isogroup41236	-0.179409174627275
+"electron carrier activity"	GO:0009055	1	isogroup263916	-0.363387369470399
+"carbon-carbon lyase activity"	GO:0016830	3	isogroup251153	-3.10935795084073
+"carbon-carbon lyase activity"	GO:0016830	3	isogroup115769	1.0232512554803
+"carbon-carbon lyase activity"	GO:0016830	3	isogroup203790	-0.557769786119378
+"carbon-carbon lyase activity"	GO:0016830	3	isogroup223226	-1.04278776382224
+"carbon-carbon lyase activity"	GO:0016830	3	isogroup200453	5.10536807812755
+"carboxylic ester hydrolase activity"	GO:0052689	2	isogroup266275	0.743488918157094
+"carboxylic ester hydrolase activity"	GO:0052689	2	isogroup240173	1.42975554137188
+"carboxylic ester hydrolase activity"	GO:0052689	2	isogroup189317	-1.14157012110727
+"carboxylic ester hydrolase activity"	GO:0052689	2	isogroup115650	0.294386134530928
+"carboxylic ester hydrolase activity"	GO:0052689	2	isogroup156176	-0.589414066753664
+"rRNA binding"	GO:0019843	2	isogroup174571	-1.10072141829887
+"rRNA binding"	GO:0019843	2	isogroup159563	-0.377258994665259
+"rRNA binding"	GO:0019843	2	isogroup256823	-0.0487152564522294
+"rRNA binding"	GO:0019843	2	isogroup254606	2.34010943256012
+"rRNA binding"	GO:0019843	2	isogroup182932	-2.05870832576811
+"rRNA binding"	GO:0019843	2	isogroup232580	-3.52311361997919
+"rRNA binding"	GO:0019843	2	isogroup268391	-0.533329211305538
+"rRNA binding"	GO:0019843	2	isogroup214632	0.380513818832955
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup55523	-1.64521245743348
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup265649	-0.802800507489861
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup188418	-0.384391606024445
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup116357	-3.40572636461837
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup53447	-0.67221497355435
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup163861	1.60501097752689
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup45273	0.778557312172592
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup114082	-8.15865881960723
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup198099	-0.27809380850736
+"organic anion transmembrane transporter activity"	GO:0046943;GO:0005342;GO:0008514	2	isogroup115811	-0.236235775410018
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup195137	-0.362451521756176
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup265649	-0.802800507489861
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup232794	-1.69155911159519
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup224528	-0.550217885749362
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup210769	-0.978153944532131
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup214314	-1.2955920382194
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup41458	-3.90079667074766
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup192368	-0.556154899259573
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup208445	5.06368958537907
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup228387	7.52822845007224
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup208792	-0.422350996180044
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup199794	0.743267759872947
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup194625	-1.08217157489784
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup230959	-0.988254640395765
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup257902	-2.01592114893442
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup173815	-1.03077318655966
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup265278	-11.3595169117479
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup265403	0.00859068445572751
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup117055	-2.31468058330561
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup43874	-1.85336561648035
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup238965	-0.968989318537911
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup264769	1.87547563443008
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup243270	-0.333565482844295
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup187784	0.132342159712466
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup265646	1.92995882665936
+"inorganic cation transmembrane transporter activity"	GO:0015077;GO:0022890	2	isogroup114544	0.450724026340128
+"polyol transmembrane transporter activity"	GO:0015166;GO:0015665;GO:1901618	5	isogroup198099	-0.27809380850736
+"polyol transmembrane transporter activity"	GO:0015166;GO:0015665;GO:1901618	5	isogroup192368	-0.556154899259573
+"polyol transmembrane transporter activity"	GO:0015166;GO:0015665;GO:1901618	5	isogroup188905	-0.79448172104311
+"polyol transmembrane transporter activity"	GO:0015166;GO:0015665;GO:1901618	5	isogroup41360	-2.65076259217105
+"polyol transmembrane transporter activity"	GO:0015166;GO:0015665;GO:1901618	5	isogroup115811	-0.236235775410018
+"S-acyltransferase activity"	GO:0016417	2	isogroup42894	-0.260241233699399
+"S-acyltransferase activity"	GO:0016417	2	isogroup264556	-0.041060193222607
+"S-acyltransferase activity"	GO:0016417	2	isogroup39862	0.867173556614644
+"S-acyltransferase activity"	GO:0016417	2	isogroup54807	1.28873316027484
+"S-acyltransferase activity"	GO:0016417	2	isogroup194877	-1.47177708159769
+"S-acyltransferase activity"	GO:0016417	2	isogroup264914	0.35574677635676
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup152369	3.4211528418183
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup153176	-0.0992502216622544
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup195443	-0.291368027828079
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup265801	-0.17615312724011
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup197090	-1.42971235058843
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup258960	1.24674510109933
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup40847	1.26736135450385
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup244498	-2.29003563702299
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup265331	2.00690893589973
+"transferase activity, transferring pentosyl groups"	GO:0003950;GO:0016763	2	isogroup188538	10.0247971282646
+"amide binding"	GO:0033218	2	isogroup263900	-6.89543194896359
+"amide binding"	GO:0033218	2	isogroup178239	0.252029135876186
+"amide binding"	GO:0033218	2	isogroup53474	0.569297692747828
+"amide binding"	GO:0033218	2	isogroup50944	-0.452120476968793
+"amide binding"	GO:0033218	2	isogroup246490	2.46790365822465
+"amide binding"	GO:0033218	2	isogroup50112	-0.842289833048711
+"amide binding"	GO:0033218	2	isogroup257490	0.392072028950917
+"amide binding"	GO:0033218	2	isogroup116093	-1.87752235784301
+"amide binding"	GO:0033218	2	isogroup260780	-0.827015744005025
+"amide binding"	GO:0033218	2	isogroup264714	-1.29036619299871
+"amide binding"	GO:0033218	2	isogroup194397	-1.56271612764203
+"amide binding"	GO:0033218	2	isogroup194767	3.95178655918563
+"amide binding"	GO:0033218	2	isogroup163733	-0.831575256264217
+"amide binding"	GO:0033218	2	isogroup264634	-0.940191692461576
+"amide binding"	GO:0033218	2	isogroup115651	-1.00486407461412
+"amide binding"	GO:0033218	2	isogroup116583	0.538452992039466
+"amide binding"	GO:0033218	2	isogroup216058	0.426353301417291
+"amide binding"	GO:0033218	2	isogroup232654	1.16743202031289
+"amide binding"	GO:0033218	2	isogroup190410	-0.0636018614436792
+"amide binding"	GO:0033218	2	isogroup229955	-0.0146906478408484
+"amide binding"	GO:0033218	2	isogroup265852	-2.64258405227004
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup266263	-0.0331002289801172
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup116334	-0.000528513839224451
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup265197	-0.000932666614621306
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup217877	3.80335462394199
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup116455	4.00219400251659
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup45655	0.116209695496378
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup39583	1.32088860296696
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup55531	0.413021873490752
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup200239	-6.18152805552082
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup223563	-0.479554410225245
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup214176	-1.0112505927679
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup229497	-0.764659541152455
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup162408	0.444534924526855
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup232279	-1.79568044643981
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup266896	10.1192027149611
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup204248	0.820003064478253
+"hydrolase activity, hydrolyzing O-glycosyl compounds"	GO:0004553;GO:0016798	2	isogroup230658	1.22298308184775
+"dioxygenase activity"	GO:0051213	3	isogroup40527	0.930020844633274
+"dioxygenase activity"	GO:0051213	3	isogroup115380	0.783684364762546
+"dioxygenase activity"	GO:0051213	3	isogroup197094	2.48022191958717
+"dioxygenase activity"	GO:0051213	3	isogroup228551	-1.04367147391516
+"dioxygenase activity"	GO:0051213	3	isogroup114055	-1.15814228144428
+"dioxygenase activity"	GO:0051213	3	isogroup257014	2.72876672847908
+"dioxygenase activity"	GO:0051213	3	isogroup116935	-0.369374225896359
+"dioxygenase activity"	GO:0051213	3	isogroup263292	-0.949481576913942
+"dioxygenase activity"	GO:0051213	3	isogroup46969	-0.593912153040402
+"dioxygenase activity"	GO:0051213	3	isogroup258764	2.51747477734016
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup208416	-0.412344218974579
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup264829	1.56873079326063
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup194676	0.726637229540485
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup194260	-0.377423543610615
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup176518	-2.60671571137303
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup53550	0.777048216431555
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup265405	-1.02780427931103
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup264946	0.184127650876119
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup163788	2.12449605211891
+"phosphoprotein phosphatase activity"	GO:0004721	2	isogroup115690	-3.69204283815707
+"chlorophyll binding"	GO:0016168	2	isogroup223122	0.544775024632137
+"chlorophyll binding"	GO:0016168	2	isogroup235004	-2.11179371799578
+"chlorophyll binding"	GO:0016168	2	isogroup252598	-5.58899160257386
+"chlorophyll binding"	GO:0016168	2	isogroup242599	-1.07527942905854
+"chlorophyll binding"	GO:0016168	2	isogroup246055	-2.80352980164761
+"chlorophyll binding"	GO:0016168	2	isogroup116154	-5.6923790556482
+"chlorophyll binding"	GO:0016168	2	isogroup169901	-0.838221699422998
+"chlorophyll binding"	GO:0016168	2	isogroup226229	-1.56886827647285
+"chlorophyll binding"	GO:0016168	2	isogroup204282	2.39780468358072
+"chlorophyll binding"	GO:0016168	2	isogroup231234	-3.55287838166555
+"chlorophyll binding"	GO:0016168	2	isogroup220366	0.577039744163857
+"chlorophyll binding"	GO:0016168	2	isogroup42849	-0.414405721923906
+"chlorophyll binding"	GO:0016168	2	isogroup247249	-2.91565506625165
+"chlorophyll binding"	GO:0016168	2	isogroup236264	-2.49324326874498
+"chlorophyll binding"	GO:0016168	2	isogroup244607	-0.731021743746513
+"chlorophyll binding"	GO:0016168	2	isogroup226247	0.507256985467755
+"chlorophyll binding"	GO:0016168	2	isogroup115785	-2.52720804318355
+"acid phosphatase activity"	GO:0003993	2	isogroup266576	-0.696121108351108
+"acid phosphatase activity"	GO:0003993	2	isogroup244486	-0.472162579493179
+"acid phosphatase activity"	GO:0003993	2	isogroup230146	2.83955722496844
+"acid phosphatase activity"	GO:0003993	2	isogroup265981	-2.27680810039608
+"acid phosphatase activity"	GO:0003993	2	isogroup219046	0.710138253688587
+"acid phosphatase activity"	GO:0003993	2	isogroup161672	-0.748336648027912
+"acid phosphatase activity"	GO:0003993	2	isogroup264415	1.10408724369399
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup243270	-0.333565482844295
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup224528	-0.550217885749362
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup210769	-0.978153944532131
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup214756	-0.752824640117727
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup228387	7.52822845007224
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup39829	-0.821520307812289
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup235410	1.11628952202927
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup214922	-0.156737238835952
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup230959	-0.988254640395765
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup173815	-1.03077318655966
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup265403	0.00859068445572751
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup163861	1.60501097752689
+"ATPase activity, coupled to transmembrane movement of substances"	GO:0042626;GO:0015405;GO:0016820;GO:0043492;GO:0015399	6	isogroup42314	-0.115150783982053
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup152369	3.4211528418183
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup180671	1.17122171442871
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup116271	-0.379156819262953
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup172880	1.16629789502637
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup153176	-0.0992502216622544
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup197090	-1.42971235058843
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup224738	1.75656470320444
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup165688	-0.0454837578617013
+"transcription regulatory region DNA binding"	GO:0044212;GO:0000975;GO:0001067	3	isogroup40847	1.26736135450385
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup163121	0.715033580409935
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup174989	-0.165940211859757
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup55059	4.46914957173756
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup259982	2.54331263659494
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup209321	2.38587419558799
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup115704	1.3514768076399
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup174036	-3.1029724116392
+"helicase activity"	GO:0008026;GO:0070035;GO:0004386	9	isogroup259391	5.43705797893191
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup53474	0.569297692747828
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup175859	-0.341291227196686
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup42894	-0.260241233699399
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup257490	0.392072028950917
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup264556	-0.041060193222607
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup39862	0.867173556614644
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup274766	0.229239848765986
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup265168	-0.24910923228578
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup194397	-1.56271612764203
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup54807	1.28873316027484
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup194877	-1.47177708159769
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup115651	-1.00486407461412
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup116583	0.538452992039466
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup216058	0.426353301417291
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup232654	1.16743202031289
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup189963	-1.15969161176659
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup190410	-0.0636018614436792
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup264914	0.35574677635676
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup40580	5.16723564347462
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup229955	-0.0146906478408484
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup177124	0.864864330799254
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup265852	-2.64258405227004
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup115815	-0.59604560771457
+"transferase activity, transferring acyl groups"	GO:0016747;GO:0016746	3	isogroup178512	-2.91407605359105
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup195652	-1.93745677728452
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup42241	-2.74259055690582
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup44516	0.846401372257897
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup118189	0.417429957868221
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup44839	-0.397283607123117
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup266577	-0.911376970700906
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup221254	1.04805996179289
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup265168	-0.24910923228578
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup194397	-1.56271612764203
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup223611	0.167250451063621
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup222312	0.24454122329168
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup189654	1.99265301945598
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup261781	2.1870904255125
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup232654	1.16743202031289
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup41236	-0.179409174627275
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup265272	-2.56444962797161
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup203790	-0.557769786119378
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup165601	-0.236117132158103
+"oxidoreductase activity, acting on CH-OH group of donors"	GO:0016616;GO:0016614	2	isogroup117193	-1.72601734740761
+"protein complex binding"	GO:0032403	2	isogroup244006	7.45300209069886
+"protein complex binding"	GO:0032403	2	isogroup259982	2.54331263659494
+"protein complex binding"	GO:0032403	2	isogroup268447	-0.491565977835109
+"protein complex binding"	GO:0032403	2	isogroup116271	-0.379156819262953
+"protein complex binding"	GO:0032403	2	isogroup39374	0.532018705722406
+"protein complex binding"	GO:0032403	2	isogroup264135	-1.86468835715407
+"endopeptidase activity"	GO:0004175	5	isogroup154100	-3.64657325914536
+"endopeptidase activity"	GO:0004175	5	isogroup113860	1.01019934257804
+"endopeptidase activity"	GO:0004175	5	isogroup45948	0.566669854088978
+"endopeptidase activity"	GO:0004175	5	isogroup38856	1.62738871192917
+"endopeptidase activity"	GO:0004175	5	isogroup264187	-1.40061465105234
+"endopeptidase activity"	GO:0004175	5	isogroup264399	-7.32660621569927
+"endopeptidase activity"	GO:0004175	5	isogroup115660	2.1345568925701
+"endopeptidase activity"	GO:0004175	5	isogroup174720	-0.627292176543525
+"endopeptidase activity"	GO:0004175	5	isogroup42879	-6.37497753019979
+"endopeptidase activity"	GO:0004175	5	isogroup115910	2.04230384995427
+"endopeptidase activity"	GO:0004175	5	isogroup235957	-0.966858790376383
+"endopeptidase activity"	GO:0004175	5	isogroup257153	4.32947960016396
+"endopeptidase activity"	GO:0004175	5	isogroup260780	-0.827015744005025
+"endopeptidase activity"	GO:0004175	5	isogroup44688	0.773582340554932
+"endopeptidase activity"	GO:0004175	5	isogroup54105	-0.82590887956335
+"endopeptidase activity"	GO:0004175	5	isogroup264303	2.91602387840844
+"endopeptidase activity"	GO:0004175	5	isogroup264634	-0.940191692461576
+"endopeptidase activity"	GO:0004175	5	isogroup229476	-9.50427080194891
+"endopeptidase activity"	GO:0004175	5	isogroup207225	-0.190385907797642
+"endopeptidase activity"	GO:0004175	5	isogroup163253	0.183789840994247
+"endopeptidase activity"	GO:0004175	5	isogroup211542	-1.45137990355156
+"endopeptidase activity"	GO:0004175	5	isogroup231465	0.238945887925844
+"endopeptidase activity"	GO:0004175	5	isogroup115985	-1.8030683652528
+"endopeptidase activity"	GO:0004175	5	isogroup215506	0.041015874711274
+"endopeptidase activity"	GO:0004175	5	isogroup166040	5.42325740863088
+"endopeptidase activity"	GO:0004175	5	isogroup116030	0.182209892447855
+"endopeptidase activity"	GO:0004175	5	isogroup117135	0.51364688570503
+"endopeptidase activity"	GO:0004175	5	isogroup214787	-3.98426018438016
+"endopeptidase activity"	GO:0004175	5	isogroup43772	-0.938776590508804
+"endopeptidase activity"	GO:0004175	5	isogroup116822	-10.6944351217119
+"endopeptidase activity"	GO:0004175	5	isogroup194487	7.51199537289915
+"hydro-lyase activity"	GO:0016836	4	isogroup251806	-1.37356833246961
+"hydro-lyase activity"	GO:0016836	4	isogroup43525	5.18189928168452
+"hydro-lyase activity"	GO:0016836	4	isogroup39533	0.221723685614487
+"hydro-lyase activity"	GO:0016836	4	isogroup258830	-3.30974686382548
+"hydro-lyase activity"	GO:0016836	4	isogroup115997	-3.62851295892919
+"structural constituent of ribosome"	GO:0003735	2	isogroup242203	1.65736303305837
+"structural constituent of ribosome"	GO:0003735	2	isogroup192600	-5.28800426043753
+"structural constituent of ribosome"	GO:0003735	2	isogroup182607	-2.93947833915752
+"structural constituent of ribosome"	GO:0003735	2	isogroup159563	-0.377258994665259
+"structural constituent of ribosome"	GO:0003735	2	isogroup170964	-3.88352453159176
+"structural constituent of ribosome"	GO:0003735	2	isogroup254606	2.34010943256012
+"structural constituent of ribosome"	GO:0003735	2	isogroup182932	-2.05870832576811
+"structural constituent of ribosome"	GO:0003735	2	isogroup58877	0.588015964028754
+"structural constituent of ribosome"	GO:0003735	2	isogroup242896	-0.67217855133946
+"structural constituent of ribosome"	GO:0003735	2	isogroup232580	-3.52311361997919
+"structural constituent of ribosome"	GO:0003735	2	isogroup268391	-0.533329211305538
+"structural constituent of ribosome"	GO:0003735	2	isogroup223351	-2.22468079985872
+"structural constituent of ribosome"	GO:0003735	2	isogroup214632	0.380513818832955
+"tetrapyrrole binding"	GO:0046906	2	isogroup223122	0.544775024632137
+"tetrapyrrole binding"	GO:0046906	2	isogroup235004	-2.11179371799578
+"tetrapyrrole binding"	GO:0046906	2	isogroup179736	-2.31560364276933
+"tetrapyrrole binding"	GO:0046906	2	isogroup241228	-0.880353678887332
+"tetrapyrrole binding"	GO:0046906	2	isogroup113729	0.870754066597086
+"tetrapyrrole binding"	GO:0046906	2	isogroup246633	-0.646693719435962
+"tetrapyrrole binding"	GO:0046906	2	isogroup252598	-5.58899160257386
+"tetrapyrrole binding"	GO:0046906	2	isogroup116252	-8.94569602299899
+"tetrapyrrole binding"	GO:0046906	2	isogroup242599	-1.07527942905854
+"tetrapyrrole binding"	GO:0046906	2	isogroup256863	-0.874073223315928
+"tetrapyrrole binding"	GO:0046906	2	isogroup246055	-2.80352980164761
+"tetrapyrrole binding"	GO:0046906	2	isogroup116154	-5.6923790556482
+"tetrapyrrole binding"	GO:0046906	2	isogroup169901	-0.838221699422998
+"tetrapyrrole binding"	GO:0046906	2	isogroup217742	-0.708056240564163
+"tetrapyrrole binding"	GO:0046906	2	isogroup241732	-0.28494722819866
+"tetrapyrrole binding"	GO:0046906	2	isogroup232755	2.15517652222242
+"tetrapyrrole binding"	GO:0046906	2	isogroup226229	-1.56886827647285
+"tetrapyrrole binding"	GO:0046906	2	isogroup204282	2.39780468358072
+"tetrapyrrole binding"	GO:0046906	2	isogroup188434	-0.96223208992706
+"tetrapyrrole binding"	GO:0046906	2	isogroup117234	-1.03814500786399
+"tetrapyrrole binding"	GO:0046906	2	isogroup236251	0.0263034088924226
+"tetrapyrrole binding"	GO:0046906	2	isogroup230714	-0.0256278290949613
+"tetrapyrrole binding"	GO:0046906	2	isogroup161819	0.493458105197581
+"tetrapyrrole binding"	GO:0046906	2	isogroup231234	-3.55287838166555
+"tetrapyrrole binding"	GO:0046906	2	isogroup220366	0.577039744163857
+"tetrapyrrole binding"	GO:0046906	2	isogroup177597	-7.88492223611469
+"tetrapyrrole binding"	GO:0046906	2	isogroup42849	-0.414405721923906
+"tetrapyrrole binding"	GO:0046906	2	isogroup247249	-2.91565506625165
+"tetrapyrrole binding"	GO:0046906	2	isogroup173220	-0.155694787697472
+"tetrapyrrole binding"	GO:0046906	2	isogroup156434	-0.719614197805696
+"tetrapyrrole binding"	GO:0046906	2	isogroup236264	-2.49324326874498
+"tetrapyrrole binding"	GO:0046906	2	isogroup264946	0.184127650876119
+"tetrapyrrole binding"	GO:0046906	2	isogroup235373	3.06947027077435
+"tetrapyrrole binding"	GO:0046906	2	isogroup244607	-0.731021743746513
+"tetrapyrrole binding"	GO:0046906	2	isogroup252814	-1.27410469242362
+"tetrapyrrole binding"	GO:0046906	2	isogroup203655	0.267848035946753
+"tetrapyrrole binding"	GO:0046906	2	isogroup237709	-0.38557063315909
+"tetrapyrrole binding"	GO:0046906	2	isogroup172177	-3.34951082769757
+"tetrapyrrole binding"	GO:0046906	2	isogroup226247	0.507256985467755
+"tetrapyrrole binding"	GO:0046906	2	isogroup117507	-1.5288429126694
+"tetrapyrrole binding"	GO:0046906	2	isogroup263939	-4.7085140063302
+"tetrapyrrole binding"	GO:0046906	2	isogroup115785	-2.52720804318355
+"tetrapyrrole binding"	GO:0046906	2	isogroup230382	-0.389624058400039
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup251806	-1.37356833246961
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup43525	5.18189928168452
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup39533	0.221723685614487
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup264337	-0.285373653763359
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup242359	-0.779057151613978
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup258830	-3.30974686382548
+"carbon-oxygen lyase activity"	GO:0016835	3	isogroup115997	-3.62851295892919
+"active transmembrane transporter activity"	GO:0022804	2	isogroup265649	-0.802800507489861
+"active transmembrane transporter activity"	GO:0022804	2	isogroup188418	-0.384391606024445
+"active transmembrane transporter activity"	GO:0022804	2	isogroup243270	-0.333565482844295
+"active transmembrane transporter activity"	GO:0022804	2	isogroup172693	-0.577234241629395
+"active transmembrane transporter activity"	GO:0022804	2	isogroup224528	-0.550217885749362
+"active transmembrane transporter activity"	GO:0022804	2	isogroup210769	-0.978153944532131
+"active transmembrane transporter activity"	GO:0022804	2	isogroup214756	-0.752824640117727
+"active transmembrane transporter activity"	GO:0022804	2	isogroup116357	-3.40572636461837
+"active transmembrane transporter activity"	GO:0022804	2	isogroup208445	5.06368958537907
+"active transmembrane transporter activity"	GO:0022804	2	isogroup228387	7.52822845007224
+"active transmembrane transporter activity"	GO:0022804	2	isogroup241267	-13.1421676724191
+"active transmembrane transporter activity"	GO:0022804	2	isogroup39829	-0.821520307812289
+"active transmembrane transporter activity"	GO:0022804	2	isogroup264318	1.1361243181796
+"active transmembrane transporter activity"	GO:0022804	2	isogroup235410	1.11628952202927
+"active transmembrane transporter activity"	GO:0022804	2	isogroup214922	-0.156737238835952
+"active transmembrane transporter activity"	GO:0022804	2	isogroup194625	-1.08217157489784
+"active transmembrane transporter activity"	GO:0022804	2	isogroup230959	-0.988254640395765
+"active transmembrane transporter activity"	GO:0022804	2	isogroup243247	0.509385912011276
+"active transmembrane transporter activity"	GO:0022804	2	isogroup173815	-1.03077318655966
+"active transmembrane transporter activity"	GO:0022804	2	isogroup265403	0.00859068445572751
+"active transmembrane transporter activity"	GO:0022804	2	isogroup163861	1.60501097752689
+"active transmembrane transporter activity"	GO:0022804	2	isogroup45273	0.778557312172592
+"active transmembrane transporter activity"	GO:0022804	2	isogroup42314	-0.115150783982053
+"active transmembrane transporter activity"	GO:0022804	2	isogroup115811	-0.236235775410018
+"calcium ion binding"	GO:0005509	3	isogroup232362	-1.08065032069053
+"calcium ion binding"	GO:0005509	3	isogroup194392	0.162620991784499
+"calcium ion binding"	GO:0005509	3	isogroup220556	-1.2376257925
+"calcium ion binding"	GO:0005509	3	isogroup244021	-0.173224205506041
+"calcium ion binding"	GO:0005509	3	isogroup246218	0.0659930202588287
+"calcium ion binding"	GO:0005509	3	isogroup42461	-0.645105544920611
+"calcium ion binding"	GO:0005509	3	isogroup119909	3.29951919046283
+"calcium ion binding"	GO:0005509	3	isogroup267138	0.122867236588506
+"calcium ion binding"	GO:0005509	3	isogroup200884	1.02583314231487
+"calcium ion binding"	GO:0005509	3	isogroup113855	3.09678976382627
+"calcium ion binding"	GO:0005509	3	isogroup51810	-0.0632784294235129
+"calcium ion binding"	GO:0005509	3	isogroup124754	-0.110540855688207
+"calcium ion binding"	GO:0005509	3	isogroup232436	0.3100632447342
+"calcium ion binding"	GO:0005509	3	isogroup250972	0.238820011634759
+"calcium ion binding"	GO:0005509	3	isogroup117397	-1.38074194162182
+"calcium ion binding"	GO:0005509	3	isogroup253215	0.458852402771283
+"calcium ion binding"	GO:0005509	3	isogroup248836	-1.03807014043168
+"calcium ion binding"	GO:0005509	3	isogroup264684	3.1593523318476
+"calcium ion binding"	GO:0005509	3	isogroup117194	2.27135309649198
+"calcium ion binding"	GO:0005509	3	isogroup194625	-1.08217157489784
+"calcium ion binding"	GO:0005509	3	isogroup195961	0.0307048728958352
+"calcium ion binding"	GO:0005509	3	isogroup39007	0.412454452201998
+"calcium ion binding"	GO:0005509	3	isogroup39653	-2.7434502174963
+"calcium ion binding"	GO:0005509	3	isogroup166040	5.42325740863088
+"calcium ion binding"	GO:0005509	3	isogroup162408	0.444534924526855
+"calcium ion binding"	GO:0005509	3	isogroup232279	-1.79568044643981
+"calcium ion binding"	GO:0005509	3	isogroup39103	-0.297185315043974
+"calcium ion binding"	GO:0005509	3	isogroup48185	1.67829605726069
+"calcium ion binding"	GO:0005509	3	isogroup157411	-1.49897751687076
+"calcium ion binding"	GO:0005509	3	isogroup232490	-4.19208387896877
+"calcium ion binding"	GO:0005509	3	isogroup115704	1.3514768076399
+"calcium ion binding"	GO:0005509	3	isogroup177124	0.864864330799254
+"calcium ion binding"	GO:0005509	3	isogroup266593	0.448651844690564
+"calcium ion binding"	GO:0005509	3	isogroup215871	-2.58237173655814
+"ligase activity"	GO:0016874	2	isogroup268504	1.02807043797618
+"ligase activity"	GO:0016874	2	isogroup268172	0.10080755897445
+"ligase activity"	GO:0016874	2	isogroup177742	-1.93073849111877
+"ligase activity"	GO:0016874	2	isogroup178239	0.252029135876186
+"ligase activity"	GO:0016874	2	isogroup266883	0.227170853898709
+"ligase activity"	GO:0016874	2	isogroup188140	0.700721092633755
+"ligase activity"	GO:0016874	2	isogroup242525	0.0951846555777759
+"ligase activity"	GO:0016874	2	isogroup267743	-1.20312713164605
+"ligase activity"	GO:0016874	2	isogroup41337	-3.23184766610775
+"ligase activity"	GO:0016874	2	isogroup256210	2.40876502469157
+"ligase activity"	GO:0016874	2	isogroup237348	1.02587562031146
+"ligase activity"	GO:0016874	2	isogroup264058	0.0743637683215615
+"ligase activity"	GO:0016874	2	isogroup39108	0.909660889543393
+"ligase activity"	GO:0016874	2	isogroup264226	0.232526956057732
+"ligase activity"	GO:0016874	2	isogroup116592	0.00958459116110334
+"ligase activity"	GO:0016874	2	isogroup219461	-0.215383209796909
+"ligase activity"	GO:0016874	2	isogroup49481	0.960942264404714
+"ligase activity"	GO:0016874	2	isogroup39876	0.220832110697167
+"ligase activity"	GO:0016874	2	isogroup266340	0.0649771693332312
+"ligase activity"	GO:0016874	2	isogroup38940	-0.704460268795415
+"ligase activity"	GO:0016874	2	isogroup260441	-0.048283249659858
+"ligase activity"	GO:0016874	2	isogroup58360	-0.994747531534677
+"ligase activity"	GO:0016874	2	isogroup116037	0.511941822921552
+"ligase activity"	GO:0016874	2	isogroup188360	3.98595108874435
+"ligase activity"	GO:0016874	2	isogroup219830	1.65856428355278
+"ligase activity"	GO:0016874	2	isogroup250584	1.18427403002606
+"ligase activity"	GO:0016874	2	isogroup229801	-0.0551981708305712
+"ligase activity"	GO:0016874	2	isogroup203655	0.267848035946753
+"ligase activity"	GO:0016874	2	isogroup254358	-2.49493327534466
+"ligase activity"	GO:0016874	2	isogroup168271	0.178319537355446
+"ligase activity"	GO:0016874	2	isogroup226004	1.14261715932798
+"ligase activity"	GO:0016874	2	isogroup115908	-0.980900121407105
+"ligase activity"	GO:0016874	2	isogroup265081	2.5305527395902
+"ligase activity"	GO:0016874	2	isogroup264397	-6.95382961178861
+"ligase activity"	GO:0016874	2	isogroup116329	-0.337450792143685
+"symporter activity"	GO:0015293	5	isogroup265649	-0.802800507489861
+"symporter activity"	GO:0015293	5	isogroup188418	-0.384391606024445
+"symporter activity"	GO:0015293	5	isogroup241267	-13.1421676724191
+"symporter activity"	GO:0015293	5	isogroup194625	-1.08217157489784
+"symporter activity"	GO:0015293	5	isogroup243247	0.509385912011276
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup232794	-1.69155911159519
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup192368	-0.556154899259573
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup199794	0.743267759872947
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup117055	-2.31468058330561
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup43874	-1.85336561648035
+"potassium ion transmembrane transporter activity"	GO:0005267;GO:0015079	3	isogroup194625	-1.08217157489784
+"carbohydrate binding"	GO:0030246	2	isogroup232362	-1.08065032069053
+"carbohydrate binding"	GO:0030246	2	isogroup254412	1.61674442629754
+"carbohydrate binding"	GO:0030246	2	isogroup39583	1.32088860296696
+"carbohydrate binding"	GO:0030246	2	isogroup116016	1.040795409757
+"carbohydrate binding"	GO:0030246	2	isogroup116935	-0.369374225896359
+"carbohydrate binding"	GO:0030246	2	isogroup229497	-0.764659541152455
+"carbohydrate binding"	GO:0030246	2	isogroup185401	0.559325263934615
+"cyclic nucleotide binding"	GO:0030551	4	isogroup114381	0.73648128064295
+"cyclic nucleotide binding"	GO:0030551	4	isogroup117436	-1.24093120218776
+"cyclic nucleotide binding"	GO:0030551	4	isogroup116401	1.2322621997969
+"cyclic nucleotide binding"	GO:0030551	4	isogroup39491	0.319973764100673
+"cyclic nucleotide binding"	GO:0030551	4	isogroup220141	0.00977068538862988
+"cyclic nucleotide binding"	GO:0030551	4	isogroup43874	-1.85336561648035
+"small conjugating protein ligase binding"	GO:0031625;GO:0044389	3	isogroup267743	-1.20312713164605
+"small conjugating protein ligase binding"	GO:0031625;GO:0044389	3	isogroup116592	0.00958459116110334
+"small conjugating protein ligase binding"	GO:0031625;GO:0044389	3	isogroup219461	-0.215383209796909
+"small conjugating protein ligase binding"	GO:0031625;GO:0044389	3	isogroup260441	-0.048283249659858
+"small conjugating protein ligase binding"	GO:0031625;GO:0044389	3	isogroup203655	0.267848035946753
+"enzyme activator activity"	GO:0008047	2	isogroup257471	3.12781490157016
+"enzyme activator activity"	GO:0008047	2	isogroup215085	0.42565396903351
+"enzyme activator activity"	GO:0008047	2	isogroup270632	1.45967581120055
+"enzyme activator activity"	GO:0008047	2	isogroup158298	-0.344998426787533
+"enzyme activator activity"	GO:0008047	2	isogroup267405	1.17007220616477
+"enzyme activator activity"	GO:0008047	2	isogroup115617	0.121192062618341
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup41540	0.697277321868828
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup117472	-0.00494854804713613
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup48362	0.537800476535271
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup39601	-5.88957829878229
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup47438	-0.0916653363052446
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup42435	0.00741958958644232
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup264146	-0.785368395802637
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds"	GO:0016810	2	isogroup43043	-2.54233158246725
+"coenzyme binding"	GO:0050662	2	isogroup249353	-6.64036564002064
+"coenzyme binding"	GO:0050662	2	isogroup117472	-0.00494854804713613
+"coenzyme binding"	GO:0050662	2	isogroup117511	0.393688710772673
+"coenzyme binding"	GO:0050662	2	isogroup259629	-0.46544589197254
+"coenzyme binding"	GO:0050662	2	isogroup241228	-0.880353678887332
+"coenzyme binding"	GO:0050662	2	isogroup113729	0.870754066597086
+"coenzyme binding"	GO:0050662	2	isogroup42241	-2.74259055690582
+"coenzyme binding"	GO:0050662	2	isogroup203790	-0.557769786119378
+"coenzyme binding"	GO:0050662	2	isogroup162379	-0.126281453050277
+"coenzyme binding"	GO:0050662	2	isogroup118189	0.417429957868221
+"coenzyme binding"	GO:0050662	2	isogroup44839	-0.397283607123117
+"coenzyme binding"	GO:0050662	2	isogroup165590	0.979260356319358
+"coenzyme binding"	GO:0050662	2	isogroup39601	-5.88957829878229
+"coenzyme binding"	GO:0050662	2	isogroup195443	-0.291368027828079
+"coenzyme binding"	GO:0050662	2	isogroup230714	-0.0256278290949613
+"coenzyme binding"	GO:0050662	2	isogroup161819	0.493458105197581
+"coenzyme binding"	GO:0050662	2	isogroup250231	-0.393442235292833
+"coenzyme binding"	GO:0050662	2	isogroup250134	-4.4544929022926
+"coenzyme binding"	GO:0050662	2	isogroup261781	2.1870904255125
+"coenzyme binding"	GO:0050662	2	isogroup165601	-0.236117132158103
+"coenzyme binding"	GO:0050662	2	isogroup117193	-1.72601734740761
+"coenzyme binding"	GO:0050662	2	isogroup115717	-0.25836174258293
+"coenzyme binding"	GO:0050662	2	isogroup252814	-1.27410469242362
+"coenzyme binding"	GO:0050662	2	isogroup240707	0.858283887330025
+"coenzyme binding"	GO:0050662	2	isogroup244498	-2.29003563702299
+"coenzyme binding"	GO:0050662	2	isogroup41236	-0.179409174627275
+"coenzyme binding"	GO:0050662	2	isogroup230382	-0.389624058400039
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup113729	0.870754066597086
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup264560	-1.87247940772568
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup156434	-0.719614197805696
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup264589	-0.45804689237682
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup225863	-0.0190950135857196
+"oxidoreductase activity, acting on a sulfur group of donors"	GO:0016667	3	isogroup117211	0.630560008639522
+"ATPase activity, coupled"	GO:0042623	8	isogroup163121	0.715033580409935
+"ATPase activity, coupled"	GO:0042623	8	isogroup174989	-0.165940211859757
+"ATPase activity, coupled"	GO:0042623	8	isogroup55059	4.46914957173756
+"ATPase activity, coupled"	GO:0042623	8	isogroup243270	-0.333565482844295
+"ATPase activity, coupled"	GO:0042623	8	isogroup259982	2.54331263659494
+"ATPase activity, coupled"	GO:0042623	8	isogroup224528	-0.550217885749362
+"ATPase activity, coupled"	GO:0042623	8	isogroup210769	-0.978153944532131
+"ATPase activity, coupled"	GO:0042623	8	isogroup214756	-0.752824640117727
+"ATPase activity, coupled"	GO:0042623	8	isogroup77633	0.734076618524095
+"ATPase activity, coupled"	GO:0042623	8	isogroup228387	7.52822845007224
+"ATPase activity, coupled"	GO:0042623	8	isogroup209321	2.38587419558799
+"ATPase activity, coupled"	GO:0042623	8	isogroup39829	-0.821520307812289
+"ATPase activity, coupled"	GO:0042623	8	isogroup115886	0.614913016795339
+"ATPase activity, coupled"	GO:0042623	8	isogroup235410	1.11628952202927
+"ATPase activity, coupled"	GO:0042623	8	isogroup214922	-0.156737238835952
+"ATPase activity, coupled"	GO:0042623	8	isogroup55436	-1.68664727442102
+"ATPase activity, coupled"	GO:0042623	8	isogroup230959	-0.988254640395765
+"ATPase activity, coupled"	GO:0042623	8	isogroup117295	-0.624305407720256
+"ATPase activity, coupled"	GO:0042623	8	isogroup173815	-1.03077318655966
+"ATPase activity, coupled"	GO:0042623	8	isogroup206211	2.39023099769387
+"ATPase activity, coupled"	GO:0042623	8	isogroup265403	0.00859068445572751
+"ATPase activity, coupled"	GO:0042623	8	isogroup163861	1.60501097752689
+"ATPase activity, coupled"	GO:0042623	8	isogroup42314	-0.115150783982053
+"ATPase activity, coupled"	GO:0042623	8	isogroup115704	1.3514768076399
+"ATPase activity, coupled"	GO:0042623	8	isogroup43046	-0.506333417316883
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup232794	-1.69155911159519
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup187784	0.132342159712466
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup214314	-1.2955920382194
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup199794	0.743267759872947
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup114544	0.450724026340128
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup117055	-2.31468058330561
+"voltage-gated channel activity"	GO:0022843;GO:0005244;GO:0022832	6	isogroup43874	-1.85336561648035
+"ATPase activity"	GO:0016887	2	isogroup114299	0.656059468125862
+"ATPase activity"	GO:0016887	2	isogroup113860	1.01019934257804
+"ATPase activity"	GO:0016887	2	isogroup44278	-0.28528048477643
+"ATPase activity"	GO:0016887	2	isogroup163121	0.715033580409935
+"ATPase activity"	GO:0016887	2	isogroup227943	-1.66367278469672
+"ATPase activity"	GO:0016887	2	isogroup174989	-0.165940211859757
+"ATPase activity"	GO:0016887	2	isogroup55059	4.46914957173756
+"ATPase activity"	GO:0016887	2	isogroup259100	5.73743906708506
+"ATPase activity"	GO:0016887	2	isogroup243270	-0.333565482844295
+"ATPase activity"	GO:0016887	2	isogroup190724	6.19536323457336
+"ATPase activity"	GO:0016887	2	isogroup259982	2.54331263659494
+"ATPase activity"	GO:0016887	2	isogroup224528	-0.550217885749362
+"ATPase activity"	GO:0016887	2	isogroup210769	-0.978153944532131
+"ATPase activity"	GO:0016887	2	isogroup214756	-0.752824640117727
+"ATPase activity"	GO:0016887	2	isogroup77633	0.734076618524095
+"ATPase activity"	GO:0016887	2	isogroup228387	7.52822845007224
+"ATPase activity"	GO:0016887	2	isogroup209321	2.38587419558799
+"ATPase activity"	GO:0016887	2	isogroup39829	-0.821520307812289
+"ATPase activity"	GO:0016887	2	isogroup115886	0.614913016795339
+"ATPase activity"	GO:0016887	2	isogroup235410	1.11628952202927
+"ATPase activity"	GO:0016887	2	isogroup256823	-0.0487152564522294
+"ATPase activity"	GO:0016887	2	isogroup214922	-0.156737238835952
+"ATPase activity"	GO:0016887	2	isogroup55436	-1.68664727442102
+"ATPase activity"	GO:0016887	2	isogroup117063	-0.842648482295178
+"ATPase activity"	GO:0016887	2	isogroup230959	-0.988254640395765
+"ATPase activity"	GO:0016887	2	isogroup117295	-0.624305407720256
+"ATPase activity"	GO:0016887	2	isogroup173815	-1.03077318655966
+"ATPase activity"	GO:0016887	2	isogroup207064	-0.820335797756789
+"ATPase activity"	GO:0016887	2	isogroup206211	2.39023099769387
+"ATPase activity"	GO:0016887	2	isogroup225288	-1.15564732091691
+"ATPase activity"	GO:0016887	2	isogroup265403	0.00859068445572751
+"ATPase activity"	GO:0016887	2	isogroup163861	1.60501097752689
+"ATPase activity"	GO:0016887	2	isogroup42314	-0.115150783982053
+"ATPase activity"	GO:0016887	2	isogroup267927	0.259534719428938
+"ATPase activity"	GO:0016887	2	isogroup115704	1.3514768076399
+"ATPase activity"	GO:0016887	2	isogroup43046	-0.506333417316883
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup116315	-2.40927732138276
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup39794	-0.531241026162258
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup260780	-0.827015744005025
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup203143	0.156777215128243
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup115617	0.121192062618341
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup231465	0.238945887925844
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup117135	0.51364688570503
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup214787	-3.98426018438016
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup116822	-10.6944351217119
+"serine hydrolase activity"	GO:0008236;GO:0017171	3	isogroup237660	0.581427293629184
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup214783	1.41989347800653
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup42888	-0.0182224199866173
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup165590	0.979260356319358
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup39848	-3.90573700732806
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup189462	-0.433855408323868
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup244316	-2.61525767022264
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup257004	-9.57584861380127
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup240707	0.858283887330025
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup192233	-1.79322273856523
+"oxidoreductase activity, acting on the CH-CH group of donors"	GO:0016627	3	isogroup41485	0.76740077875494
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup152369	3.4211528418183
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup251358	0.574382121639646
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup191514	-0.358534841104019
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup207102	-0.0754631945106466
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup265331	2.00690893589973
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup40185	-0.273660598378365
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup174782	0.703044817556786
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup153176	-0.0992502216622544
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup195443	-0.291368027828079
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup114332	1.09381164403754
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup265198	1.24158767684966
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup265801	-0.17615312724011
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup197090	-1.42971235058843
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup188538	10.0247971282646
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup262793	-2.73115664656768
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup258960	1.24674510109933
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup153495	-5.28151792511733
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup172078	-3.63028571221221
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup40847	1.26736135450385
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup120690	-3.62112186557312
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup230658	1.22298308184775
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup244498	-2.29003563702299
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup39008	-0.329694566592825
+"transferase activity, transferring glycosyl groups"	GO:0016757	2	isogroup211700	2.34683538668171
+"isomerase activity"	GO:0016853	2	isogroup40107	0.541914090176651
+"isomerase activity"	GO:0016853	2	isogroup263900	-6.89543194896359
+"isomerase activity"	GO:0016853	2	isogroup186920	0.241911785344685
+"isomerase activity"	GO:0016853	2	isogroup50944	-0.452120476968793
+"isomerase activity"	GO:0016853	2	isogroup182358	3.0397023764274
+"isomerase activity"	GO:0016853	2	isogroup116093	-1.87752235784301
+"isomerase activity"	GO:0016853	2	isogroup116149	1.98751123832312
+"isomerase activity"	GO:0016853	2	isogroup116016	1.040795409757
+"isomerase activity"	GO:0016853	2	isogroup117500	0.331904329281224
+"isomerase activity"	GO:0016853	2	isogroup264714	-1.29036619299871
+"isomerase activity"	GO:0016853	2	isogroup194767	3.95178655918563
+"isomerase activity"	GO:0016853	2	isogroup163733	-0.831575256264217
+"isomerase activity"	GO:0016853	2	isogroup262821	-1.22302722828003
+"isomerase activity"	GO:0016853	2	isogroup115670	0.593160399381839
+"isomerase activity"	GO:0016853	2	isogroup199510	4.42752903439033
+"isomerase activity"	GO:0016853	2	isogroup210813	-0.465021938746058
+"isomerase activity"	GO:0016853	2	isogroup266217	0.867310248673778
+"isomerase activity"	GO:0016853	2	isogroup244001	-1.87401831599614
+"isomerase activity"	GO:0016853	2	isogroup117070	0.797187147405809
+"isomerase activity"	GO:0016853	2	isogroup264140	-0.639590733343785
+"isomerase activity"	GO:0016853	2	isogroup264284	0.770204951122406
+"isomerase activity"	GO:0016853	2	isogroup157411	-1.49897751687076
+"isomerase activity"	GO:0016853	2	isogroup215501	-0.437959901540452
+"isomerase activity"	GO:0016853	2	isogroup210054	-0.776753752366794
+"isomerase activity"	GO:0016853	2	isogroup41236	-0.179409174627275
+"isomerase activity"	GO:0016853	2	isogroup43046	-0.506333417316883
+"nucleoside-triphosphatase regulator activity"	GO:0060589	2	isogroup215085	0.42565396903351
+"nucleoside-triphosphatase regulator activity"	GO:0060589	2	isogroup270632	1.45967581120055
+"nucleoside-triphosphatase regulator activity"	GO:0060589	2	isogroup158298	-0.344998426787533
+"nucleoside-triphosphatase regulator activity"	GO:0060589	2	isogroup265109	1.42665369944652
+"nucleoside-triphosphatase regulator activity"	GO:0060589	2	isogroup267405	1.17007220616477
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup40107	0.541914090176651
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup182358	3.0397023764274
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup117500	0.331904329281224
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup262821	-1.22302722828003
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup210813	-0.465021938746058
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup266217	0.867310248673778
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup244001	-1.87401831599614
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup264140	-0.639590733343785
+"intramolecular oxidoreductase activity"	GO:0016860	3	isogroup157411	-1.49897751687076
+"enzyme binding"	GO:0019899	2	isogroup220556	-1.2376257925
+"enzyme binding"	GO:0019899	2	isogroup246218	0.0659930202588287
+"enzyme binding"	GO:0019899	2	isogroup259100	5.73743906708506
+"enzyme binding"	GO:0019899	2	isogroup57318	0.365810762270533
+"enzyme binding"	GO:0019899	2	isogroup246490	2.46790365822465
+"enzyme binding"	GO:0019899	2	isogroup259982	2.54331263659494
+"enzyme binding"	GO:0019899	2	isogroup224528	-0.550217885749362
+"enzyme binding"	GO:0019899	2	isogroup189318	1.38634656269385
+"enzyme binding"	GO:0019899	2	isogroup116271	-0.379156819262953
+"enzyme binding"	GO:0019899	2	isogroup267743	-1.20312713164605
+"enzyme binding"	GO:0019899	2	isogroup53418	-0.395590802545467
+"enzyme binding"	GO:0019899	2	isogroup195443	-0.291368027828079
+"enzyme binding"	GO:0019899	2	isogroup116592	0.00958459116110334
+"enzyme binding"	GO:0019899	2	isogroup265234	0.492407796885301
+"enzyme binding"	GO:0019899	2	isogroup265801	-0.17615312724011
+"enzyme binding"	GO:0019899	2	isogroup219461	-0.215383209796909
+"enzyme binding"	GO:0019899	2	isogroup162932	0.542582286590912
+"enzyme binding"	GO:0019899	2	isogroup232436	0.3100632447342
+"enzyme binding"	GO:0019899	2	isogroup258168	-0.405404996574379
+"enzyme binding"	GO:0019899	2	isogroup260441	-0.048283249659858
+"enzyme binding"	GO:0019899	2	isogroup52154	0.71064945370878
+"enzyme binding"	GO:0019899	2	isogroup203655	0.267848035946753
+"enzyme binding"	GO:0019899	2	isogroup39103	-0.297185315043974
+"enzyme binding"	GO:0019899	2	isogroup39035	-1.22318821249102
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup154100	-3.64657325914536
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup38856	1.62738871192917
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup174720	-0.627292176543525
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup264634	-0.940191692461576
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup43772	-0.938776590508804
+"aspartic-type peptidase activity"	GO:0004190;GO:0070001	5	isogroup194487	7.51199537289915
+"protein serine/threonine phosphatase activity"	GO:0004722	2	isogroup208416	-0.412344218974579
+"protein serine/threonine phosphatase activity"	GO:0004722	2	isogroup53550	0.777048216431555
+"protein serine/threonine phosphatase activity"	GO:0004722	2	isogroup265405	-1.02780427931103
+"protein serine/threonine phosphatase activity"	GO:0004722	2	isogroup264946	0.184127650876119
+"protein serine/threonine phosphatase activity"	GO:0004722	2	isogroup163788	2.12449605211891
+"protein dimerization activity"	GO:0046983	2	isogroup114299	0.656059468125862
+"protein dimerization activity"	GO:0046983	2	isogroup219744	-4.68210021996522
+"protein dimerization activity"	GO:0046983	2	isogroup268447	-0.491565977835109
+"protein dimerization activity"	GO:0046983	2	isogroup237336	-1.17409792432169
+"protein dimerization activity"	GO:0046983	2	isogroup39848	-3.90573700732806
+"protein dimerization activity"	GO:0046983	2	isogroup265646	1.92995882665936
+"protein dimerization activity"	GO:0046983	2	isogroup39374	0.532018705722406
+"protein dimerization activity"	GO:0046983	2	isogroup264391	-0.81884414209163
+"protein dimerization activity"	GO:0046983	2	isogroup194625	-1.08217157489784
+"protein dimerization activity"	GO:0046983	2	isogroup235373	3.06947027077435
+"protein dimerization activity"	GO:0046983	2	isogroup265072	0.17751432157001
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup264187	-1.40061465105234
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup264399	-7.32660621569927
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup264303	2.91602387840844
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup207225	-0.190385907797642
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup115985	-1.8030683652528
+"threonine-type peptidase activity"	GO:0004298;GO:0070003	3	isogroup116030	0.182209892447855
+"enzyme regulator activity"	GO:0030234	1	isogroup116401	1.2322621997969
+"enzyme regulator activity"	GO:0030234	1	isogroup257471	3.12781490157016
+"enzyme regulator activity"	GO:0030234	1	isogroup215085	0.42565396903351
+"enzyme regulator activity"	GO:0030234	1	isogroup270632	1.45967581120055
+"enzyme regulator activity"	GO:0030234	1	isogroup39491	0.319973764100673
+"enzyme regulator activity"	GO:0030234	1	isogroup158298	-0.344998426787533
+"enzyme regulator activity"	GO:0030234	1	isogroup208416	-0.412344218974579
+"enzyme regulator activity"	GO:0030234	1	isogroup236585	-0.761579550199589
+"enzyme regulator activity"	GO:0030234	1	isogroup265109	1.42665369944652
+"enzyme regulator activity"	GO:0030234	1	isogroup265234	0.492407796885301
+"enzyme regulator activity"	GO:0030234	1	isogroup267405	1.17007220616477
+"enzyme regulator activity"	GO:0030234	1	isogroup115617	0.121192062618341
+"enzyme regulator activity"	GO:0030234	1	isogroup246134	-1.92822630222726
+"enzyme regulator activity"	GO:0030234	1	isogroup162101	0.586696335643503
+"enzyme regulator activity"	GO:0030234	1	isogroup116107	-3.10750750912014
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup224528	-0.550217885749362
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup210769	-0.978153944532131
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup228387	7.52822845007224
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup230959	-0.988254640395765
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup173815	-1.03077318655966
+"ATPase activity, coupled to transmembrane movement of ions, rotational mechanism"	GO:0044769;GO:0046933	4	isogroup265403	0.00859068445572751
+"zinc ion binding"	GO:0008270	6	isogroup41639	1.71156773722701
+"zinc ion binding"	GO:0008270	6	isogroup117472	-0.00494854804713613
+"zinc ion binding"	GO:0008270	6	isogroup268504	1.02807043797618
+"zinc ion binding"	GO:0008270	6	isogroup113860	1.01019934257804
+"zinc ion binding"	GO:0008270	6	isogroup251153	-3.10935795084073
+"zinc ion binding"	GO:0008270	6	isogroup53474	0.569297692747828
+"zinc ion binding"	GO:0008270	6	isogroup48852	-2.11696746823481
+"zinc ion binding"	GO:0008270	6	isogroup44516	0.846401372257897
+"zinc ion binding"	GO:0008270	6	isogroup40464	-0.385045415642088
+"zinc ion binding"	GO:0008270	6	isogroup215085	0.42565396903351
+"zinc ion binding"	GO:0008270	6	isogroup270632	1.45967581120055
+"zinc ion binding"	GO:0008270	6	isogroup251806	-1.37356833246961
+"zinc ion binding"	GO:0008270	6	isogroup266883	0.227170853898709
+"zinc ion binding"	GO:0008270	6	isogroup158298	-0.344998426787533
+"zinc ion binding"	GO:0008270	6	isogroup162379	-0.126281453050277
+"zinc ion binding"	GO:0008270	6	isogroup45441	1.15237153335007
+"zinc ion binding"	GO:0008270	6	isogroup264556	-0.041060193222607
+"zinc ion binding"	GO:0008270	6	isogroup188140	0.700721092633755
+"zinc ion binding"	GO:0008270	6	isogroup235957	-0.966858790376383
+"zinc ion binding"	GO:0008270	6	isogroup39601	-5.88957829878229
+"zinc ion binding"	GO:0008270	6	isogroup116306	0.114346626553753
+"zinc ion binding"	GO:0008270	6	isogroup195443	-0.291368027828079
+"zinc ion binding"	GO:0008270	6	isogroup40480	0.378424405292264
+"zinc ion binding"	GO:0008270	6	isogroup222312	0.24454122329168
+"zinc ion binding"	GO:0008270	6	isogroup54807	1.28873316027484
+"zinc ion binding"	GO:0008270	6	isogroup115651	-1.00486407461412
+"zinc ion binding"	GO:0008270	6	isogroup159143	-0.499956982190282
+"zinc ion binding"	GO:0008270	6	isogroup216058	0.426353301417291
+"zinc ion binding"	GO:0008270	6	isogroup243998	0.595964122262718
+"zinc ion binding"	GO:0008270	6	isogroup189462	-0.433855408323868
+"zinc ion binding"	GO:0008270	6	isogroup163253	0.183789840994247
+"zinc ion binding"	GO:0008270	6	isogroup208558	0.0227126855052049
+"zinc ion binding"	GO:0008270	6	isogroup250584	1.18427403002606
+"zinc ion binding"	GO:0008270	6	isogroup115642	0.14867663434395
+"zinc ion binding"	GO:0008270	6	isogroup210225	0.749684013674479
+"zinc ion binding"	GO:0008270	6	isogroup203655	0.267848035946753
+"zinc ion binding"	GO:0008270	6	isogroup264146	-0.785368395802637
+"zinc ion binding"	GO:0008270	6	isogroup38932	4.0375487146637
+"zinc ion binding"	GO:0008270	6	isogroup264914	0.35574677635676
+"zinc ion binding"	GO:0008270	6	isogroup226004	1.14261715932798
+"zinc ion binding"	GO:0008270	6	isogroup244498	-2.29003563702299
+"zinc ion binding"	GO:0008270	6	isogroup229955	-0.0146906478408484
+"zinc ion binding"	GO:0008270	6	isogroup41485	0.76740077875494
+"zinc ion binding"	GO:0008270	6	isogroup258830	-3.30974686382548
+"zinc ion binding"	GO:0008270	6	isogroup116329	-0.337450792143685
+"thiolester hydrolase activity"	GO:0016790	2	isogroup45948	0.566669854088978
+"thiolester hydrolase activity"	GO:0016790	2	isogroup257153	4.32947960016396
+"thiolester hydrolase activity"	GO:0016790	2	isogroup180554	-1.43194574631217
+"thiolester hydrolase activity"	GO:0016790	2	isogroup54105	-0.82590887956335
+"thiolester hydrolase activity"	GO:0016790	2	isogroup189963	-1.15969161176659
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup193417	-3.96789330905458
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup241228	-0.880353678887332
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup208792	-0.422350996180044
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup189462	-0.433855408323868
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup265278	-11.3595169117479
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup238965	-0.968989318537911
+"iron-sulfur cluster binding"	GO:0051536;GO:0051540	3	isogroup263916	-0.363387369470399
+"phosphate transmembrane transporter activity"	GO:1901677	2	isogroup198099	-0.27809380850736
+"phosphate transmembrane transporter activity"	GO:1901677	2	isogroup172693	-0.577234241629395
+"phosphate transmembrane transporter activity"	GO:1901677	2	isogroup116357	-3.40572636461837
+"phosphate transmembrane transporter activity"	GO:1901677	2	isogroup45273	0.778557312172592
+"phosphate transmembrane transporter activity"	GO:1901677	2	isogroup115811	-0.236235775410018
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup114381	0.73648128064295
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup117436	-1.24093120218776
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup211940	-0.974646895089344
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup220556	-1.2376257925
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup219483	-0.996282851273018
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup244006	7.45300209069886
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup42241	-2.74259055690582
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup246490	2.46790365822465
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup265065	0.415835290374189
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup116035	-0.356707212677412
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup42461	-0.645105544920611
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup168903	1.20590391287714
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup258091	-0.311436798007667
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup244446	-0.289488179832021
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup208416	-0.412344218974579
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup50770	0.0352555938299988
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup42200	0.193632296935127
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup264247	1.05838773845841
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup203086	-0.493851368365713
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup267138	0.122867236588506
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup265781	0.065370746053439
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup214145	-3.00997501245257
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup262185	-4.82792047205575
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup219883	-1.22984331884949
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup53518	-0.977215452670758
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup115714	-3.57666932198562
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup117270	-0.45622995831533
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup180828	0.0312875902317239
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup252103	2.23405244621971
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup238056	0.343191823830846
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup117397	-1.38074194162182
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup265294	-1.5362765889608
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup115927	-0.558449522344441
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup267405	1.17007220616477
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup264391	-0.81884414209163
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup117194	2.27135309649198
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup220141	0.00977068538862988
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup266230	-0.562390805450167
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup195961	0.0307048728958352
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup39007	0.412454452201998
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup214228	1.21446287359614
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup39220	0.593695425296674
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup267875	-2.25913378217617
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup39653	-2.7434502174963
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup259912	-2.4580900596681
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup197774	5.36774161323787
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup267414	-0.921234219205416
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup161672	-0.748336648027912
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup39103	-0.297185315043974
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup232490	-4.19208387896877
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup160783	0.203028646000256
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup42211	0.13580170598338
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup265072	0.17751432157001
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup210221	1.02724869574503
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup191732	16.4656988296457
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup49422	-0.849141428161938
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup48852	-2.11696746823481
+"transferase activity, transferring phosphorus-containing groups"	GO:0016301;GO:0016773;GO:0016772	2	isogroup265264	-0.180533423460926
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup177742	-1.93073849111877
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup267743	-1.20312713164605
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup219461	-0.215383209796909
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup116037	0.511941822921552
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup250584	1.18427403002606
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup203655	0.267848035946753
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup226004	1.14261715932798
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup264397	-6.95382961178861
+"ubiquitin-protein ligase activity"	GO:0004842	3	isogroup116329	-0.337450792143685
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup114381	0.73648128064295
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup117436	-1.24093120218776
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup220556	-1.2376257925
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup42461	-0.645105544920611
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup168903	1.20590391287714
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup208416	-0.412344218974579
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup50770	0.0352555938299988
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup203086	-0.493851368365713
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup267138	0.122867236588506
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup214145	-3.00997501245257
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup115714	-3.57666932198562
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup117270	-0.45622995831533
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup180828	0.0312875902317239
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup252103	2.23405244621971
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup117397	-1.38074194162182
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup267405	1.17007220616477
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup264391	-0.81884414209163
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup117194	2.27135309649198
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup220141	0.00977068538862988
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup266230	-0.562390805450167
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup195961	0.0307048728958352
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup39007	0.412454452201998
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup214228	1.21446287359614
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup267875	-2.25913378217617
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup39653	-2.7434502174963
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup197774	5.36774161323787
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup267414	-0.921234219205416
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup39103	-0.297185315043974
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup232490	-4.19208387896877
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup160783	0.203028646000256
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup42211	0.13580170598338
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup210221	1.02724869574503
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup49422	-0.849141428161938
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup246490	2.46790365822465
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup265294	-1.5362765889608
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup115927	-0.558449522344441
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup259912	-2.4580900596681
+"protein kinase activity"	GO:0004674;GO:0004672	6	isogroup265072	0.17751432157001
+"iron ion binding"	GO:0005506	2	isogroup40527	0.930020844633274
+"iron ion binding"	GO:0005506	2	isogroup179736	-2.31560364276933
+"iron ion binding"	GO:0005506	2	isogroup266576	-0.696121108351108
+"iron ion binding"	GO:0005506	2	isogroup256863	-0.874073223315928
+"iron ion binding"	GO:0005506	2	isogroup268729	0.374994780152381
+"iron ion binding"	GO:0005506	2	isogroup241732	-0.28494722819866
+"iron ion binding"	GO:0005506	2	isogroup244486	-0.472162579493179
+"iron ion binding"	GO:0005506	2	isogroup188434	-0.96223208992706
+"iron ion binding"	GO:0005506	2	isogroup117234	-1.03814500786399
+"iron ion binding"	GO:0005506	2	isogroup236251	0.0263034088924226
+"iron ion binding"	GO:0005506	2	isogroup230146	2.83955722496844
+"iron ion binding"	GO:0005506	2	isogroup230714	-0.0256278290949613
+"iron ion binding"	GO:0005506	2	isogroup161819	0.493458105197581
+"iron ion binding"	GO:0005506	2	isogroup39520	-5.32444246019021
+"iron ion binding"	GO:0005506	2	isogroup177597	-7.88492223611469
+"iron ion binding"	GO:0005506	2	isogroup173220	-0.155694787697472
+"iron ion binding"	GO:0005506	2	isogroup265981	-2.27680810039608
+"iron ion binding"	GO:0005506	2	isogroup114055	-1.15814228144428
+"iron ion binding"	GO:0005506	2	isogroup257014	2.72876672847908
+"iron ion binding"	GO:0005506	2	isogroup116935	-0.369374225896359
+"iron ion binding"	GO:0005506	2	isogroup263292	-0.949481576913942
+"iron ion binding"	GO:0005506	2	isogroup252814	-1.27410469242362
+"iron ion binding"	GO:0005506	2	isogroup237709	-0.38557063315909
+"iron ion binding"	GO:0005506	2	isogroup46969	-0.593912153040402
+"iron ion binding"	GO:0005506	2	isogroup264126	1.99078518435185
+"iron ion binding"	GO:0005506	2	isogroup263939	-4.7085140063302
+"iron ion binding"	GO:0005506	2	isogroup258764	2.51747477734016
+"iron ion binding"	GO:0005506	2	isogroup230382	-0.389624058400039
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup249353	-6.64036564002064
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup117511	0.393688710772673
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup241228	-0.880353678887332
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup203790	-0.557769786119378
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup162379	-0.126281453050277
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup165590	0.979260356319358
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup230714	-0.0256278290949613
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup250231	-0.393442235292833
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup165601	-0.236117132158103
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup117193	-1.72601734740761
+"flavin adenine dinucleotide binding"	GO:0050660	2	isogroup240707	0.858283887330025
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup195137	-0.362451521756176
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup55523	-1.64521245743348
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup265649	-0.802800507489861
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup188418	-0.384391606024445
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup198099	-0.27809380850736
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup267144	-2.21947266281766
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup116357	-3.40572636461837
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup192368	-0.556154899259573
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup188905	-0.79448172104311
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup163634	0.717471175123772
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup264318	1.1361243181796
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup235410	1.11628952202927
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup53447	-0.67221497355435
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup257902	-2.01592114893442
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup163861	1.60501097752689
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup45273	0.778557312172592
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup114082	-8.15865881960723
+"anion transmembrane transporter activity"	GO:0008509	4	isogroup115811	-0.236235775410018
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup232794	-1.69155911159519
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup187784	0.132342159712466
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup214314	-1.2955920382194
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup192368	-0.556154899259573
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup163634	0.717471175123772
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup199794	0.743267759872947
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup114544	0.450724026340128
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup194625	-1.08217157489784
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup117055	-2.31468058330561
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup43874	-1.85336561648035
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup188905	-0.79448172104311
+"substrate-specific channel activity"	GO:0005261;GO:0005216;GO:0022838;GO:0015267;GO:0022803;GO:0022836	5	isogroup41360	-2.65076259217105
+"protein kinase regulator activity"	GO:0019887;GO:0019207	2	isogroup116401	1.2322621997969
+"protein kinase regulator activity"	GO:0019887;GO:0019207	2	isogroup39491	0.319973764100673
+"protein kinase regulator activity"	GO:0019887;GO:0019207	2	isogroup208416	-0.412344218974579
+"protein kinase regulator activity"	GO:0019887;GO:0019207	2	isogroup265234	0.492407796885301
+"protein kinase regulator activity"	GO:0019887;GO:0019207	2	isogroup246134	-1.92822630222726
+"serine-type endopeptidase activity"	GO:0004252	2	isogroup260780	-0.827015744005025
+"serine-type endopeptidase activity"	GO:0004252	2	isogroup231465	0.238945887925844
+"serine-type endopeptidase activity"	GO:0004252	2	isogroup117135	0.51364688570503
+"serine-type endopeptidase activity"	GO:0004252	2	isogroup214787	-3.98426018438016
+"serine-type endopeptidase activity"	GO:0004252	2	isogroup116822	-10.6944351217119
+"magnesium ion binding"	GO:0000287	3	isogroup211940	-0.974646895089344
+"magnesium ion binding"	GO:0000287	3	isogroup173600	-0.519246260804563
+"magnesium ion binding"	GO:0000287	3	isogroup265646	1.92995882665936
+"magnesium ion binding"	GO:0000287	3	isogroup264140	-0.639590733343785
+"magnesium ion binding"	GO:0000287	3	isogroup163788	2.12449605211891
+"magnesium ion binding"	GO:0000287	3	isogroup157411	-1.49897751687076
+"magnesium ion binding"	GO:0000287	3	isogroup215501	-0.437959901540452
+"magnesium ion binding"	GO:0000287	3	isogroup42211	0.13580170598338
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup268172	0.10080755897445
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup242525	0.0951846555777759
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup39876	0.220832110697167
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup38940	-0.704460268795415
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup58360	-0.994747531534677
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup188360	3.98595108874435
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup219830	1.65856428355278
+"ligase activity, forming aminoacyl-tRNA and related compounds"	GO:0004812;GO:0016876;GO:0016875	4	isogroup229801	-0.0551981708305712
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup216294	-1.89584628137314
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup115946	-5.6219403619415
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup264015	0.115507027849915
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup231275	-1.44423677550728
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup226110	-1.27839396333517
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup176442	0.858210477138174
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup264119	0.462185133484961
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup245674	-6.37615743112815
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup226888	0.564240125216079
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup258935	-0.32829024242784
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup215794	0.941117147746366
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup123908	-0.655542140144528
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup117002	0.667827213322148
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup206420	-2.3087646201536
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup256823	-0.0487152564522294
+"translation factor activity, nucleic acid binding"	GO:0003743;GO:0008135	3	isogroup258038	-0.434574402370851
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup243270	-0.333565482844295
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup187784	0.132342159712466
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup208445	5.06368958537907
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup114544	0.450724026340128
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup194625	-1.08217157489784
+"divalent inorganic cation transmembrane transporter activity"	GO:0015085;GO:0072509	2	isogroup265646	1.92995882665936
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup178239	0.252029135876186
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup42104	-1.47238334888367
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup223226	-1.04278776382224
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup247798	1.60978373131865
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup264192	8.14320586686603
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup154626	2.88480260175114
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup208754	-1.07790660192408
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup267952	-1.71399371827403
+"transaminase activity"	GO:0030170;GO:0008483;GO:0016769	2	isogroup185401	0.559325263934615
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup41540	0.697277321868828
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup117472	-0.00494854804713613
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup39601	-5.88957829878229
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup47438	-0.0916653363052446
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup42435	0.00741958958644232
+"hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides"	GO:0016811;GO:0019213	4	isogroup43043	-2.54233158246725
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup45948	0.566669854088978
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup42879	-6.37497753019979
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup235957	-0.966858790376383
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup257153	4.32947960016396
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup44688	0.773582340554932
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup54105	-0.82590887956335
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup229476	-9.50427080194891
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup211542	-1.45137990355156
+"cysteine-type endopeptidase activity"	GO:0004197	2	isogroup166040	5.42325740863088
+"protein homodimerization activity"	GO:0042803	4	isogroup114299	0.656059468125862
+"protein homodimerization activity"	GO:0042803	4	isogroup237336	-1.17409792432169
+"protein homodimerization activity"	GO:0042803	4	isogroup39848	-3.90573700732806
+"protein homodimerization activity"	GO:0042803	4	isogroup265646	1.92995882665936
+"protein homodimerization activity"	GO:0042803	4	isogroup39374	0.532018705722406
+"protein homodimerization activity"	GO:0042803	4	isogroup264391	-0.81884414209163
+"protein homodimerization activity"	GO:0042803	4	isogroup235373	3.06947027077435
+"protein homodimerization activity"	GO:0042803	4	isogroup265072	0.17751432157001
+"receptor binding"	GO:0005102	2	isogroup264306	-2.33404208063851
+"receptor binding"	GO:0005102	2	isogroup116093	-1.87752235784301
+"receptor binding"	GO:0005102	2	isogroup115603	1.25311774869644
+"receptor binding"	GO:0005102	2	isogroup223766	0.0953664543179513
+"receptor binding"	GO:0005102	2	isogroup189963	-1.15969161176659
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup263900	-6.89543194896359
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup186920	0.241911785344685
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup50944	-0.452120476968793
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup116093	-1.87752235784301
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup264714	-1.29036619299871
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup194767	3.95178655918563
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup163733	-0.831575256264217
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup115670	0.593160399381839
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup199510	4.42752903439033
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup117070	0.797187147405809
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup264284	0.770204951122406
+"peptidyl-prolyl cis-trans isomerase activity"	GO:0003755;GO:0016859	4	isogroup210054	-0.776753752366794
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup265649	-0.802800507489861
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup232794	-1.69155911159519
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup243270	-0.333565482844295
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup187784	0.132342159712466
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup214314	-1.2955920382194
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup192368	-0.556154899259573
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup208445	5.06368958537907
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup265646	1.92995882665936
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup199794	0.743267759872947
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup114544	0.450724026340128
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup194625	-1.08217157489784
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup117055	-2.31468058330561
+"metal ion transmembrane transporter activity"	GO:0046873	4	isogroup43874	-1.85336561648035
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup241475	-0.737551144838375
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup244021	-0.173224205506041
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup246633	-0.646693719435962
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup232755	2.15517652222242
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup264560	-1.87247940772568
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup219046	0.710138253688587
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup116143	2.15859562962321
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup172177	-3.34951082769757
+"antioxidant activity"	GO:0016209;GO:0004601;GO:0016684	1	isogroup117507	-1.5288429126694
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup154100	-3.64657325914536
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup39552	-0.660298254899632
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup113860	1.01019934257804
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup45948	0.566669854088978
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup116315	-2.40927732138276
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup38856	1.62738871192917
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup264187	-1.40061465105234
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup264399	-7.32660621569927
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup115660	2.1345568925701
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup174720	-0.627292176543525
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup167862	0.939283755877986
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup42879	-6.37497753019979
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup115910	2.04230384995427
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup235957	-0.966858790376383
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup264944	-1.91504847098874
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup263906	-4.494745456642
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup77633	0.734076618524095
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup259723	0.433703192153331
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup39794	-0.531241026162258
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup257153	4.32947960016396
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup260780	-0.827015744005025
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup203143	0.156777215128243
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup44688	0.773582340554932
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup54105	-0.82590887956335
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup264303	2.91602387840844
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup264634	-0.940191692461576
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup229476	-9.50427080194891
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup207225	-0.190385907797642
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup115617	0.121192062618341
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup254238	-2.16714810727911
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup163253	0.183789840994247
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup211542	-1.45137990355156
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup241134	-1.22870391956567
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup231465	0.238945887925844
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup115985	-1.8030683652528
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup215506	0.041015874711274
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup166040	5.42325740863088
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup116030	0.182209892447855
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup117135	0.51364688570503
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup116165	0.676741173937669
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup214787	-3.98426018438016
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup210225	0.749684013674479
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup261607	1.79062411290061
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup43772	-0.938776590508804
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup116822	-10.6944351217119
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup237660	0.581427293629184
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup194487	7.51199537289915
+"peptidase activity"	GO:0070011;GO:0008233	2	isogroup41115	-0.154579310084486
+"lyase activity"	GO:0016829	2	isogroup251153	-3.10935795084073
+"lyase activity"	GO:0016829	2	isogroup115769	1.0232512554803
+"lyase activity"	GO:0016829	2	isogroup203255	0.921981619711483
+"lyase activity"	GO:0016829	2	isogroup203790	-0.557769786119378
+"lyase activity"	GO:0016829	2	isogroup204322	1.05331845811074
+"lyase activity"	GO:0016829	2	isogroup246490	2.46790365822465
+"lyase activity"	GO:0016829	2	isogroup251806	-1.37356833246961
+"lyase activity"	GO:0016829	2	isogroup43525	5.18189928168452
+"lyase activity"	GO:0016829	2	isogroup39533	0.221723685614487
+"lyase activity"	GO:0016829	2	isogroup264337	-0.285373653763359
+"lyase activity"	GO:0016829	2	isogroup242359	-0.779057151613978
+"lyase activity"	GO:0016829	2	isogroup223226	-1.04278776382224
+"lyase activity"	GO:0016829	2	isogroup235373	3.06947027077435
+"lyase activity"	GO:0016829	2	isogroup179469	1.75857142503204
+"lyase activity"	GO:0016829	2	isogroup258830	-3.30974686382548
+"lyase activity"	GO:0016829	2	isogroup115997	-3.62851295892919
+"lyase activity"	GO:0016829	2	isogroup200453	5.10536807812755
+"NAD binding"	GO:0051287	3	isogroup117472	-0.00494854804713613
+"NAD binding"	GO:0051287	3	isogroup259629	-0.46544589197254
+"NAD binding"	GO:0051287	3	isogroup118189	0.417429957868221
+"NAD binding"	GO:0051287	3	isogroup44839	-0.397283607123117
+"NAD binding"	GO:0051287	3	isogroup39601	-5.88957829878229
+"NAD binding"	GO:0051287	3	isogroup195443	-0.291368027828079
+"NAD binding"	GO:0051287	3	isogroup250134	-4.4544929022926
+"NAD binding"	GO:0051287	3	isogroup261781	2.1870904255125
+"NAD binding"	GO:0051287	3	isogroup115717	-0.25836174258293
+"NAD binding"	GO:0051287	3	isogroup244498	-2.29003563702299
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup265649	-0.802800507489861
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup188418	-0.384391606024445
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup172693	-0.577234241629395
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup116357	-3.40572636461837
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup208445	5.06368958537907
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup241267	-13.1421676724191
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup264318	1.1361243181796
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup235410	1.11628952202927
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup194625	-1.08217157489784
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup243247	0.509385912011276
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup45273	0.778557312172592
+"secondary active transmembrane transporter activity"	GO:0015291	2	isogroup115811	-0.236235775410018
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup114299	0.656059468125862
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup113860	1.01019934257804
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup44278	-0.28528048477643
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup163121	0.715033580409935
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup246218	0.0659930202588287
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup53359	0.269914807132301
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup227943	-1.66367278469672
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup174989	-0.165940211859757
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup55059	4.46914957173756
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup259100	5.73743906708506
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup57318	0.365810762270533
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup243270	-0.333565482844295
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup190724	6.19536323457336
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup219744	-4.68210021996522
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup174036	-3.1029724116392
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup259982	2.54331263659494
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup224528	-0.550217885749362
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup210769	-0.978153944532131
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup216509	2.87114497013048
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup214756	-0.752824640117727
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup77633	0.734076618524095
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup228387	7.52822845007224
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup209321	2.38587419558799
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup117002	0.667827213322148
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup264158	-0.358460392970398
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup264060	0.120254028625208
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup265368	-0.772213582808541
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup39829	-0.821520307812289
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup162932	0.542582286590912
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup232436	0.3100632447342
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup115886	0.614913016795339
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup206420	-2.3087646201536
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup235410	1.11628952202927
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup256823	-0.0487152564522294
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup214922	-0.156737238835952
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup55436	-1.68664727442102
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup223766	0.0953664543179513
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup117063	-0.842648482295178
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup230959	-0.988254640395765
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup117295	-0.624305407720256
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup180629	0.190798661834128
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup173815	-1.03077318655966
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup207064	-0.820335797756789
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup206211	2.39023099769387
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup215794	0.941117147746366
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup225288	-1.15564732091691
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup258038	-0.434574402370851
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup259391	5.43705797893191
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup265403	0.00859068445572751
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup163861	1.60501097752689
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup261298	0.821807249266402
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup42314	-0.115150783982053
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup264538	0.491602595698064
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup267927	0.259534719428938
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup115704	1.3514768076399
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup43046	-0.506333417316883
+"pyrophosphatase activity"	GO:0017111;GO:0016462;GO:0016818;GO:0016817	6	isogroup173600	-0.519246260804563
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup114381	0.73648128064295
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup117436	-1.24093120218776
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup256750	2.0394106311487
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup53359	0.269914807132301
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup57318	0.365810762270533
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup246490	2.46790365822465
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup264015	0.115507027849915
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup219744	-4.68210021996522
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup117002	0.667827213322148
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup264158	-0.358460392970398
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup204237	-1.09316289393271
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup86840	-0.149128640992984
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup206420	-2.3087646201536
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup232423	-8.23320835488361
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup188538	10.0247971282646
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup220141	0.00977068538862988
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup223766	0.0953664543179513
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup235373	3.06947027077435
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup215794	0.941117147746366
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup116981	-0.237609078145117
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup257228	6.56063059412521
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup258038	-0.434574402370851
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup264538	0.491602595698064
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup117044	0.108901618821753
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup43874	-1.85336561648035
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup42378	0.25711924714023
+"guanyl ribonucleotide binding"	GO:0032561;GO:0019001;GO:0005525	2	isogroup244626	-0.322519765938578
+"mRNA binding"	GO:0003729	3	isogroup174571	-1.10072141829887
+"mRNA binding"	GO:0003729	3	isogroup43525	5.18189928168452
+"mRNA binding"	GO:0003729	3	isogroup58065	-0.135809531909086
+"mRNA binding"	GO:0003729	3	isogroup117087	-0.0459411776758495
+"mRNA binding"	GO:0003729	3	isogroup201157	-6.32921590471695
+"mRNA binding"	GO:0003729	3	isogroup153540	0.396371467681504
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup224528	-0.550217885749362
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup210769	-0.978153944532131
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup41458	-3.90079667074766
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup208445	5.06368958537907
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup228387	7.52822845007224
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup208792	-0.422350996180044
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup230959	-0.988254640395765
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup173815	-1.03077318655966
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup265278	-11.3595169117479
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup265403	0.00859068445572751
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup238965	-0.968989318537911
+"hydrogen ion transmembrane transporter activity"	GO:0015078	2	isogroup264769	1.87547563443008
+"monooxygenase activity"	GO:0004497	3	isogroup117511	0.393688710772673
+"monooxygenase activity"	GO:0004497	3	isogroup162379	-0.126281453050277
+"monooxygenase activity"	GO:0004497	3	isogroup117234	-1.03814500786399
+"monooxygenase activity"	GO:0004497	3	isogroup161819	0.493458105197581
+"monooxygenase activity"	GO:0004497	3	isogroup250231	-0.393442235292833
+"monooxygenase activity"	GO:0004497	3	isogroup252814	-1.27410469242362
+"monooxygenase activity"	GO:0004497	3	isogroup264126	1.99078518435185
+"monooxygenase activity"	GO:0004497	3	isogroup263939	-4.7085140063302
+"monooxygenase activity"	GO:0004497	3	isogroup230382	-0.389624058400039
+"GTPase activity"	GO:0003924	2	isogroup53359	0.269914807132301
+"GTPase activity"	GO:0003924	2	isogroup57318	0.365810762270533
+"GTPase activity"	GO:0003924	2	isogroup219744	-4.68210021996522
+"GTPase activity"	GO:0003924	2	isogroup117002	0.667827213322148
+"GTPase activity"	GO:0003924	2	isogroup264158	-0.358460392970398
+"GTPase activity"	GO:0003924	2	isogroup206420	-2.3087646201536
+"GTPase activity"	GO:0003924	2	isogroup223766	0.0953664543179513
+"GTPase activity"	GO:0003924	2	isogroup215794	0.941117147746366
+"GTPase activity"	GO:0003924	2	isogroup258038	-0.434574402370851
+"GTPase activity"	GO:0003924	2	isogroup264538	0.491602595698064
+"identical protein binding"	GO:0042802	2	isogroup114299	0.656059468125862
+"identical protein binding"	GO:0042802	2	isogroup177742	-1.93073849111877
+"identical protein binding"	GO:0042802	2	isogroup237336	-1.17409792432169
+"identical protein binding"	GO:0042802	2	isogroup195443	-0.291368027828079
+"identical protein binding"	GO:0042802	2	isogroup39848	-3.90573700732806
+"identical protein binding"	GO:0042802	2	isogroup265646	1.92995882665936
+"identical protein binding"	GO:0042802	2	isogroup161819	0.493458105197581
+"identical protein binding"	GO:0042802	2	isogroup39374	0.532018705722406
+"identical protein binding"	GO:0042802	2	isogroup264391	-0.81884414209163
+"identical protein binding"	GO:0042802	2	isogroup38940	-0.704460268795415
+"identical protein binding"	GO:0042802	2	isogroup235373	3.06947027077435
+"identical protein binding"	GO:0042802	2	isogroup115904	1.95037471539573
+"identical protein binding"	GO:0042802	2	isogroup252814	-1.27410469242362
+"identical protein binding"	GO:0042802	2	isogroup229801	-0.0551981708305712
+"identical protein binding"	GO:0042802	2	isogroup264538	0.491602595698064
+"identical protein binding"	GO:0042802	2	isogroup244498	-2.29003563702299
+"identical protein binding"	GO:0042802	2	isogroup265072	0.17751432157001
+"identical protein binding"	GO:0042802	2	isogroup230382	-0.389624058400039
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup251358	0.574382121639646
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup191514	-0.358534841104019
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup40185	-0.273660598378365
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup174782	0.703044817556786
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup114332	1.09381164403754
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup265198	1.24158767684966
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup262793	-2.73115664656768
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup172078	-3.63028571221221
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup120690	-3.62112186557312
+"transferase activity, transferring hexosyl groups"	GO:0016758	3	isogroup230658	1.22298308184775
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup244010	-2.31207617953812
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup241489	1.15111922618271
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup212154	1.82981644009563
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup41419	-3.75163558291788
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup264139	0.428821526191534
+"transferase activity, transferring alkyl or aryl (other than methyl) groups"	GO:0016765	2	isogroup157411	-1.49897751687076
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup115380	0.783684364762546
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup117511	0.393688710772673
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup162379	-0.126281453050277
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup188434	-0.96223208992706
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup117234	-1.03814500786399
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup53777	0.860844852552314
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup161819	0.493458105197581
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup250231	-0.393442235292833
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup114055	-1.15814228144428
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup257014	2.72876672847908
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup116935	-0.369374225896359
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup252814	-1.27410469242362
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup116143	2.15859562962321
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup264126	1.99078518435185
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup263939	-4.7085140063302
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup258764	2.51747477734016
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"	GO:0016705	3	isogroup230382	-0.389624058400039
+"sequence-specific DNA binding"	GO:0043565	4	isogroup257219	2.47619875662673
+"sequence-specific DNA binding"	GO:0043565	4	isogroup205016	-0.474524536534264
+"sequence-specific DNA binding"	GO:0043565	4	isogroup44332	-0.902177586822006
+"sequence-specific DNA binding"	GO:0043565	4	isogroup116271	-0.379156819262953
+"sequence-specific DNA binding"	GO:0043565	4	isogroup161711	-0.375336341152744
+"sequence-specific DNA binding"	GO:0043565	4	isogroup178777	1.97313961761712
+"sequence-specific DNA binding"	GO:0043565	4	isogroup251592	3.72945979702603
+"motor activity"	GO:0003774	2	isogroup44278	-0.28528048477643
+"motor activity"	GO:0003774	2	isogroup246218	0.0659930202588287
+"motor activity"	GO:0003774	2	isogroup216509	2.87114497013048
+"motor activity"	GO:0003774	2	isogroup264060	0.120254028625208
+"motor activity"	GO:0003774	2	isogroup265368	-0.772213582808541
+"motor activity"	GO:0003774	2	isogroup162932	0.542582286590912
+"motor activity"	GO:0003774	2	isogroup232436	0.3100632447342
+"motor activity"	GO:0003774	2	isogroup180629	0.190798661834128
+"motor activity"	GO:0003774	2	isogroup225288	-1.15564732091691
+"motor activity"	GO:0003774	2	isogroup261298	0.821807249266402
+"motor activity"	GO:0003774	2	isogroup267927	0.259534719428938
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup246490	2.46790365822465
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup114450	0.00233492347780401
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup53603	-1.74721500430929
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup199794	0.743267759872947
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup254731	1.17696939498713
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup115927	-0.558449522344441
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup266230	-0.562390805450167
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup264607	5.33901416732309
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup267875	-2.25913378217617
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup259912	-2.4580900596681
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup117055	-2.31468058330561
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup265072	0.17751432157001
+"signal transducer activity"	GO:0004871;GO:0060089	2	isogroup49422	-0.849141428161938
+"protein transporter activity"	GO:0008565	2	isogroup117424	1.78173132938376
+"protein transporter activity"	GO:0008565	2	isogroup238861	-0.0924416800993659
+"protein transporter activity"	GO:0008565	2	isogroup39934	1.48523873210843
+"protein transporter activity"	GO:0008565	2	isogroup40998	0.613086665506195
+"protein transporter activity"	GO:0008565	2	isogroup236975	-0.0341599390864196
+"protein transporter activity"	GO:0008565	2	isogroup115649	-0.253985584902965
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup243270	-0.333565482844295
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup224528	-0.550217885749362
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup210769	-0.978153944532131
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup228387	7.52822845007224
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup235410	1.11628952202927
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup214922	-0.156737238835952
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup230959	-0.988254640395765
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup173815	-1.03077318655966
+"cation-transporting ATPase activity"	GO:0019829;GO:0042625	3	isogroup265403	0.00859068445572751
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup259629	-0.46544589197254
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup174284	1.94064226846784
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup250134	-4.4544929022926
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup165601	-0.236117132158103
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup39216	-0.504838936506672
+"oxidoreductase activity, acting on the aldehyde or oxo group of donors"	GO:0016903	3	isogroup117193	-1.72601734740761
+"NADP binding"	GO:0050661	2	isogroup259629	-0.46544589197254
+"NADP binding"	GO:0050661	2	isogroup241228	-0.880353678887332
+"NADP binding"	GO:0050661	2	isogroup42241	-2.74259055690582
+"NADP binding"	GO:0050661	2	isogroup250231	-0.393442235292833
+"NADP binding"	GO:0050661	2	isogroup250134	-4.4544929022926
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup214783	1.41989347800653
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup42888	-0.0182224199866173
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup244316	-2.61525767022264
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup257004	-9.57584861380127
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup192233	-1.79322273856523
+"oxidoreductase activity, acting on the CH-CH group of donors, NAD or NADP as acceptor"	GO:0016628	4	isogroup41485	0.76740077875494
+"metallopeptidase activity"	GO:0008237	5	isogroup113860	1.01019934257804
+"metallopeptidase activity"	GO:0008237	5	isogroup115910	2.04230384995427
+"metallopeptidase activity"	GO:0008237	5	isogroup259723	0.433703192153331
+"metallopeptidase activity"	GO:0008237	5	isogroup163253	0.183789840994247
+"metallopeptidase activity"	GO:0008237	5	isogroup215506	0.041015874711274
+"metallopeptidase activity"	GO:0008237	5	isogroup210225	0.749684013674479
+"metallopeptidase activity"	GO:0008237	5	isogroup261607	1.79062411290061
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors"	GO:0016706	2	isogroup115380	0.783684364762546
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors"	GO:0016706	2	isogroup114055	-1.15814228144428
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors"	GO:0016706	2	isogroup257014	2.72876672847908
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors"	GO:0016706	2	isogroup116935	-0.369374225896359
+"oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors"	GO:0016706	2	isogroup258764	2.51747477734016
+"lipid binding"	GO:0008289	2	isogroup40527	0.930020844633274
+"lipid binding"	GO:0008289	2	isogroup204237	-1.09316289393271
+"lipid binding"	GO:0008289	2	isogroup52934	-1.87142858931926
+"lipid binding"	GO:0008289	2	isogroup212272	-8.31212090205657
+"lipid binding"	GO:0008289	2	isogroup207225	-0.190385907797642
+"lipid binding"	GO:0008289	2	isogroup39008	-0.329694566592825
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup41639	1.71156773722701
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup116271	-0.379156819262953
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup39327	0.432265371314215
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup264226	0.232526956057732
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup188483	-0.58495610408439
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup253519	-0.303539162057305
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup243998	0.595964122262718
+"methyltransferase activity"	GO:0008168;GO:0016741;GO:0008757	2	isogroup263922	-1.08846136326965
+"cofactor binding"	GO:0048037	2	isogroup249353	-6.64036564002064
+"cofactor binding"	GO:0048037	2	isogroup117472	-0.00494854804713613
+"cofactor binding"	GO:0048037	2	isogroup117511	0.393688710772673
+"cofactor binding"	GO:0048037	2	isogroup259629	-0.46544589197254
+"cofactor binding"	GO:0048037	2	isogroup241228	-0.880353678887332
+"cofactor binding"	GO:0048037	2	isogroup113729	0.870754066597086
+"cofactor binding"	GO:0048037	2	isogroup178239	0.252029135876186
+"cofactor binding"	GO:0048037	2	isogroup42241	-2.74259055690582
+"cofactor binding"	GO:0048037	2	isogroup203790	-0.557769786119378
+"cofactor binding"	GO:0048037	2	isogroup162379	-0.126281453050277
+"cofactor binding"	GO:0048037	2	isogroup118189	0.417429957868221
+"cofactor binding"	GO:0048037	2	isogroup44839	-0.397283607123117
+"cofactor binding"	GO:0048037	2	isogroup165590	0.979260356319358
+"cofactor binding"	GO:0048037	2	isogroup39601	-5.88957829878229
+"cofactor binding"	GO:0048037	2	isogroup195443	-0.291368027828079
+"cofactor binding"	GO:0048037	2	isogroup230714	-0.0256278290949613
+"cofactor binding"	GO:0048037	2	isogroup161819	0.493458105197581
+"cofactor binding"	GO:0048037	2	isogroup250231	-0.393442235292833
+"cofactor binding"	GO:0048037	2	isogroup194397	-1.56271612764203
+"cofactor binding"	GO:0048037	2	isogroup42104	-1.47238334888367
+"cofactor binding"	GO:0048037	2	isogroup223226	-1.04278776382224
+"cofactor binding"	GO:0048037	2	isogroup250134	-4.4544929022926
+"cofactor binding"	GO:0048037	2	isogroup261781	2.1870904255125
+"cofactor binding"	GO:0048037	2	isogroup165601	-0.236117132158103
+"cofactor binding"	GO:0048037	2	isogroup247798	1.60978373131865
+"cofactor binding"	GO:0048037	2	isogroup232654	1.16743202031289
+"cofactor binding"	GO:0048037	2	isogroup195216	0.295219140819054
+"cofactor binding"	GO:0048037	2	isogroup117193	-1.72601734740761
+"cofactor binding"	GO:0048037	2	isogroup115717	-0.25836174258293
+"cofactor binding"	GO:0048037	2	isogroup252814	-1.27410469242362
+"cofactor binding"	GO:0048037	2	isogroup264192	8.14320586686603
+"cofactor binding"	GO:0048037	2	isogroup240707	0.858283887330025
+"cofactor binding"	GO:0048037	2	isogroup154626	2.88480260175114
+"cofactor binding"	GO:0048037	2	isogroup208754	-1.07790660192408
+"cofactor binding"	GO:0048037	2	isogroup244498	-2.29003563702299
+"cofactor binding"	GO:0048037	2	isogroup41236	-0.179409174627275
+"cofactor binding"	GO:0048037	2	isogroup265852	-2.64258405227004
+"cofactor binding"	GO:0048037	2	isogroup230382	-0.389624058400039
+"chromatin binding"	GO:0003682	2	isogroup174903	-0.355862369430273
+"chromatin binding"	GO:0003682	2	isogroup254412	1.61674442629754
+"chromatin binding"	GO:0003682	2	isogroup220783	0.102500290262214
+"chromatin binding"	GO:0003682	2	isogroup213471	0.440830221885193
+"chromatin binding"	GO:0003682	2	isogroup46362	0.203701564428257
+"chromatin binding"	GO:0003682	2	isogroup54944	-0.0530079913043656
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup195137	-0.362451521756176
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup55523	-1.64521245743348
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup265649	-0.802800507489861
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup188418	-0.384391606024445
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup232794	-1.69155911159519
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup198099	-0.27809380850736
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup243270	-0.333565482844295
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup187784	0.132342159712466
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup224528	-0.550217885749362
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup210769	-0.978153944532131
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup214314	-1.2955920382194
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup41458	-3.90079667074766
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup267144	-2.21947266281766
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup116357	-3.40572636461837
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup192368	-0.556154899259573
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup208445	5.06368958537907
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup228387	7.52822845007224
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup208792	-0.422350996180044
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup188905	-0.79448172104311
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup265646	1.92995882665936
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup163634	0.717471175123772
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup199794	0.743267759872947
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup264318	1.1361243181796
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup235410	1.11628952202927
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup214922	-0.156737238835952
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup114544	0.450724026340128
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup194625	-1.08217157489784
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup230959	-0.988254640395765
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup53447	-0.67221497355435
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup257902	-2.01592114893442
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup173815	-1.03077318655966
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup265278	-11.3595169117479
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup265403	0.00859068445572751
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup163861	1.60501097752689
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup117055	-2.31468058330561
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup45273	0.778557312172592
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup114082	-8.15865881960723
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup43874	-1.85336561648035
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup238965	-0.968989318537911
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup115811	-0.236235775410018
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup264769	1.87547563443008
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup242047	6.22589451007366
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup41360	-2.65076259217105
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup172693	-0.577234241629395
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup214756	-0.752824640117727
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup241267	-13.1421676724191
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup39829	-0.821520307812289
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup179900	-1.26916096378078
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup243247	0.509385912011276
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup42314	-0.115150783982053
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup46564	-0.481181175519335
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup114299	0.656059468125862
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup117424	1.78173132938376
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup238861	-0.0924416800993659
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup177597	-7.88492223611469
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup39934	1.48523873210843
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup40998	0.613086665506195
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup237709	-0.38557063315909
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup236975	-0.0341599390864196
+"substrate-specific transporter activity"	GO:0015075;GO:0022891;GO:0022857;GO:0022892	3	isogroup115649	-0.253985584902965
+"structural molecule activity"	GO:0005198	1	isogroup242203	1.65736303305837
+"structural molecule activity"	GO:0005198	1	isogroup117505	1.11608182577163
+"structural molecule activity"	GO:0005198	1	isogroup189318	1.38634656269385
+"structural molecule activity"	GO:0005198	1	isogroup192600	-5.28800426043753
+"structural molecule activity"	GO:0005198	1	isogroup182607	-2.93947833915752
+"structural molecule activity"	GO:0005198	1	isogroup159563	-0.377258994665259
+"structural molecule activity"	GO:0005198	1	isogroup53418	-0.395590802545467
+"structural molecule activity"	GO:0005198	1	isogroup170964	-3.88352453159176
+"structural molecule activity"	GO:0005198	1	isogroup113925	0.36320172278981
+"structural molecule activity"	GO:0005198	1	isogroup254606	2.34010943256012
+"structural molecule activity"	GO:0005198	1	isogroup182932	-2.05870832576811
+"structural molecule activity"	GO:0005198	1	isogroup58877	0.588015964028754
+"structural molecule activity"	GO:0005198	1	isogroup242896	-0.67217855133946
+"structural molecule activity"	GO:0005198	1	isogroup232580	-3.52311361997919
+"structural molecule activity"	GO:0005198	1	isogroup268391	-0.533329211305538
+"structural molecule activity"	GO:0005198	1	isogroup223351	-2.22468079985872
+"structural molecule activity"	GO:0005198	1	isogroup52154	0.71064945370878
+"structural molecule activity"	GO:0005198	1	isogroup214632	0.380513818832955
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup39552	-0.660298254899632
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup45948	0.566669854088978
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup167862	0.939283755877986
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup42879	-6.37497753019979
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup235957	-0.966858790376383
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup264944	-1.91504847098874
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup263906	-4.494745456642
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup257153	4.32947960016396
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup44688	0.773582340554932
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup54105	-0.82590887956335
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup229476	-9.50427080194891
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup254238	-2.16714810727911
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup211542	-1.45137990355156
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup241134	-1.22870391956567
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup166040	5.42325740863088
+"cysteine-type peptidase activity"	GO:0008234	5	isogroup116165	0.676741173937669
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup249353	-6.64036564002064
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup244021	-0.173224205506041
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup267285	0.253698813320254
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup39143	-0.838401160197565
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup161819	0.493458105197581
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup252814	-1.27410469242362
+"oxidoreductase activity, acting on NAD(P)H"	GO:0016651	2	isogroup230382	-0.389624058400039
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup177742	-1.93073849111877
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup267743	-1.20312713164605
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup264058	0.0743637683215615
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup116592	0.00958459116110334
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup219461	-0.215383209796909
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup260441	-0.048283249659858
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup116037	0.511941822921552
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup250584	1.18427403002606
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup203655	0.267848035946753
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup226004	1.14261715932798
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup264397	-6.95382961178861
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup116329	-0.337450792143685
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup39108	0.909660889543393
+"acid-amino acid ligase activity"	GO:0019787;GO:0016881	2	isogroup265081	2.5305527395902
+"acetyltransferase activity"	GO:0016407	2	isogroup175859	-0.341291227196686
+"acetyltransferase activity"	GO:0016407	2	isogroup39862	0.867173556614644
+"acetyltransferase activity"	GO:0016407	2	isogroup189963	-1.15969161176659
+"acetyltransferase activity"	GO:0016407	2	isogroup40580	5.16723564347462
+"acetyltransferase activity"	GO:0016407	2	isogroup177124	0.864864330799254
+"microtubule motor activity"	GO:0003777	2	isogroup44278	-0.28528048477643
+"microtubule motor activity"	GO:0003777	2	isogroup265368	-0.772213582808541
+"microtubule motor activity"	GO:0003777	2	isogroup162932	0.542582286590912
+"microtubule motor activity"	GO:0003777	2	isogroup225288	-1.15564732091691
+"microtubule motor activity"	GO:0003777	2	isogroup267927	0.259534719428938
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup253470	-1.72529313310454
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup45948	0.566669854088978
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup266576	-0.696121108351108
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup257471	3.12781490157016
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup46881	0.689816900380455
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup244486	-0.472162579493179
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup208416	-0.412344218974579
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup264829	1.56873079326063
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup257153	4.32947960016396
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup180554	-1.43194574631217
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup194676	0.726637229540485
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup230146	2.83955722496844
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup202386	-0.893631014808284
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup114026	0.551458749068214
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup266275	0.743488918157094
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup194260	-0.377423543610615
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup176518	-2.60671571137303
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup54105	-0.82590887956335
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup81504	-0.334405451655311
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup53550	0.777048216431555
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup265981	-2.27680810039608
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup265405	-1.02780427931103
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup266943	-2.70095249603077
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup219046	0.710138253688587
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup240173	1.42975554137188
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup264946	0.184127650876119
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup189963	-1.15969161176659
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup163788	2.12449605211891
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup115596	-2.13856578230949
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup161672	-0.748336648027912
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup189317	-1.14157012110727
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup115650	0.294386134530928
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup264415	1.10408724369399
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup188192	-0.178578871454347
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup117094	1.00135444698817
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup265852	-2.64258405227004
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup156176	-0.589414066753664
+"hydrolase activity, acting on ester bonds"	GO:0016788	3	isogroup115690	-3.69204283815707
+"ferrous iron binding"	GO:0008198	2	isogroup266576	-0.696121108351108
+"ferrous iron binding"	GO:0008198	2	isogroup244486	-0.472162579493179
+"ferrous iron binding"	GO:0008198	2	isogroup230146	2.83955722496844
+"ferrous iron binding"	GO:0008198	2	isogroup265981	-2.27680810039608
+"ferrous iron binding"	GO:0008198	2	isogroup257014	2.72876672847908
+"ferrous iron binding"	GO:0008198	2	isogroup46969	-0.593912153040402
+"intramolecular oxidoreductase activity, transposing S-S bonds"	GO:0003756;GO:0016864	4	isogroup40107	0.541914090176651
+"intramolecular oxidoreductase activity, transposing S-S bonds"	GO:0003756;GO:0016864	4	isogroup262821	-1.22302722828003
+"intramolecular oxidoreductase activity, transposing S-S bonds"	GO:0003756;GO:0016864	4	isogroup210813	-0.465021938746058
+"intramolecular oxidoreductase activity, transposing S-S bonds"	GO:0003756;GO:0016864	4	isogroup266217	0.867310248673778
+"intramolecular oxidoreductase activity, transposing S-S bonds"	GO:0003756;GO:0016864	4	isogroup244001	-1.87401831599614
+"cytoskeletal protein binding"	GO:0008092	2	isogroup117505	1.11608182577163
+"cytoskeletal protein binding"	GO:0008092	2	isogroup244006	7.45300209069886
+"cytoskeletal protein binding"	GO:0008092	2	isogroup216509	2.87114497013048
+"cytoskeletal protein binding"	GO:0008092	2	isogroup268447	-0.491565977835109
+"cytoskeletal protein binding"	GO:0008092	2	isogroup189318	1.38634656269385
+"cytoskeletal protein binding"	GO:0008092	2	isogroup162379	-0.126281453050277
+"cytoskeletal protein binding"	GO:0008092	2	isogroup219032	1.56123895957765
+"cytoskeletal protein binding"	GO:0008092	2	isogroup255238	0.312531893817645
+"cytoskeletal protein binding"	GO:0008092	2	isogroup175733	0.0198845446971954
+"cytoskeletal protein binding"	GO:0008092	2	isogroup264135	-1.86468835715407
+"poly(A) RNA binding"	GO:0044822	2	isogroup174903	-0.355862369430273
+"poly(A) RNA binding"	GO:0044822	2	isogroup246218	0.0659930202588287
+"poly(A) RNA binding"	GO:0044822	2	isogroup174989	-0.165940211859757
+"poly(A) RNA binding"	GO:0044822	2	isogroup259100	5.73743906708506
+"poly(A) RNA binding"	GO:0044822	2	isogroup48852	-2.11696746823481
+"poly(A) RNA binding"	GO:0044822	2	isogroup153858	1.46376132010161
+"poly(A) RNA binding"	GO:0044822	2	isogroup264642	0.921897338650104
+"poly(A) RNA binding"	GO:0044822	2	isogroup42894	-0.260241233699399
+"poly(A) RNA binding"	GO:0044822	2	isogroup119887	0.0395875369890165
+"poly(A) RNA binding"	GO:0044822	2	isogroup180671	1.17122171442871
+"poly(A) RNA binding"	GO:0044822	2	isogroup223112	0.474596482929416
+"poly(A) RNA binding"	GO:0044822	2	isogroup174571	-1.10072141829887
+"poly(A) RNA binding"	GO:0044822	2	isogroup43525	5.18189928168452
+"poly(A) RNA binding"	GO:0044822	2	isogroup161697	0.418690334222988
+"poly(A) RNA binding"	GO:0044822	2	isogroup264513	-1.7435262031876
+"poly(A) RNA binding"	GO:0044822	2	isogroup172880	1.16629789502637
+"poly(A) RNA binding"	GO:0044822	2	isogroup50770	0.0352555938299988
+"poly(A) RNA binding"	GO:0044822	2	isogroup209321	2.38587419558799
+"poly(A) RNA binding"	GO:0044822	2	isogroup246932	-0.445577517166289
+"poly(A) RNA binding"	GO:0044822	2	isogroup195443	-0.291368027828079
+"poly(A) RNA binding"	GO:0044822	2	isogroup58065	-0.135809531909086
+"poly(A) RNA binding"	GO:0044822	2	isogroup117087	-0.0459411776758495
+"poly(A) RNA binding"	GO:0044822	2	isogroup264656	1.143483013941
+"poly(A) RNA binding"	GO:0044822	2	isogroup232436	0.3100632447342
+"poly(A) RNA binding"	GO:0044822	2	isogroup224738	1.75656470320444
+"poly(A) RNA binding"	GO:0044822	2	isogroup201157	-6.32921590471695
+"poly(A) RNA binding"	GO:0044822	2	isogroup115603	1.25311774869644
+"poly(A) RNA binding"	GO:0044822	2	isogroup39109	0.446465737690827
+"poly(A) RNA binding"	GO:0044822	2	isogroup46782	0.0647680147162674
+"poly(A) RNA binding"	GO:0044822	2	isogroup179350	0.626810388774338
+"poly(A) RNA binding"	GO:0044822	2	isogroup165688	-0.0454837578617013
+"poly(A) RNA binding"	GO:0044822	2	isogroup115904	1.95037471539573
+"poly(A) RNA binding"	GO:0044822	2	isogroup215794	0.941117147746366
+"poly(A) RNA binding"	GO:0044822	2	isogroup116143	2.15859562962321
+"poly(A) RNA binding"	GO:0044822	2	isogroup46362	0.203701564428257
+"poly(A) RNA binding"	GO:0044822	2	isogroup267927	0.259534719428938
+"poly(A) RNA binding"	GO:0044822	2	isogroup153540	0.396371467681504
+"transporter activity"	GO:0005215	1	isogroup195137	-0.362451521756176
+"transporter activity"	GO:0005215	1	isogroup114299	0.656059468125862
+"transporter activity"	GO:0005215	1	isogroup55523	-1.64521245743348
+"transporter activity"	GO:0005215	1	isogroup265649	-0.802800507489861
+"transporter activity"	GO:0005215	1	isogroup188418	-0.384391606024445
+"transporter activity"	GO:0005215	1	isogroup227943	-1.66367278469672
+"transporter activity"	GO:0005215	1	isogroup232794	-1.69155911159519
+"transporter activity"	GO:0005215	1	isogroup198099	-0.27809380850736
+"transporter activity"	GO:0005215	1	isogroup243270	-0.333565482844295
+"transporter activity"	GO:0005215	1	isogroup172693	-0.577234241629395
+"transporter activity"	GO:0005215	1	isogroup187784	0.132342159712466
+"transporter activity"	GO:0005215	1	isogroup224528	-0.550217885749362
+"transporter activity"	GO:0005215	1	isogroup229761	-0.996388379413723
+"transporter activity"	GO:0005215	1	isogroup210769	-0.978153944532131
+"transporter activity"	GO:0005215	1	isogroup214314	-1.2955920382194
+"transporter activity"	GO:0005215	1	isogroup41458	-3.90079667074766
+"transporter activity"	GO:0005215	1	isogroup117424	1.78173132938376
+"transporter activity"	GO:0005215	1	isogroup214756	-0.752824640117727
+"transporter activity"	GO:0005215	1	isogroup267144	-2.21947266281766
+"transporter activity"	GO:0005215	1	isogroup242047	6.22589451007366
+"transporter activity"	GO:0005215	1	isogroup238861	-0.0924416800993659
+"transporter activity"	GO:0005215	1	isogroup116357	-3.40572636461837
+"transporter activity"	GO:0005215	1	isogroup192368	-0.556154899259573
+"transporter activity"	GO:0005215	1	isogroup208445	5.06368958537907
+"transporter activity"	GO:0005215	1	isogroup228387	7.52822845007224
+"transporter activity"	GO:0005215	1	isogroup208792	-0.422350996180044
+"transporter activity"	GO:0005215	1	isogroup188905	-0.79448172104311
+"transporter activity"	GO:0005215	1	isogroup216055	-3.22177396356274
+"transporter activity"	GO:0005215	1	isogroup227554	-0.915673915469855
+"transporter activity"	GO:0005215	1	isogroup265646	1.92995882665936
+"transporter activity"	GO:0005215	1	isogroup241267	-13.1421676724191
+"transporter activity"	GO:0005215	1	isogroup163634	0.717471175123772
+"transporter activity"	GO:0005215	1	isogroup199794	0.743267759872947
+"transporter activity"	GO:0005215	1	isogroup115592	-2.18817896264535
+"transporter activity"	GO:0005215	1	isogroup244779	-0.0480933293405392
+"transporter activity"	GO:0005215	1	isogroup39829	-0.821520307812289
+"transporter activity"	GO:0005215	1	isogroup177597	-7.88492223611469
+"transporter activity"	GO:0005215	1	isogroup264038	-0.167754340198902
+"transporter activity"	GO:0005215	1	isogroup264318	1.1361243181796
+"transporter activity"	GO:0005215	1	isogroup235410	1.11628952202927
+"transporter activity"	GO:0005215	1	isogroup214922	-0.156737238835952
+"transporter activity"	GO:0005215	1	isogroup39934	1.48523873210843
+"transporter activity"	GO:0005215	1	isogroup114544	0.450724026340128
+"transporter activity"	GO:0005215	1	isogroup194625	-1.08217157489784
+"transporter activity"	GO:0005215	1	isogroup179900	-1.26916096378078
+"transporter activity"	GO:0005215	1	isogroup230959	-0.988254640395765
+"transporter activity"	GO:0005215	1	isogroup116152	0.074527565569572
+"transporter activity"	GO:0005215	1	isogroup40998	0.613086665506195
+"transporter activity"	GO:0005215	1	isogroup243247	0.509385912011276
+"transporter activity"	GO:0005215	1	isogroup53447	-0.67221497355435
+"transporter activity"	GO:0005215	1	isogroup257902	-2.01592114893442
+"transporter activity"	GO:0005215	1	isogroup173815	-1.03077318655966
+"transporter activity"	GO:0005215	1	isogroup265278	-11.3595169117479
+"transporter activity"	GO:0005215	1	isogroup265403	0.00859068445572751
+"transporter activity"	GO:0005215	1	isogroup41360	-2.65076259217105
+"transporter activity"	GO:0005215	1	isogroup163861	1.60501097752689
+"transporter activity"	GO:0005215	1	isogroup237709	-0.38557063315909
+"transporter activity"	GO:0005215	1	isogroup117055	-2.31468058330561
+"transporter activity"	GO:0005215	1	isogroup45273	0.778557312172592
+"transporter activity"	GO:0005215	1	isogroup42314	-0.115150783982053
+"transporter activity"	GO:0005215	1	isogroup114082	-8.15865881960723
+"transporter activity"	GO:0005215	1	isogroup43874	-1.85336561648035
+"transporter activity"	GO:0005215	1	isogroup238965	-0.968989318537911
+"transporter activity"	GO:0005215	1	isogroup115811	-0.236235775410018
+"transporter activity"	GO:0005215	1	isogroup236975	-0.0341599390864196
+"transporter activity"	GO:0005215	1	isogroup264769	1.87547563443008
+"transporter activity"	GO:0005215	1	isogroup115649	-0.253985584902965
+"transporter activity"	GO:0005215	1	isogroup46564	-0.481181175519335
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup53474	0.569297692747828
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup257490	0.392072028950917
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup194397	-1.56271612764203
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup115651	-1.00486407461412
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup116583	0.538452992039466
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup216058	0.426353301417291
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup232654	1.16743202031289
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup190410	-0.0636018614436792
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup229955	-0.0146906478408484
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup42894	-0.260241233699399
+"fatty acid synthase activity"	GO:0004315;GO:0004312	2	isogroup265168	-0.24910923228578
