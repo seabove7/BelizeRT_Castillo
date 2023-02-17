@@ -1,0 +1,100 @@
+---
+title: "Reciprocal Transplants (ITS2)"
+author: "Annabel Hughes"
+date: "8/18/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r install packages, eval = FALSE, include = FALSE}
+setwd("/Users/annabelhughes/Documents/Davies\ Lab/Git/Reciprocal_Transplants")
+## install phyloseq packages
+install.packages("Biostrings")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.14")
+BiocManager::install("phyloseq")
+
+```
+
+```{r load packages, echo = FALSE}
+#library(dada2) # I have version 1.18.0 downloaded on the SCC for this
+library(tidyverse)
+library(phyloseq)
+library(RColorBrewer)
+library(janitor)
+library(ggplot2)
+library(Rmisc) 
+library(RColorBrewer)
+```
+
+# **ITS2 Assessment** {.tabset}
+
+```{r cleaning up its2 file, eval=TRUE, include=FALSE}
+df <- read.table("219_20220803T065042_DBV_20220803T143825.profiles.absolute.abund_and_meta.txt", sep = "\t")[c(-1:-6,-37, -38),-1] %>%
+  row_to_names(row_number = 1)
+names(df)[1] <- "sampleID"
+write.csv(df, "ITS2_symportal_RT.csv", row.names = FALSE)
+```
+
+```{r read in ITS2 data}
+## read in ITS2 data
+its_df <- read.csv("ITS2_symportal_RT.csv") %>% 
+  column_to_rownames("sampleID") # making first column of sample IDs the rownames
+## read in the meta data from the samples
+meta <- read.csv("RT_SSID_microPrep_ITS2_meta.csv") %>% 
+  column_to_rownames("Well_ID") # making first column of well IDs the rownames
+```
+
+```{r its2 phyloseq object}
+## Make taxa table for phyloseq
+taxa_its <- data.frame(colnames(its_df))# extract symb strain data as dataframe
+colnames(taxa_its) <- "DIV" # changing the column name to be 'DIV'
+taxa_its[2] <- taxa_its %>% separate(DIV, "majority_its2") # create a column for major ITS2 (first part of DIV name)
+taxa_its$genus <- str_sub(taxa_its$DIV, 1, 1) # make genus column of symb genus (first letter of DIV)
+taxa_its <- taxa_its %>% mutate_if(is.character, as.factor) # convert all columns to factors
+rownames(taxa_its) <- taxa_its$DIV # rename rows with DIV ids
+taxa_its_matrix <- as.matrix(taxa_its) # convert to a matrix
+ 
+## Create ITS2 taxa phyloseq object 
+phylo_its2 <- phyloseq(sample_data(meta),
+                       otu_table(its_df, taxa_are_rows = FALSE),
+                       tax_table(taxa_its_matrix))
+# phylo_its2 # just a sanity to check that we have 5 taxa and 29 samples -- Looks good!
+```
+
+### Abundance by individual
+
+```{r calc rel abund and save phylo objc, fig.height = 4, fig.width = 6, fig.align = "center"}
+## Calculate relative abundance per sample
+phylo_its2_rel <- transform_sample_counts(phylo_its2, function(OTU) OTU/sum(OTU))
+## plot relative majority ITS2 by treatment
+plot_bar(phylo_its2_rel, x = "Sample_ID", fill = "majority_its2")+
+  theme_bw() +
+ # facet_wrap(~ Transplant, ncol = 3) +
+  theme(panel.grid = element_blank(), legend.position = "bottom", strip.background = element_blank(), strip.text = element_text(face = "bold")) +
+  labs(x = "Coral Fragment", y = "Relative abundance") +
+  scale_color_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
+  scale_fill_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1.02))
+ggsave("FigSXX_ITS2_RT.png", height = 4, width = 6, dpi = 600)
+ggsave("FigSXX_ITS2_RT.pdf", height = 4, width = 6, useDingbats = FALSE)
+## Save both the absolute and relative abundance phyloseq objects
+#save(phylo_its2, phylo_its2_rel, file = "Data/ITS2_data/its_phylo_abund.Rdata")
+```
+
+**Figure SXX.** Relative abundance of major ITS2 types by coral fragment (x axis).
+
+```{r}
+## stats
+its_df_total <- cbind(its_df, total = rowSums(its_df)) #create a new column summing up counts for each sample
+mean(its_df_total$total) #mean
+sd(its_df_total$total) #standard deviation
+min(its_df_total$total) #minimum counts
+max(its_df_total$total) #max
+```
+
+

@@ -77,12 +77,13 @@ temp_wide <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>%
 
 ```{r all temperature measurements across time}
 
-ggplot(data = temp_long, aes(x = date_time, y = temp, colour = reef, group = reef)) +
+raw_temp_plot <- ggplot(data = temp_long, aes(x = date_time, y = temp, colour = reef, group = reef)) +
   geom_line() +
   scale_colour_manual(values = c("#D55E00","#009E73","#0072B2")) +
   theme_bw() +
   theme(panel.grid = element_blank(), axis.title.x = element_blank(), legend.title = element_blank(), legend.position = c(0.8, 0.2)) +
   ylab("Temperature (°C)")
+raw_temp_plot
 
 ```
 
@@ -991,102 +992,6 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 <br/>
 
 
-### Supplemental Figures
-
-#### Figure S2
-
-```{r figure S2}
-
-fig_s2a <- month_mean_stat_plot + 
-  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
-  ylab("Monthly Temperature Mean (°C)")
-
-fig_s2b <- week_mean_stat_plot + 
-  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
-  ylab("Weekly Temperature Mean (°C)")
-
-fig_s2c <- day_mean_stat_plot + 
-  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
-  ylab("Daily Temperature Mean (°C)")
-
-
-fig_s2d <- month_range_stat_plot + 
-  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
-  ylab("Monthly Temperature Range (°C)")
-
-fig_s2e <- day_range_stat_plot + 
-  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
-  ylab("Daily Temperature Range (°C)")
-
-
-
-
-ggarrange(fig_s2a, fig_s2b, fig_s2c, fig_s2d, fig_s2e, ncol = 3, nrow = 2, labels = "AUTO")
-ggsave("RT_figures/FigureS2_temps.pdf", height = 8, width = 14, useDingbats = FALSE) # save plot
-ggsave("RT_figures/FigureS2_temps.png", height = 8, width = 14) # save plot
-
-```
-
-
-<br/>
-<br/>
-
-
-#### First ()
-
-```{r supplemental calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
-
-calc.avg.plot <- ggplot(data = RT.calc) +
-  theme_bw() +
-  theme(panel.grid = element_blank(), legend.key=element_blank()) +
-  geom_point(aes(x = source, y = rate, colour = trans), size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
-  geom_linerange(aes(x = source, ymin = lowerci, ymax = upperci, colour = trans), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
-  scale_color_manual("Transplant \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
-  xlab("Source Location") +
-  ggtitle("") +
-  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
-
-calc.avg.plot
-
-```
-
-**Supplemental Figure 1A |** Calcification rate (mg cm^-2^ day^-1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
-
-
-#### Second ()
-
-```{r supplementalTP calcification plot, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
-
-calc.tp2.plot <- ggplot(data = RT.calc.tp) +
-  theme_bw() +
-  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
-  geom_point(aes(x = TP, y = rate, colour = source), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
-  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
-  facet_wrap(~ trans) +
-  scale_color_manual("Source Location", values=c("#D55E00", "#009E73", "#0072B2")) +
-  xlab("Time (years)") +
-  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
-
-calc.tp2.plot
-
-```
-
-**Supplemental 1B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by transplant location. Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
-
-```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=3.3, fig.width=12}
-
-plot_grid(fig2b, calc.tp2.plot, rel_widths = c(0.7,1.3), labels = c("A", "B"), scale = 0.9) +
-  draw_label("Transplant Location", size = 11, x = 0.695, y = 0.96)
-  ggsave("RT_figures/FigureS1_Calcification.pdf", height = 3.3, width = 12, useDingbats = FALSE)
-  ggsave("RT_figures/FigureS1_Calcification.png", height = 3.3, width = 12)
-  
-
-```
-**Supplemental Figure 1.** Calcification rate (mg cm^–2^ day^–1^) averaged over the entire transplant experimental period (2012 – 2015) by transplant location (A) and at yearly intervals (B). Source location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
-
-<br/>
-
-
 ## GE Plasticity Tables {.tabset}
 
 ### Supplemental Table S3
@@ -1212,6 +1117,128 @@ ggsave("RT_figures/Figure2_survival_calc.pdf", width = 11, height = 5, useDingba
 ggsave("RT_figures/Figure2_survival_calc.png", width = 11, height = 5) # save as PNG
 
 ```
+
+<br/>
+<br/>
+
+## Supplemental Figures {.tabset}
+
+### Figure S1
+
+```{r figure S1, fig.height = 8, fig.width = 14}
+
+fig_s2a <- raw_temp_plot + 
+  theme(text = element_text(size = 15))
+
+fig_s2b <- month_mean_stat_plot + 
+  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
+  ylab("Monthly Temperature Mean (°C)")
+
+fig_s2c <- week_mean_stat_plot + 
+  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
+  ylab("Weekly Temperature Mean (°C)")
+
+fig_s2d <- day_mean_stat_plot + 
+  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
+  ylab("Daily Temperature Mean (°C)")
+
+
+fig_s2e <- month_range_stat_plot + 
+  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
+  ylab("Monthly Temperature Range (°C)")
+
+fig_s2f <- day_range_stat_plot + 
+  theme(plot.subtitle = element_blank(), plot.title = element_blank(), text = element_text(size = 15)) +
+  ylab("Daily Temperature Range (°C)")
+
+
+
+
+ggarrange(fig_s2a, fig_s2b, fig_s2c, fig_s2d, fig_s2e, fig_s2f, ncol = 3, nrow = 2, labels = "AUTO")
+ggsave("RT_figures/FigureS1_temps.pdf", height = 8, width = 14, useDingbats = FALSE) # save plot
+ggsave("RT_figures/FigureS1_temps.png", height = 8, width = 14) # save plot
+
+```
+**Figure S1**. *In situ* temperatures recorded every 30 minutes from November 2014 to October 2015 on the nearshore (NS; orange), backreef (BR; green), and forereef (FR; blue) habitats assessed during this reciprocal transplant experiment on the Belize MBRS. (*A*) Raw temperature observations showing overall temperature patterns through the sampling period at each site. (*B*) Monthly, (*C*) Weekly, and (*D*) daily mean temperature comparisons across the three reef environments. (*E*) Monthly and (*F*) daily temperature ranges across the three reef environments demonstrating differences in temperature variability across sites.
+
+<br/>
+<br/>
+
+
+### Figure S2
+
+```{r figure s2a, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+
+figS2a <- ggplot(data = RT.calc.tp) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), legend.position = "none", strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = TP, y = rate, colour = trans), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
+  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = trans), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
+  facet_wrap(~source) +
+  scale_color_manual("Transplant Location", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Time (years)") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+```
+
+```{r figure S2b, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=5}
+
+figS2b <- ggplot(data = RT.calc, aes(x = source, y = rate, colour = trans)) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), legend.key=element_blank()) +
+  geom_point(size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
+  geom_linerange(aes(x = source, ymin = lowerci, ymax = upperci, colour = trans), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
+  scale_color_manual("Transplant \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Source Location") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+```
+
+```{r figure s2b, message=FALSE, warning=FALSE, fig.align='center', fig.height=4, fig.width=9.5}
+
+figS2c <- ggplot(data = RT.calc.tp) +
+  theme_bw() +
+  theme(panel.grid.major=element_blank(), panel.grid.minor=element_blank(), panel.background=element_blank(), legend.key=element_blank(), strip.background = element_blank(), panel.border = element_rect(colour = "black", fill=NA, size=1)) +
+  geom_point(aes(x = TP, y = rate, colour = source), size = 1.8, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.5, seed = 14)) +
+  geom_linerange(aes(x = TP, ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.5), size = 1.2, alpha = 0.2) +
+  facet_wrap(~ trans) +
+  scale_color_manual("Source \nLocation", values=c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Time (years)") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")"))
+
+```
+
+```{r figure s2 legends}
+
+library(cowplot)
+library(gridExtra) 
+library(grid)
+
+### Transplant colour legend
+figS2a_legend <- as_ggplot(get_legend(figS2b))
+# then need to remove legend from fig 2Sb
+figS2b <- figS2b + theme(legend.position = "none")
+
+### Source colour legend
+figS2c_legend <- as_ggplot(get_legend(figS2c))
+# then need to remove legend from fig 2Sc
+figS2c <- figS2c + theme(legend.position = "none")
+
+```
+
+```{r message=FALSE, warning=FALSE, fig.align='center', fig.height=6, fig.width=12}
+
+plot_grid(figS2a, figS2a_legend, figS2b, figS2c, figS2c_legend, rel_widths = c(1.3, 0.1, 0.7), labels = c("A", "", "B", "C", ""), scale = 0.85) +
+  draw_label("Source Location", size = 11, x = 0.33, y = 0.96) +
+  draw_label("Transplant Location", size = 11, x = 0.33, y = 0.46)
+ggsave("RT_figures/FigureS2_Calcification.pdf", height = 6, width = 12, useDingbats = FALSE)
+ggsave("RT_figures/FigureS2_Calcification.png", height = 6, width = 12)
+
+```
+**Supplemental Figure 2.** Calcification rate (mg cm^–2^ day^–1^) coloured by either (**A-B**) transplant or (**C**) source location (orange = NS [nearshore], green = BR [backreef], and blue = FR [forereef]), at (**A, C**) yearly intervals or (**B**) averaged over the entire transplant experimental period. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color.
+
+<br/>
+<br/>
 
 
 ## <span style="color: navy;">*Session Information:*</span>
