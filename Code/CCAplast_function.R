@@ -1,12 +1,14 @@
 ################################################################################
-################### Sample plasticity based on CCA distances ####################
+################### Sample plasticity based on PC distances ####################
 ############## Written by Colleen B. Bove (colleenbove@gmail.com) ##############
-########################## Laste update: 23 May 2022 ###########################
+########################## Laste update: 03 Feb 2022 ###########################
 ################################################################################
 
 ## Required packages to run:
 # dplyr
 
+
+## PC distances can be calculated from prcomp() objects or from plotcca()
 
 
 ## To run the function, enter the following objects:

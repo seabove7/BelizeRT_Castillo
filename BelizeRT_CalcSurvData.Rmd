@@ -62,13 +62,13 @@ seed = 14 # seed to make results replicatable (our seed was 14)
 
 ```{r temp dataframe setup, message=FALSE, warning=FALSE}
 
-temp_long <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
+temp_long <- read.csv("Data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
   mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
   select(-Date.Time) %>% 
   pivot_longer(Forereef:Nearshore, names_to = "reef", values_to = "temp") %>% 
   mutate(reef = fct_relevel(reef, c("Nearshore", "Backreef", "Forereef"))) 
 
-temp_wide <- read.csv("RT_data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
+temp_wide <- read.csv("Data/RTE_Temperature_Nov2014_Oct2015.csv") %>% 
   mutate(date_time = as.POSIXct(Date.Time, format = "%m/%d/%y %H:%M")) %>% # convert date/time to POSIXct class 
   select(-Date.Time) %>% 
   drop_na()
@@ -157,7 +157,7 @@ temp_stat_plot <- temp_plot +
 temp_stat_plot
 
 
-ggsave("RT_figures/Overall_temp.pdf", height = 4, width = 4, useDingbats = FALSE) # save plot
+#ggsave("Figures/Overall_temp.pdf", height = 4, width = 4, useDingbats = FALSE) # save plot
 
 ```
 
@@ -323,7 +323,7 @@ day_mean_stat_plot <- day_mean_plot +
 
 ## Combine all mean plots together for visual comparison
 ggarrange(month_mean_stat_plot, week_mean_stat_plot, day_mean_stat_plot, ncol = 3)
-ggsave("RT_figures/Mean_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
+#ggsave("Figures/Mean_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
 
 ```
 
@@ -498,7 +498,7 @@ day_range_stat_plot <- day_range_plot +
 
 ## Combine all range plots together for visual comparison
 ggarrange(month_range_stat_plot, week_range_stat_plot, day_range_stat_plot, ncol = 3)
-ggsave("RT_figures/Range_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
+#ggsave("Figures/Range_temp.pdf", height = 4, width = 12, useDingbats = FALSE) # save plot
 
 ```
 
@@ -525,7 +525,7 @@ ggsave("RT_figures/Range_temp.pdf", height = 4, width = 12, useDingbats = FALSE)
 
 ```{r survival dataframe setup, message=FALSE, warning=FALSE}
 
-sur <- read.csv("RT_data/RT_survival.csv") %>% # Read in survival data (0 = living, 1 = mortality event under 'Status')
+sur <- read.csv("Data/RT_survival.csv") %>% # Read in survival data (0 = living, 1 = mortality event under 'Status')
   mutate(Source = fct_relevel(Source, levels = c("NS", "BR", "FR")), # relevel source to be by distance from land
          Transplant = fct_relevel(Transplant, levels = c("NS", "BR", "FR"))) # relevel transplant to be by distance from land
 
@@ -565,8 +565,8 @@ fig2a <- surv_plot$plot
 fig2a
 
 ## Save survival plots
-# ggsave("RT_figures/Figure2A_Survival.pdf", width = 5.7, height = 5.5, useDingbats = FALSE) # save as PDF
-# ggsave("RT_figures/Figure2A_Survival.png", width = 5.7, height = 5.5) # save as PNG
+# ggsave("Figures/Figure2A_Survival.pdf", width = 5.7, height = 5.5, useDingbats = FALSE) # save as PDF
+# ggsave("Figures/Figure2A_Survival.png", width = 5.7, height = 5.5) # save as PNG
 
 ```
 
@@ -581,7 +581,7 @@ fig2a
 
 ```{r}
 
-tableS4 <- read.csv("RT_data/RT_survival_table.csv")[1:7] # Read in num corals surviving at each timepoint
+tableS4 <- read.csv("Data/RT_survival_table.csv")[1:7] # Read in num corals surviving at each timepoint
 names(tableS4) <- gsub(x = names(tableS4), pattern = "X", replacement = "") # remove 'X' from in front of years of columns
 
 kable(tableS4) %>% 
@@ -652,7 +652,7 @@ kable(surv_aov, digits = 3) %>%
 ```{r calc df setup, message=FALSE, warning=FALSE}
 
 # read in dataframe
-RT.calc <- read.csv('RT_data/RT_calcification.csv') # read in data
+RT.calc <- read.csv('Data/RT_calcification.csv') # read in data
 
 # convert dataframe from wide to long
 RT.calc <- gather(RT.calc, TP, rate, y23:avg2)
@@ -724,7 +724,7 @@ boots <- cbind(predict(calc.model, re.form=NA), boots)
 RT.calc.fin2 <- (cbind(RT.calc.fin, as.data.frame(t(apply(boots, 1, function(x) c(mean(x), quantile(x, c(0.025, 0.975))))))))
 colnames(RT.calc.fin2)[6:8] <- c("estimate", "lowerci", "upperci")
 
-write.csv(RT.calc.fin2, "RT_output/RT_calc_boot.csv")
+write.csv(RT.calc.fin2, "Data/RT_calc_boot.csv")
 
 ```
 
@@ -735,7 +735,7 @@ write.csv(RT.calc.fin2, "RT_output/RT_calc_boot.csv")
 Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
 ```{r CI table, message=FALSE, warning=FALSE}
 
-RT.calc <- read.csv("RT_output/RT_calc_boot.csv", header = TRUE) # new dataframe with modeled 95% CI and mean calcification rates
+RT.calc <- read.csv("Data/RT_calc_boot.csv", header = TRUE) # new dataframe with modeled 95% CI and mean calcification rates
 RT.calc$trans <- factor(RT.calc$trans, levels = c("NS", "BR", "FR")) # relevel transplant factors
 RT.calc$source <- factor(RT.calc$source, levels = c("NS", "BR", "FR")) # relevel source factors
 
@@ -836,7 +836,7 @@ boots <- cbind(predict(tp.model, re.form=NA), boots)
 RT.calc.tp2 <- (cbind(RT.calc.tp, as.data.frame(t(apply(boots, 1, function(x) c(mean(x), quantile(x, c(0.025, 0.975))))))))
 colnames(RT.calc.tp2)[6:8] <- c("estimate", "lowerci", "upperci")
 
-write.csv(RT.calc.tp2, "RT_output/RT_TP_calc_boot.csv")
+write.csv(RT.calc.tp2, "Data/RT_TP_calc_boot.csv")
 
 ```
 
@@ -848,7 +848,7 @@ write.csv(RT.calc.tp2, "RT_output/RT_TP_calc_boot.csv")
 Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
 ```{r TP CI table, message=FALSE, warning=FALSE}
 
-RT.calc.tp <- read.csv("RT_output/RT_TP_calc_boot.csv", header = TRUE) # new dataframe with modeled 95% CI and mean calcification rates
+RT.calc.tp <- read.csv("Data/RT_TP_calc_boot.csv", header = TRUE) # new dataframe with modeled 95% CI and mean calcification rates
 RT.calc.tp$trans <- factor(RT.calc.tp$trans, levels = c("NS", "BR", "FR")) # relevel transplant location factors
 RT.calc.tp$source <- factor(RT.calc.tp$source, levels = c("NS", "BR", "FR")) # relevel source location factors
 RT.calc.tp$TP <- factor(RT.calc.tp$TP) # make Year a factor
@@ -1069,7 +1069,7 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 ```{r read in map for fig 1a}
 
 ## Read in the map of sites (this was created by KD Castillo in ArcGIS and saved as a PNG)
-map_png <- readPNG("RT_figures/Figure1A_Map.png")
+map_png <- readPNG("Figures/Figure1A_Map.png")
 
 # make the map png into a ggplot object
 fig_1a <- ggplot() + 
@@ -1096,8 +1096,8 @@ fig_1c <- week_range_stat_plot +
 ```{r full figure 1, fig.height = 4, fig.width = 13}
 
 ggarrange(fig_1a, fig_1b, fig_1c, ncol = 3, labels = "AUTO")
-ggsave("RT_figures/Figure1_map_temp.pdf", height = 4, width = 13, useDingbats = FALSE) # save plot as PDF
-ggsave("RT_figures/Figure1_map_temp.png", height = 4, width = 13) # save plot as PNG
+ggsave("Figures/Figure1_map_temp.pdf", height = 4, width = 13, useDingbats = FALSE) # save plot as PDF
+ggsave("Figures/Figure1_map_temp.png", height = 4, width = 13) # save plot as PNG
 
 ```
 **Figure 1:** Map of reef environments on the southern Belize Mesoamerican Barrier Reef System with *in situ* seawater temperatures recorded at these locations. (**A**) Model showing locations of forereef (FR; blue), backreef (BR; green), and nearshore (NS; orange) environments. Forereef and backreef sites are ~2-km apart on the seaward and landward sides of the Barrier Reef’s crest, respectively. The nearshore site is located 30-km west toward mainland Belize. (**B**) Mean (±1 SD) and distribution of *in situ* seawater temperatures taken every 30 minutes at forereef (blue), backreef (green), and nearshore (orange) environments from November 2014 to November 2015. (**C**) Weekly temperature ranges across the three reef environments demonstrating differences in temperature variability across sites.
@@ -1113,8 +1113,8 @@ ggsave("RT_figures/Figure1_map_temp.png", height = 4, width = 13) # save plot as
 ggarrange(fig2a, fig2b, ncol = 2, labels = "AUTO", widths = c(1, 0.8))
 
 ## Save survival plots
-ggsave("RT_figures/Figure2_survival_calc.pdf", width = 11, height = 5, useDingbats = FALSE) # save as PDF
-ggsave("RT_figures/Figure2_survival_calc.png", width = 11, height = 5) # save as PNG
+ggsave("Figures/Figure2_survival_calc.pdf", width = 11, height = 5, useDingbats = FALSE) # save as PDF
+ggsave("Figures/Figure2_survival_calc.png", width = 11, height = 5) # save as PNG
 
 ```
 
@@ -1155,8 +1155,8 @@ fig_s2f <- day_range_stat_plot +
 
 
 ggarrange(fig_s2a, fig_s2b, fig_s2c, fig_s2d, fig_s2e, fig_s2f, ncol = 3, nrow = 2, labels = "AUTO")
-ggsave("RT_figures/FigureS1_temps.pdf", height = 8, width = 14, useDingbats = FALSE) # save plot
-ggsave("RT_figures/FigureS1_temps.png", height = 8, width = 14) # save plot
+ggsave("Figures/Supplement_Figures/FigureS1_temps.pdf", height = 8, width = 14, useDingbats = FALSE) # save plot
+ggsave("Figures/Supplement_Figures/FigureS1_temps.png", height = 8, width = 14) # save plot
 
 ```
 **Figure S1**. *In situ* temperatures recorded every 30 minutes from November 2014 to October 2015 on the nearshore (NS; orange), backreef (BR; green), and forereef (FR; blue) habitats assessed during this reciprocal transplant experiment on the Belize MBRS. (*A*) Raw temperature observations showing overall temperature patterns through the sampling period at each site. (*B*) Monthly, (*C*) Weekly, and (*D*) daily mean temperature comparisons across the three reef environments. (*E*) Monthly and (*F*) daily temperature ranges across the three reef environments demonstrating differences in temperature variability across sites.
@@ -1231,8 +1231,8 @@ figS2c <- figS2c + theme(legend.position = "none")
 plot_grid(figS2a, figS2a_legend, figS2b, figS2c, figS2c_legend, rel_widths = c(1.3, 0.1, 0.7), labels = c("A", "", "B", "C", ""), scale = 0.85) +
   draw_label("Source Location", size = 11, x = 0.33, y = 0.96) +
   draw_label("Transplant Location", size = 11, x = 0.33, y = 0.46)
-ggsave("RT_figures/FigureS2_Calcification.pdf", height = 6, width = 12, useDingbats = FALSE)
-ggsave("RT_figures/FigureS2_Calcification.png", height = 6, width = 12)
+ggsave("Figures/Supplement_Figures/FigureS2_Calcification.pdf", height = 6, width = 12, useDingbats = FALSE)
+ggsave("Figures/Supplement_Figures/FigureS2_Calcification.png", height = 6, width = 12)
 
 ```
 **Supplemental Figure 2.** Calcification rate (mg cm^–2^ day^–1^) coloured by either (**A-B**) transplant or (**C**) source location (orange = NS [nearshore], green = BR [backreef], and blue = FR [forereef]), at (**A, C**) yearly intervals or (**B**) averaged over the entire transplant experimental period. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color.

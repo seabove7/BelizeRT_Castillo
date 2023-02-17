@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r install packages, eval = FALSE, include = FALSE}
-setwd("/Users/annabelhughes/Documents/Davies\ Lab/Git/Reciprocal_Transplants")
+
 ## install phyloseq packages
 install.packages("Biostrings")
 if (!require("BiocManager", quietly = TRUE))
@@ -34,15 +34,15 @@ library(RColorBrewer)
 # **ITS2 Assessment** {.tabset}
 
 ```{r cleaning up its2 file, eval=TRUE, include=FALSE}
-df <- read.table("219_20220803T065042_DBV_20220803T143825.profiles.absolute.abund_and_meta.txt", sep = "\t")[c(-1:-6,-37, -38),-1] %>%
+df <- read.table("Data/219_20220803T065042_DBV_20220803T143825.profiles.absolute.abund_and_meta.txt", sep = "\t")[c(-1:-6,-37, -38),-1] %>%
   row_to_names(row_number = 1)
 names(df)[1] <- "sampleID"
-write.csv(df, "ITS2_symportal_RT.csv", row.names = FALSE)
+write.csv(df, "Data/ITS2_symportal_RT.csv", row.names = FALSE)
 ```
 
 ```{r read in ITS2 data}
 ## read in ITS2 data
-its_df <- read.csv("ITS2_symportal_RT.csv") %>% 
+its_df <- read.csv("Data/ITS2_symportal_RT.csv") %>% 
   column_to_rownames("sampleID") # making first column of sample IDs the rownames
 ## read in the meta data from the samples
 meta <- read.csv("RT_SSID_microPrep_ITS2_meta.csv") %>% 
@@ -80,13 +80,13 @@ plot_bar(phylo_its2_rel, x = "Sample_ID", fill = "majority_its2")+
   scale_color_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
   scale_fill_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 1.02))
-ggsave("FigSXX_ITS2_RT.png", height = 4, width = 6, dpi = 600)
-ggsave("FigSXX_ITS2_RT.pdf", height = 4, width = 6, useDingbats = FALSE)
+ggsave("Figures/Supplemental_Figures/FigS9_ITS2types.png", height = 4, width = 6, dpi = 600)
+ggsave("Figures/Supplemental_Figures/FigS9_ITS2types.pdf", height = 4, width = 6, useDingbats = FALSE)
 ## Save both the absolute and relative abundance phyloseq objects
 #save(phylo_its2, phylo_its2_rel, file = "Data/ITS2_data/its_phylo_abund.Rdata")
 ```
 
-**Figure SXX.** Relative abundance of major ITS2 types by coral fragment (x axis).
+**Figure S9.** Relative abundance of major ITS2 types by coral fragment (x axis).
 
 ```{r}
 ## stats
