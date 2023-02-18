@@ -2369,15 +2369,19 @@ gg <- read.table("GO_enrichment_Symb/sym_feb_iso2gene.tab",sep="\t")
 head(gg)
 
 p.val <- 0.10 # raw pvalue for GO enriched
-conds <- symb_source[symb_source$pval.Source1<=p.val & !is.na(symb_source$pval.Source1),]
-length(conds[,1])
-#387
-head(conds)
+genes_NF <- symb_source[symb_source$padj.Source1<=p.val & !is.na(symb_source$padj.Source1),]
+genes_NB <- symb_source[symb_source$padj.Source2<=p.val & !is.na(symb_source$padj.Source2),]
+genes_BF <- symb_source[symb_source$padj.Source3<=p.val & !is.na(symb_source$padj.Source3),]
+
+genes_full <- unique(rbind(genes_NF[-43:-48], genes_NB[-43:-48], genes_BF[-43:-48]))
+length(genes_full[,1])
+#60
+head(genes_full)
 
 ############## COLLEEN STOPPED HERE ##############
 
 
-exp <- conds[,1:10]
+exp <- genes_full[,-1:-2]
 head(exp)
 means <- apply(exp,1,mean) # means of rows
 explc <- exp - means # subtracting them
@@ -2391,29 +2395,31 @@ df_all_iso <- explc %>%
   left_join(gg) %>%
   mutate(V2 = gsub(" OS=.*", "", V2))
 head(df_all_iso)
-unanno=df_all_iso[,2:11]
+unanno <- df_all_iso[,2:41]
 
 df_only_anno <- df_all_iso %>%
   filter(!is.na(V2))
 rownames(df_only_anno) <- make.unique(df_only_anno$V2)
 head(df_only_anno)
-anno=df_only_anno[,2:11]
+anno <- df_only_anno[,2:41]
 head(anno)
 
 #dataframe of the samples
 colnames(anno)
 
-##write out and edit manually a few gene names that have weird descriptions
-write.csv(anno, "immunity_info_raw.csv", quote=TRUE)
-anno2 <- read.csv("immunity_info_EDIT.csv", row.names=1) # Sarah performed some modifications to the excel file before uploading it here
+## save this and then check for weird genes
+write.csv(anno, "Data/GeneExpression_data/symb_sigGO_genes.csv", quote = TRUE)
+anno2 <- read.csv("Data/GeneExpression_data/symb_sigGO_genes.csv", row.names = 1) 
 
 #cbPalette2 <- c("darkorange","firebrick2", "firebrick4")
-my_sample_col <- data.frame(treatment = c("OAW+MP","AMB","AMB","OAW+MP","AMB","OAW+MP","OAW+MP", "OAW+MP","AMB","AMB"))
-row.names(my_sample_col)= colnames(anno2)
-my_colour = list(treatment = c(`OAW+MP` = cbPalette[4], AMB = cbPalette[1]))
+my_sample_col <- data.frame(treat = colnames(rldpvals)[1:40])
+row.names(my_sample_col) <- colnames(anno2)
+my_colour <- list(treat = c(NS_NS = "#D55E00", NS_BR = "#D55E00", NS_FR = "#D55E00", BR_NS = "#009E73",  BR_BR = "#009E73",  BR_FR = "#009E73", FR_NS = "#0072B2", FR_BR = "#0072B2", FR_FR = "#0072B2"))
+
 
 # big heat map of all annotated genes
 library(pheatmap)
-pdf("Figures/Figure4_OAW_AMB_immunity.pdf", height = 8.2, width = 9, onefile = F)
+pdf("Figures/Figure4_Symb_GOgenes.pdf", height = 7, width = 9, onefile = FALSE)
 pheatmap(anno2, cluster_cols = TRUE, scale = "row", color = col0, annotation_col = my_sample_col, annotation_colors = my_colour, show_rownames = TRUE, show_colnames = FALSE, border_color = "NA")
 dev.off()
+
