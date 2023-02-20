@@ -261,7 +261,7 @@ go_sourceNSvsFR = resSource1 %>%
 head(go_sourceNSvsFR)
 colnames(go_sourceNSvsFR) <- c("gene", "pval")
 head(go_sourceNSvsFR)
-write.csv(go_sourceNSvsFR, file="sourceNSvsFR_GO.csv", quote=F, row.names=FALSE)
+write.csv(go_sourceNSvsFR, file="GO_enrichment_Host/sourceNSvsFR_GO.csv", quote=F, row.names=FALSE)
 
 #########################################################################################################
 ####################Source NS vs BR
@@ -304,7 +304,7 @@ go_sourceNSvsBR = resSource2 %>%
 head(go_sourceNSvsBR)
 colnames(go_sourceNSvsBR) <- c("gene", "pval")
 head(go_sourceNSvsBR)
-write.csv(go_sourceNSvsBR, file="sourceNSvsBR_GO.csv", quote=F, row.names=FALSE)
+write.csv(go_sourceNSvsBR, file="GO_enrichment_Host/sourceNSvsBR_GO.csv", quote=F, row.names=FALSE)
 #########################################################################################################################
 ####################Source BR vs FR
 conditions$source<-factor(conditions$source, levels=c("BR","FR"))
@@ -2378,8 +2378,6 @@ length(genes_full[,1])
 #60
 head(genes_full)
 
-############## COLLEEN STOPPED HERE ##############
-
 
 exp <- genes_full[,-1:-2]
 head(exp)
@@ -2413,13 +2411,18 @@ anno2 <- read.csv("Data/GeneExpression_data/symb_sigGO_genes.csv", row.names = 1
 
 #cbPalette2 <- c("darkorange","firebrick2", "firebrick4")
 my_sample_col <- data.frame(treat = colnames(rldpvals)[1:40])
+my_sample_col <- my_sample_col %>% separate(treat, c("source", "transplant"))
+#my_sample_col <- data.frame(treat = colnames(rldpvals)[1:40])
+
 row.names(my_sample_col) <- colnames(anno2)
-my_colour <- list(treat = c(NS_NS = "#D55E00", NS_BR = "#D55E00", NS_FR = "#D55E00", BR_NS = "#009E73",  BR_BR = "#009E73",  BR_FR = "#009E73", FR_NS = "#0072B2", FR_BR = "#0072B2", FR_FR = "#0072B2"))
+my_colour <- list(source = c(NS = "#D55E00", BR = "#009E73", FR = "#0072B2"),
+                  transplant = c(NS = "#C68A63", BR = "#709C89", FR = "#7692AD"))
+#my_colour <- list(treat = c(NS_NS = "#D55E00", NS_BR = "#D55E00", NS_FR = "#D55E00", BR_NS = "#009E73",  BR_BR = "#009E73",  BR_FR = "#009E73", FR_NS = "#0072B2", FR_BR = "#0072B2", FR_FR = "#0072B2"))
 
 
 # big heat map of all annotated genes
 library(pheatmap)
-pdf("Figures/Figure4_Symb_GOgenes.pdf", height = 7, width = 9, onefile = FALSE)
+#pdf("Figures/Figure4_Symb_GOgenes.pdf", height = 7, width = 9, onefile = FALSE)
 pheatmap(anno2, cluster_cols = TRUE, scale = "row", color = col0, annotation_col = my_sample_col, annotation_colors = my_colour, show_rownames = TRUE, show_colnames = FALSE, border_color = "NA")
-dev.off()
+#dev.off()
 
