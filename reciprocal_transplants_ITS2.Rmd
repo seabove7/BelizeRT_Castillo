@@ -10,12 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r install packages, eval = FALSE, include = FALSE}
-
+#setwd("/Users/annabelhughes/Desktop/Davies\ Lab/Git/Reciprocal_Transplants")
 ## install phyloseq packages
 install.packages("Biostrings")
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install(version = "3.14")
+BiocManager::install(version = "3.16") # changed to "3.16" on Colleen's computer to be able to run with R 4.2 (Annabel used "3.14")
 BiocManager::install("phyloseq")
 
 ```
@@ -29,6 +29,7 @@ library(janitor)
 library(ggplot2)
 library(Rmisc) 
 library(RColorBrewer)
+library(cowplot)
 ```
 
 # **ITS2 Assessment** {.tabset}
@@ -45,8 +46,10 @@ write.csv(df, "Data/ITS2_symportal_RT.csv", row.names = FALSE)
 its_df <- read.csv("Data/ITS2_symportal_RT.csv") %>% 
   column_to_rownames("sampleID") # making first column of sample IDs the rownames
 ## read in the meta data from the samples
-meta <- read.csv("RT_SSID_microPrep_ITS2_meta.csv") %>% 
-  column_to_rownames("Well_ID") # making first column of well IDs the rownames
+meta <- read.csv("Data/RT_SSID_microPrep_ITS2_meta.csv") %>% 
+  column_to_rownames("Well_ID") %>% # making first column of well IDs the rownames
+  mutate(Source = fct_relevel(Source, c('NS', 'BR', 'FR')),
+         Transplant = fct_relevel(Transplant, c('NS', 'BR', 'FR')))
 ```
 
 ```{r its2 phyloseq object}
@@ -74,19 +77,19 @@ phylo_its2_rel <- transform_sample_counts(phylo_its2, function(OTU) OTU/sum(OTU)
 ## plot relative majority ITS2 by treatment
 plot_bar(phylo_its2_rel, x = "Sample_ID", fill = "majority_its2")+
   theme_bw() +
- # facet_wrap(~ Transplant, ncol = 3) +
+  facet_wrap(~ Source, scales = "free_x") +
   theme(panel.grid = element_blank(), legend.position = "bottom", strip.background = element_blank(), strip.text = element_text(face = "bold")) +
-  labs(x = "Coral Fragment", y = "Relative abundance") +
+  labs(x = "Coral ID", y = "Relative abundance") +
   scale_color_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
   scale_fill_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 1.02))
-ggsave("Figures/Supplemental_Figures/FigS9_ITS2types.png", height = 4, width = 6, dpi = 600)
-ggsave("Figures/Supplemental_Figures/FigS9_ITS2types.pdf", height = 4, width = 6, useDingbats = FALSE)
+ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.png", height = 4, width = 8, dpi = 600)
+ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.pdf", height = 4, width = 8, useDingbats = FALSE)
 ## Save both the absolute and relative abundance phyloseq objects
 #save(phylo_its2, phylo_its2_rel, file = "Data/ITS2_data/its_phylo_abund.Rdata")
 ```
 
-**Figure S9.** Relative abundance of major ITS2 types by coral fragment (x axis).
+**Figure S9.** Relative abundance of major ITS2 types within each coral colony grouped by source location. Light grey represents *Cladocopium goreaui* (C1), which was the dominant ITS2 for all colonies.
 
 ```{r}
 ## stats
