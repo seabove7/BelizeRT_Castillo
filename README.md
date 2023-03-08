@@ -1,9 +1,9 @@
 # Gene expression plasticity facilitates acclimation across divergent reef environments in a long-lived Caribbean coral
 
 
-#### **Authors:** Karl D. Castillo^#^, Colleen B. Bove^#^, Annabel M. Hughes, Maya E. Powell, Justin B. Ries, Sarah W. Davies
+#### **Authors:** Karl D. Castillo#, Colleen B. Bove#, Annabel M. Hughes, Maya E. Powell, Justin B. Ries, Sarah W. Davies
 
-*^#^ denotes co-first authors* 
+*# denotes co-first authors* 
 
 #### **Citation:**  *Coming Soon*
 
