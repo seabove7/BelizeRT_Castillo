@@ -1,6 +1,6 @@
 ---
 title: "Calcification and Survival Data Analyses and Visualization *(Castillo et al In Prep)*"
-author: "Colleen B Bove"
+author: "Colleen B. Bove"
 date: "*Last run on `r format(Sys.time(), '%d %B %Y')`*"
 output:
   html_document: 
@@ -11,7 +11,7 @@ output:
 
 <br/>
 
-This file contains all data manipulations, analyses, and visualizations used to produce the temperature, calcification, and survival results in Castillo KD, Bove CB, et al. (*In Prep*). All gene expression data and analyses can be found in this repository on the [RT_Host_Sym_GE.R](https://github.com/seabove7/BelizeRT_CalcSurvData/blob/main/RT_Host_Sym_GE.R) script and the ITS2 analyses can be found in the [reciprocal_transplants_ITS2.Rmd](https://github.com/seabove7/BelizeRT_CalcSurvData/blob/main/reciprocal_transplants_ITS2.Rmd) file.
+This file contains all data manipulations, analyses, and visualizations used to produce the temperature, calcification, and survival results in Castillo KD, Bove CB, et al. (*In Prep*). All gene expression data and analyses can be found in this repository on the *[RT_Host_Sym_GE.R](https://github.com/seabove7/BelizeRT_Castillo/blob/main/RT_Host_Sym_GE.R)* script and the ITS2 analyses can be found in the *[reciprocal_transplants_ITS2.Rmd](https://github.com/seabove7/BelizeRT_Castillo/blob/main/reciprocal_transplants_ITS2.Rmd)* file.
 
 
 ```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
