@@ -7,7 +7,8 @@
 
 #### **Citation:**  *Coming Soon*
 
-#### **Zenodo DOI:** *Coming Soon*
+#### **Zenodo DOI:** <a href="https://zenodo.org/badge/latestdoi/248840574"><img src="https://zenodo.org/badge/248840574.svg" alt="DOI"></a>
+
 
 ### **Abstract:**  
 Local adaptation can facilitate fitness under stable environmental conditions; however under rapidly changing environments, compensatory mechanisms enabled through plasticity might be favored. Climate change is causing devastating impacts on coral reefs globally and understanding the potential for adaptive and plastic responses is critical for reef management. We conducted a four-year, three-way reciprocal transplant of the Caribbean coral *Siderastrea siderea* across forereef, backreef, and nearshore environments in Belize to investigate local adaptation and plasticity in this species. Corals exhibited high survival within forereef and backreef environments, but transplantation to the nearshore resulted in high mortality, suggesting that nearshore environments present strong environmental selection. Only forereef corals exhibited evidence of local adaptation, exhibiting the highest growth within their source reef. Gene expression profiling 3.5 years post-transplantation revealed that transplanted coral hosts exhibited profiles more similar to other colonies on the same reef, regardless of source location, suggesting that transcriptomic plasticity facilitates acclimatization to environmental change in *S. siderea*. In contrast, *Cladocopium goreaui* gene expression showcased functional variation between source locations that was maintained throughout transplantation. Our findings suggest limited *S. siderea* adaptive capacity under strong environmental selection, and highlight the potential to harness coral physiological plasticity to combat climate change.
