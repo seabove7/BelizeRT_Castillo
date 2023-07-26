@@ -513,8 +513,8 @@ ggarrange(month_range_stat_plot, week_range_stat_plot, day_range_stat_plot, ncol
 ```{r survival dataframe setup, message=FALSE, warning=FALSE}
 
 sur <- read.csv("Data/RT_survival.csv") %>% # Read in survival data (0 = living, 1 = mortality event under 'Status')
-  mutate(Source = fct_relevel(Source, levels = c("NS", "BR", "FR")), # relevel source to be by distance from land
-         Transplant = fct_relevel(Transplant, levels = c("NS", "BR", "FR"))) # relevel transplant to be by distance from land
+  mutate(Source = fct_relevel(Source, c("NS", "BR", "FR")), # relevel source to be by distance from land
+         Transplant = fct_relevel(Transplant, c("NS", "BR", "FR"))) # relevel transplant to be by distance from land
 
 
 sur$Colony <- as.factor(sur$Colony) # make colony ID a factor
@@ -535,8 +535,8 @@ sur.all <- survfit(sur.r ~ Source + Transplant, data = sur) # Computes an estima
 ```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width = 5.7, fig.height = 5.5}
 
 surv_plot <- ggsurvplot(sur.all, data = sur,
-           palette = c("#D55E00", "#0072B2", "#009E73", "#D55E00", "#0072B2", "#009E73", "#D55E00", "#0072B2", "#009E73"),
-           linetype = c(1, 1, 1, 2, 2, 2, 3, 3, 3),
+           palette = c("#D55E00", "#D55E00", "#D55E00", "#0072B2", "#0072B2", "#0072B2", "#009E73", "#009E73", "#009E73"),
+           linetype = c(1, 2, 3, 1, 2, 3, 1, 2, 3),
            censor = FALSE,
            legend.title = "",
            legend.labs = c("NS to NS", "NS to BR", "NS to FR", "BR to NS", "BR to BR", "BR to FR", "FR to NS", "FR to BR", "FR to FR")) 
@@ -589,7 +589,8 @@ kable(tableS4) %>%
 
 ```{r survival model, echo=TRUE, message=FALSE, warning=FALSE}
 
-surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur)
+surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur) %>% 
+  tbl_regression(exp = TRUE) 
 
 ```
 
@@ -598,6 +599,9 @@ surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur)
 Cox proportional hazard model output, with exp(coef) representing the hazard ratio, se(coef) is the standard error, z is the z score, and Pr(>|z|) is the propability that the estimated could be 0.
 
 ```{r survival model table, message=FALSE, warning=FALSE}
+
+install.packages("gtsummary")
+library(gtsummary)
 
 surv_mod_df <- data.frame(summary(surv.mod)$coefficients)
 colnames(surv_mod_df) <- c("coefficient", "exp(coef)" , "se(coef)", "z", "Pr(>|z|)")
