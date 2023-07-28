@@ -6,7 +6,9 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Knit standards
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, options(knitr.kable.NA = ''))
+options(warn = -1)
 ```
 
 ```{r install packages, eval = FALSE, include = FALSE}
@@ -72,19 +74,21 @@ phylo_its2 <- phyloseq(sample_data(meta),
 ### Abundance by individual
 
 ```{r calc rel abund and save phylo objc, fig.height = 4, fig.width = 6, fig.align = "center"}
+
 ## Calculate relative abundance per sample
 phylo_its2_rel <- transform_sample_counts(phylo_its2, function(OTU) OTU/sum(OTU))
+
 ## plot relative majority ITS2 by treatment
-plot_bar(phylo_its2_rel, x = "Sample_ID", fill = "majority_its2")+
+major_plot <- plot_bar(phylo_its2_rel, x = "Sample_ID", fill = "majority_its2")+
   theme_bw() +
   facet_wrap(~ Source, scales = "free_x") +
-  theme(panel.grid = element_blank(), legend.position = "bottom", strip.background = element_blank(), strip.text = element_text(face = "bold")) +
+  theme(panel.grid = element_blank(), legend.position = "bottom", strip.background = element_blank(), strip.text = element_text(face = "bold"), legend.title = element_blank()) +
   labs(x = "Coral ID", y = "Relative abundance") +
-  scale_color_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
-  scale_fill_manual("Majority ITS2", values = c("#252525", "#636363", "#969696", "#cccccc")) +
+  scale_color_manual(values = c("#252525", "#636363", "#969696", "#cccccc")) +
+  scale_fill_manual(values = c("#252525", "#636363", "#969696", "#cccccc")) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 1.02))
-ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.png", height = 4, width = 8, dpi = 600)
-ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.pdf", height = 4, width = 8, useDingbats = FALSE)
+#ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.png", height = 4, width = 8, dpi = 600)
+#ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.pdf", height = 4, width = 8, useDingbats = FALSE)
 ## Save both the absolute and relative abundance phyloseq objects
 #save(phylo_its2, phylo_its2_rel, file = "Data/ITS2_data/its_phylo_abund.Rdata")
 ```
@@ -100,4 +104,105 @@ min(its_df_total$total) #minimum counts
 max(its_df_total$total) #max
 ```
 
+
+
+### Making a new figure after reviewer comments: "Figure S9 - It would be valuable for readers to also have the stacked bar plot of sequences from the raw data, not just the IT2S data. This would reinforce your conclusion that C. goreaui is the primary symbiont in the samples, not just clade C."
+
+```{r cleaning up post-med seqs file, eval=TRUE, include=FALSE}
+
+df_seqs <- read.table("Data/219_20220803T065042_DBV_20220803T143825.seqs.absolute.abund_and_meta.txt", sep = "\t") [c(-31),c(-1,-3:-39)] %>%
+  row_to_names(row_number = 1)
+names(df_seqs)[1] <- "sampleID"
+write.csv(df_seqs, "Data/ITS2_symportal_RT_postmed.csv", row.names = FALSE)
+
+```
+
+```{r read in ITS2 post-med seqs data}
+
+## read in ITS2 data
+its_seqs_df <- read.csv("Data/ITS2_symportal_RT_postmed.csv") %>% 
+  column_to_rownames("sampleID") # making first column of sample IDs the rownames
+
+```
+
+```{r its2 post-med seqs phyloseq object}
+
+## Make taxa table for phyloseq
+taxa_its_seqs <- data.frame(colnames(its_seqs_df))# extract symb strain data as dataframe
+colnames(taxa_its_seqs) <- "DIV" # changing the column name to be 'DIV'
+#taxa_its_seqs[2] <- taxa_its_seqs %>% separate(DIV, "majority_its2") # create a column for major ITS2 (first part of DIV name)
+#taxa_its_seqs$genus <- str_sub(taxa_its_seqs$DIV, 1, 1) # make genus column of symb genus (first letter of DIV)
+taxa_its_seqs <- taxa_its_seqs %>% mutate_if(is.character, as.factor) # convert all columns to factors
+rownames(taxa_its_seqs) <- taxa_its_seqs$DIV # rename rows with DIV ids
+taxa_its_seqs_matrix <- as.matrix(taxa_its_seqs) # convert to a matrix
+ 
+## Create ITS2 seqs phyloseq object 
+phylo_its2_seqs <- phyloseq(sample_data(meta),
+                       otu_table(its_seqs_df, taxa_are_rows = FALSE),
+                       tax_table(taxa_its_seqs_matrix))
+# phylo_its2_seqs # just a sanity to check that we have 112 taxa and 29 samples -- Looks good!
+
+```
+
+```{r calc rel abund of seqs and save phylo objc, fig.height = 6, fig.width = 12, fig.align = "center"}
+
+## Calculate relative abundance per sample
+phylo_its2_seqs_rel <- transform_sample_counts(phylo_its2_seqs, function(OTU) OTU/sum(OTU))
+
+#generating random color palette
+set.seed(6) # setting a seed here to save the colours to randomly generate the same each time
+color <- grDevices::colors()[grep('gr(a|e)y', grDevices::colors(), invert = T)]
+n <- 112 #number of taxa you have
+col <- sample(color, n)
+#write.csv(col,"col.csv")
+#col_saved <- read.csv("col.csv")[,-1]
+
+
+## plot relative majority ITS2 by treatment
+post_plot <- plot_bar(phylo_its2_seqs_rel, x = "Sample_ID", fill = "DIV") + #Looking at DIV rel abundance
+  theme_bw() +
+  facet_wrap(~ Source, scales = "free_x") +
+  theme(panel.grid = element_blank(), legend.position = "bottom", strip.background = element_blank(), strip.text = element_text(face = "bold"), legend.key.size = unit(0.4, 'cm'), legend.title = element_blank()) +
+  scale_fill_manual(values = col) +
+  guides(fill = guide_legend(ncol = 10)) +
+  labs(x = "Coral ID", y = "Relative abundance") +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1.02))
+#ggsave("FigS9A_ITS2_RT.png", height = 6, width = 15, dpi = 600)
+#ggsave("FigS9A_ITS2_RT.pdf", height = 6, width = 15, useDingbats = FALSE)
+
+```
+
+</br>
+</br>
+
+# Final Figure S9
+
+```{r final fig S9, fig.align='center', fig.width=10, fig.height=10}
+
+library(patchwork)
+
+## set the layout
+layout <- "
+AAAA
+BBBB
+"
+
+## add plots together with layout
+major_plot + post_plot + plot_layout(design = layout) + plot_annotation(tag_levels = 'A')
+
+ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.png", height = 10, width = 10, dpi = 800)
+ggsave("Figures/Supplemental_Figures/FigureS9_ITS2.pdf", height = 10, width = 10, useDingbats = FALSE)
+
+```
+
+**Figure S9.** Relative abundance of major ITS2 types (A) as well as the post-med sequences (B) within each coral colony grouped by source location. The dominant algal symbiont species was determined to be Cladocopium goreaui (C1) for all collected corals.
+
+</br>
+
+### Session Info:
+```{r}
+
+sessionInfo()
+
+```
 

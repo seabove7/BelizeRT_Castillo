@@ -581,16 +581,16 @@ kable(tableS4) %>%
 
 ### Statistical Exploration
 
-##### While the current data are not able to be appropriately fit with statistical models, here are the models we explored:
-
 <br/>
 
 #### <span style="color: navy;">**Cox Proportional Hazard Model**</span>
 
 ```{r survival model, echo=TRUE, message=FALSE, warning=FALSE}
 
-surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur) %>% 
-  tbl_regression(exp = TRUE) 
+sur$Source <- fct_relevel(sur$Source, c("FR", "BR", "NS"))
+sur$Transplant <- fct_relevel(sur$Transplant, c("FR", "BR", "NS"))
+
+surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur)
 
 ```
 
@@ -599,9 +599,6 @@ surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur) %>%
 Cox proportional hazard model output, with exp(coef) representing the hazard ratio, se(coef) is the standard error, z is the z score, and Pr(>|z|) is the propability that the estimated could be 0.
 
 ```{r survival model table, message=FALSE, warning=FALSE}
-
-install.packages("gtsummary")
-library(gtsummary)
 
 surv_mod_df <- data.frame(summary(surv.mod)$coefficients)
 colnames(surv_mod_df) <- c("coefficient", "exp(coef)" , "se(coef)", "z", "Pr(>|z|)")
