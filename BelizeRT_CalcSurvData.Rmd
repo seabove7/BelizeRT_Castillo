@@ -30,6 +30,7 @@ library(gghalves)
 library(xts)
 library(FSA)
 library(png)
+library(car)
 
 
 ## Knit standards
@@ -506,7 +507,7 @@ ggarrange(month_range_stat_plot, week_range_stat_plot, day_range_stat_plot, ncol
 <br/>
 
 
-## Colony survival {.tabset}
+## Coral survival {.tabset}
 
 ### Figure 2A
 
@@ -532,7 +533,7 @@ sur.all <- survfit(sur.r ~ Source + Transplant, data = sur) # Computes an estima
 
 #### <span style="color: navy;">**Data Visualization**</span>
 
-```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width = 5.7, fig.height = 5.5}
+```{r survival figure, message=FALSE, warning=FALSE, fig.align='center', fig.width = 5.7, fig.height = 5.3}
 
 surv_plot <- ggsurvplot(sur.all, data = sur,
            palette = c("#D55E00", "#D55E00", "#D55E00", "#0072B2", "#0072B2", "#0072B2", "#009E73", "#009E73", "#009E73"),
@@ -562,7 +563,9 @@ fig2a
 <br/>
 
 
-### Supplementary Table 4
+### Supplementary Tables
+
+#### Supplemental Table 4
 
 **Table S4.** Number or corals surviving per year in each transplant location (BR = backreef, FR = forereef, NS = Nearshore).
 
@@ -578,12 +581,9 @@ kable(tableS4) %>%
 
 ```
 
-
-### Statistical Exploration
-
 <br/>
 
-#### <span style="color: navy;">**Cox Proportional Hazard Model**</span>
+#### Supplemental Table 5
 
 ```{r survival model, echo=TRUE, message=FALSE, warning=FALSE}
 
@@ -596,7 +596,19 @@ surv.mod <- coxph(sur.r ~ Transplant + Source, data = sur)
 
 <br/>
 
-Cox proportional hazard model output, with exp(coef) representing the hazard ratio, se(coef) is the standard error, z is the z score, and Pr(>|z|) is the propability that the estimated could be 0.
+**Table S5.** Statistical assessment of the cox proportional hazards survival model. (A) Type 2 analysis of deviance of the overall effect of transplant and source. (B) Cox proportional hazard model output, with exp(coef) representing the hazard ratio, se(coef) is the standard error, z is the z score, and Pr(>|z|) is the probability that the estimate could be 0.
+
+```{r survival ANOVA}
+
+surv_aov <- Anova(surv.mod)
+surv_aov$`Pr(>Chisq)` <- format(surv_aov$`Pr(>Chisq)`, digits = 3)
+
+kable(surv_aov, digits = 3) %>% 
+  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  kable_classic(full_width = FALSE, html_font = "Times")
+
+```
 
 ```{r survival model table, message=FALSE, warning=FALSE}
 
@@ -610,20 +622,6 @@ kable(surv_mod_df, digits = 2) %>%
 
 ```
 
-<br/>
-
-ANOVA output of the survival model.
-
-```{r}
-
-surv_aov <- anova(surv.mod,  test = 'Chisq')
-
-kable(surv_aov, digits = 3) %>% 
-  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
-  column_spec(1, bold = TRUE) %>% 
-  kable_classic(full_width = FALSE, html_font = "Times")
-
-```
 
 <br/>
 
@@ -907,17 +905,17 @@ kable(AIC_full) %>%
 <br/>
 
 
-#### Supplemental Table 5
+#### Supplemental Table 6
 
-**Table S5** Linear model output assessing overall calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
+**Table S6** Linear model output assessing overall calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef.
 
 ```{r}
 
-tableS5 <- summary(calc.model)$coefficients
+tableS6 <- summary(calc.model)$coefficients
 
-row.names(tableS5) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)")
+row.names(tableS6) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)")
 
-kable(tableS5, digits = 2) %>% 
+kable(tableS6, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
   row_spec(0, bold = TRUE) %>% 
   kable_classic(full_width = FALSE, html_font = "Times")
@@ -927,9 +925,9 @@ kable(tableS5, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 6
+#### Supplemental Table 7
 
-**Table S6.** Modeled mean calcification rate and 95% confidence interval. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
+**Table S7.** Modeled mean calcification rate and 95% confidence interval. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore).
 
 ```{r}
 
@@ -943,18 +941,18 @@ kable(RT.calc.tab, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 7
+#### Supplemental Table 8
 
-**Table S6** Linear model output assessing annual calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef from 2013.
+**Table S8** Linear model output assessing annual calcification responses. The intercept was set at corals from the backreef (BR) transplanted back to the backreef from 2013.
 
 ```{r}
 
-tableS7 <- summary(tp.model)$coefficients
+tableS8 <- summary(tp.model)$coefficients
 
-row.names(tableS7) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "Year (2014)", "Year (2015)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)", "source (FR):Year (2014)", "source (NS):Year (2014)", "source (FR):Year (2015)", "source (NS):Year (2015)", "transplant (FR):Year (2014)", "transplant (NS):Year (2014)", "transplant (FR):Year (2015)", "transplant (NS):Year (2015)", "source (FR):transplant (FR):Year (2014)", "source (NS):transplant (FR):Year (2014)", "source (FR):transplant (NS):Year (2014)", "source (NS):transplant (NS):Year (2014)", "source (FR):transplant (FR):Year (2015)", "source (NS):transplant (FR):Year (2015)", "source (FR):transplant (NS):Year (2015)", "source (NS):transplant (NS):Year (2015)")
+row.names(tableS8) <- c("(Intercept)", "source (FR)", "source (NS)", "transplant (FR)", "transplant (NS)", "Year (2014)", "Year (2015)", "source (FR):transplant (FR)", "source (NS):transplant (FR)", "source (FR):transplant (NS)", "source (NS):transplant (NS)", "source (FR):Year (2014)", "source (NS):Year (2014)", "source (FR):Year (2015)", "source (NS):Year (2015)", "transplant (FR):Year (2014)", "transplant (NS):Year (2014)", "transplant (FR):Year (2015)", "transplant (NS):Year (2015)", "source (FR):transplant (FR):Year (2014)", "source (NS):transplant (FR):Year (2014)", "source (FR):transplant (NS):Year (2014)", "source (NS):transplant (NS):Year (2014)", "source (FR):transplant (FR):Year (2015)", "source (NS):transplant (FR):Year (2015)", "source (FR):transplant (NS):Year (2015)", "source (NS):transplant (NS):Year (2015)")
 
 
-kable(tableS7, digits = 2) %>% 
+kable(tableS8, digits = 2) %>% 
   kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
   row_spec(0, bold = TRUE) %>% 
   kable_classic(full_width = FALSE, html_font = "Times")
@@ -964,9 +962,9 @@ kable(tableS7, digits = 2) %>%
 <br/>
 
 
-#### Supplemental Table 8
+#### Supplemental Table 9
 
-**Table S8.** Modeled mean calcification rate and 95% confidence interval by year. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
+**Table S9.** Modeled mean calcification rate and 95% confidence interval by year. Parametric bootstrapped mean and 95% confidence intervals of calcification rates (mg cm^-2^ day^-1^) in response to transplant treatment (BR = backreef, FR = forereef, NS = Nearshore) over time.
 
 ```{r}
 
@@ -1005,11 +1003,11 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 <br/>
 
 
-### Supplemental Table 9A
+### Supplemental Table 10A
 
 *(These model outputs are taken from the plasticity analysis and just constructed into tables here)*
 
-**Table S9A.** Linear model output assessing coral host gene expression plasticity. The intercept was set at corals from the backreef transplanted back to the backreef.  (BR = backreef, FR = forereef, NS = Nearshore) 
+**Table S10A.** Linear model output assessing coral host gene expression plasticity. The intercept was set at corals from the backreef transplanted back to the backreef.  (BR = backreef, FR = forereef, NS = Nearshore) 
 
 |                             | Estimate | Std. Error | t value |     Pr(>t) |
 | :---------------------------|---------:|-----------:|--------:|:-------------|
@@ -1026,11 +1024,11 @@ kable(RT.calc.TP.tab, digits = 2) %>%
 <br/>
 
 
-### Supplemental Table 9B
+### Supplemental Table 10B
 
 *(These model outputs are taken from the plasticity analysis and just constructed into tables here)*
 
-**Table SB.** Linear model output assessing algal symbiont gene expression plasticity. The intercept was set at corals from the backreef transplanted back to the backreef.  (BR = backreef, FR = forereef, NS = Nearshore) 
+**Table S10B.** Linear model output assessing algal symbiont gene expression plasticity. The intercept was set at corals from the backreef transplanted back to the backreef.  (BR = backreef, FR = forereef, NS = Nearshore) 
 
 |                             | Estimate | Std. Error | t value |     Pr(>t) |
 | :---------------------------|---------:|-----------:|--------:|:-------------|
