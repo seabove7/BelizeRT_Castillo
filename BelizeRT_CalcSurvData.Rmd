@@ -876,7 +876,110 @@ calc.tp.plot
 
 ```
 
-**Figure 3B |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+**Figure S2A |** Calcification rate (mg cm^-2^ day^-1^) at yearly intervals over the entire transplant experimental period (2012 – 2015) by source location. Transplant location is represented by color: <span style="color: #D55E00;">red = NS (nearshore)</span>, <span style="color: #009E73;">green = BR (backreef)</span>, and <span style="color: #0072B2;">blue = FR (forereef)</span>. Colored bars represent modeled 95% confidence intervals with corresponding raw calcification rates per colony denoted by circles of the same color. 
+
+
+```{r subset analysis, eval=FALSE, include=FALSE}
+
+### Exploring the calcification data when subset down to the lowest N across treatments (per reviewer comment)
+
+# setting a seed to have the same values pulled each time (for reproducibility) -- I used 14 in the rest of the code so keeping that here too
+set.seed(14)
+
+## created subsampled df with 2 random samples per source/transplant pairing
+RT_calc_sub.fin_subset <- RT.calc.fin %>% 
+  group_by(source, trans) %>% 
+  sample_n(., 2)
+
+
+#### Now running the same analyses with the subset data
+
+
+## AIC model selection
+full.int_sub <- lm(rate ~ source * trans, data = RT_calc_sub.fin_subset) # interaction of source with transplant location
+
+# data look normal so I am okay with proceeding with a linear model here
+##check_normality(full.int) # OK: residuals appear as normally distributed (p = 0.653).
+##check_model(full.int)
+
+full.add <- lm(rate ~ source + trans, data = RT_calc_sub.fin_subset) # additive model of source with transplant location
+tran.only <- lm(rate ~ trans, data = RT_calc_sub.fin_subset) # transplant location only
+sourc.only <- lm(rate ~ source, data = RT_calc_sub.fin_subset) # source location only
+
+compare_performance(full.int_sub, full.add, tran.only, sourc.only)
+# Comparison of Model Performance Indices
+
+# Name       | Model | AIC (weights) | AICc (weights) | BIC (weights) |    R2 | R2 (adj.) |  RMSE | Sigma
+# -------------------------------------------------------------------------------------------------------
+# full.int   |    lm |  -1.2 (0.179) |   30.2 (<.001) |   7.7 (0.016) | 0.465 |    -0.011 | 0.134 | 0.190  ** best model performance **
+# full.add   |    lm |   0.6 (0.069) |    8.3 (0.009) |   6.0 (0.036) | 0.073 |    -0.212 | 0.177 | 0.208
+# tran.only  |    lm |  -3.2 (0.469) |   -0.1 (0.618) |   0.4 (0.592) | 0.064 |    -0.061 | 0.177 | 0.194
+# sourc.only |    lm |  -2.2 (0.283) |    0.9 (0.372) |   1.4 (0.356) | 0.009 |    -0.123 | 0.182 | 0.200
+
+
+## Running model bootstrap
+out <- simulate(full.int_sub, nsim = bootnum, seed = seed, re.form=NULL)
+boots <- apply(out,2,function(x) predict(lm(x ~ source * trans, data = RT_calc_sub.fin_subset), reform = NA))
+boots <- cbind(predict(full.int_sub, re.form=NA), boots)
+RT_calc_sub.fin2 <- (cbind(RT_calc_sub.fin_subset, as.data.frame(t(apply(boots, 1, function(x) c(mean(x), quantile(x, c(0.025, 0.975))))))))
+colnames(RT_calc_sub.fin2)[6:8] <- c("estimate", "lowerci", "upperci")
+RT_calc_sub <- RT_calc_sub.fin2
+
+
+## Update boot dataframe and make table of mean/CI
+RT_calc_sub$trans <- factor(RT_calc_sub$trans, levels = c("NS", "BR", "FR")) # relevel transplant factors
+RT_calc_sub$source <- factor(RT_calc_sub$source, levels = c("NS", "BR", "FR")) # relevel source factors
+
+RT_calc_sub$Treatment <- paste(RT_calc_sub$source, RT_calc_sub$trans, sep = " to ") # make a 'treatment' column
+
+# condensed dataframe of modeled mean and 95% CI per treatment
+RT_calc_sub.tab <- RT_calc_sub %>% 
+  group_by(Treatment) %>% 
+  summarize(`Modeled Mean` = mean(estimate, na.rm=TRUE),
+            `Lower 95% CI` = mean(lowerci, na.rm=TRUE),
+            `Upper 95% CI` = mean(upperci, na.rm=TRUE))
+
+kable(RT_calc_sub.tab, digits = 2) %>% 
+  kable_styling(position = "center", font_size = 14, full_width = FALSE) %>% 
+  column_spec(1, bold = TRUE) %>% 
+  kable_classic(full_width = FALSE, html_font = "Times")
+
+
+
+## Plot figure of subset calc data
+fig2b_sub <- ggplot(data = RT_calc_sub, aes(x = trans, y = rate, colour = source)) +
+  theme_bw() +
+  theme(panel.grid = element_blank(), legend.key=element_blank(),  text = element_text(size = 13)) +
+  geom_point(size = 2, position = position_jitterdodge(jitter.height = 0, dodge.width = 0.8, seed = 14)) +
+  geom_linerange(aes(ymin = lowerci, ymax = upperci, colour = source), position = position_dodge(width = 0.7), size = 1.2, alpha = 0.2) +
+  scale_color_manual("Source \nLocation", values = c("#D55E00", "#009E73", "#0072B2")) +
+  xlab("Transplant Location") +
+  ylab(bquote("Net Calcification (mg cm" ^-2~day^-1*")")) +
+  ggtitle("Subset Fig 2B")
+
+
+## Plot original with subset calcification data for comparison
+fig2b_edit <- fig2b + ggtitle("Original Fig 2B")
+ggarrange(fig2b_edit, fig2b_sub, ncol = 2, labels = "AUTO")
+
+# these patterns look pretty similar so we feel pretty good about the analysis!
+
+# pulling the coefficients
+summary(full.int_sub)$coefficients
+
+#                      Estimate Std. Error      t value    Pr(>|t|)
+# (Intercept)       0.730030746  0.1486962  4.909545862 0.000836565
+# sourceFR          0.235472372  0.2102882  1.119760466 0.291807695
+# sourceNS          0.157549647  0.2102882  0.749208343 0.472858309
+# transFR          -0.042910032  0.2102882 -0.204053482 0.842851226
+# transNS           0.146580305  0.2102882  0.697044965 0.503380276
+# sourceFR:transFR -0.015524793  0.2973924 -0.052203062 0.959507213
+# sourceNS:transFR -0.002063829  0.2973924 -0.006939751 0.994614317
+# sourceFR:transNS -0.546340891  0.2973924 -1.837104583 0.099367828
+# sourceNS:transNS -0.156978868  0.2973924 -0.527851024 0.610367760
+
+```
+
 
 <br/>
 
