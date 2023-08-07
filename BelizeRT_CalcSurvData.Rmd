@@ -1184,7 +1184,24 @@ fig_1c <- week_range_stat_plot +
 
 ```{r full figure 1, fig.height = 4, fig.width = 13}
 
+library(patchwork)
+
+## set the layout
+layout <- "
+#AA#
+BBCC
+"
+
+### add plots together with layout
+#Figure1 <- fig_1a + fig_1b + fig_1c + plot_layout(design = layout) + plot_annotation(tag_levels = 'A')
+#Figure1
+#ggsave("Figures/Figure1_map_temp.pdf", height = 8, width = 10, useDingbats = FALSE) # save plot as PDF
+#ggsave("Figures/Figure1_map_temp.png", height = 8, width = 10) # save plot as PNG
+
+
+
 ggarrange(fig_1a, fig_1b, fig_1c, ncol = 3, labels = "AUTO")
+
 ggsave("Figures/Figure1_map_temp.pdf", height = 4, width = 13, useDingbats = FALSE) # save plot as PDF
 ggsave("Figures/Figure1_map_temp.png", height = 4, width = 13) # save plot as PNG
 
