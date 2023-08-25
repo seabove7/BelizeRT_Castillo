@@ -1,4 +1,4 @@
-cff-version: 1.0
+cff-version: 2.0
 message: "If you use the code or data in this repository, please cite it as below."
 authors:
   - family-names: Bove B.
@@ -9,6 +9,6 @@ authors:
   - family-names: Sarah W.
     given-names: Davies
     orcid: https://orcid.org/0000-0002-1620-2278
-title: seabove7/BelizeRT_Castillo_Bove: Initial Release for Paper Submission
-version: v1.0
+title: seabove7/BelizeRT_Castillo_Bove: Repository for Gene expression plasticity facilitates acclimatization of a long-lived Caribbean coral across divergent reef environments
+version: v2.0
 date-released: 2023-03-16
