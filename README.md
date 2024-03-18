@@ -1,17 +1,16 @@
-# Gene expression plasticity facilitates acclimation across divergent reef environments in a long-lived Caribbean coral
+# Gene expression plasticity facilitates acclimatization of a long-lived Caribbean coral across divergent reef environments
 
+#### **Authors:** Karl D. Castillo<sup>#</sup>, Colleen B. Bove<sup>#</sup>, Annabel M. Hughes, Maya E. Powell, Justin B. Ries, Sarah W. Davies
 
-#### **Authors:** Karl D. Castillo#, Colleen B. Bove#, Annabel M. Hughes, Maya E. Powell, Justin B. Ries, Sarah W. Davies
+*<sup>#</sup> denotes co-first authors* 
 
-*# denotes co-first authors* 
-
-#### **Citation:**  *Coming Soon*
+**Citation:**  Castillo KD, Bove CB *et al.*Gene expression plasticity facilitates acclimatization of a long-lived Caribbean coral across divergent reef environments. *Sci Rep* (2024). https://doi.org/10.1038/s41598-024-57319-0
 
 #### **Zenodo DOI:** <a href="https://zenodo.org/badge/latestdoi/248840574"><img src="https://zenodo.org/badge/248840574.svg" alt="DOI"></a>
 
 
 ### **Abstract:**  
-Local adaptation can facilitate fitness under stable environmental conditions; however under rapidly changing environments, compensatory mechanisms enabled through plasticity might be favored. Climate change is causing devastating impacts on coral reefs globally and understanding the potential for adaptive and plastic responses is critical for reef management. We conducted a four-year, three-way reciprocal transplant of the Caribbean coral *Siderastrea siderea* across forereef, backreef, and nearshore environments in Belize to investigate local adaptation and plasticity in this species. Corals exhibited high survival within forereef and backreef environments, but transplantation to the nearshore resulted in high mortality, suggesting that nearshore environments present strong environmental selection. Only forereef corals exhibited evidence of local adaptation, exhibiting the highest growth within their source reef. Gene expression profiling 3.5 years post-transplantation revealed that transplanted coral hosts exhibited profiles more similar to other colonies on the same reef, regardless of source location, suggesting that transcriptomic plasticity facilitates acclimatization to environmental change in *S. siderea*. In contrast, *Cladocopium goreaui* gene expression showcased functional variation between source locations that was maintained throughout transplantation. Our findings suggest limited *S. siderea* adaptive capacity under strong environmental selection, and highlight the potential to harness coral physiological plasticity to combat climate change.
+Local adaptation can increase fitness under stable environmental conditions. However, in rapidly changing environments, compensatory mechanisms enabled through plasticity may better promote fitness. Climate change is causing devastating impacts on coral reefs globally and understanding the potential for adaptive and plastic responses is critical for reef management. We conducted a four-year, three-way reciprocal transplant of the Caribbean coral *Siderastrea siderea* across forereef, backreef, and nearshore populations in Belize to investigate the potential for environmental specialization versus plasticity in this species. Corals maintained high survival within forereef and backreef environments, but transplantation to nearshore environments resulted in high mortality, suggesting that nearshore environments present strong environmental selection. Only forereef- sourced corals demonstrated evidence of environmental specialization, exhibiting the highest growth in the forereef. Gene expression profiling 3.5 years post-transplantation revealed that transplanted coral hosts exhibited profiles more similar to other corals in the same reef environment, regardless of their source location, suggesting that transcriptome plasticity facilitates acclimatization to environmental change in *S. siderea*. In contrast, algal symbiont (*Cladocopium goreaui*) gene expression showcased functional variation between source locations that was maintained post-transplantation. Our findings suggest limited acclimatory capacity of some *S. siderea* populations under strong environmental selection and highlight the potential limits of coral physiological plasticity in reef restoration.
 
 <br/>
 
